@@ -1,49 +1,53 @@
 package Sokoban;
 
 import Sokoban.Interfaces.Map;
-import Sokoban.Levels.Nivel1;
 
 public class MapFactory {
 
+    //se podría leer de un archivo
+    private static final LevelInfo[] levels = new LevelInfo[]{
+            new LevelInfo(9, 28,
+                    "~~~~~~###~~~~~~\n" +
+                            "~~~~~~#.#~~~~~~\n" +
+                            "~~#####.#####~~\n" +
+                            "~##         ##~\n" +
+                            "##  # # # #  ##\n" +
+                            "#  ##     ##  #\n" +
+                            "# ##  # #  ## #\n" +
+                            "#     $@$     #\n" +
+                            "####  ###  ####\n" +
+                            "~~~#### ####~~~\n"
+            )};
+
     public Map loadMap(String name){
         if(name == null) return null;
-        if(name.equals("nivel1")){
-            Nivel1 level = new Nivel1();
-            level.setMap(parse_map(level.getLayout(), level.getLayoutRows(), level.getLayoutCols()));
-            return new Nivel1();
+        if(name.equals("level1")){
+            LevelInfo li = levels[0];
+            return new Level(li.getLayout(), li.getLayoutRows(), li.getLayoutCols());
         }
         return null;
     }
 
-    private int[][] parse_map(String layout, int rows, int cols){
-        int[][] map = new int[rows][cols];
-        String[] lines = layout.split("\n");
-        char[] aux;
-        for(int i = 0; i < lines.length; i++){
-            aux = lines[i].toCharArray();
-            for(int j = 0; j < aux.length; j++){
-                switch(aux[j]){
-                    case '~':
-                        map[i][j] = -1;
-                        break;
-                    case ' ':
-                        map[i][j] = 0;
-                        break;
-                    case '#':
-                        map[i][j] = 1;
-                        break;
-                    case '$':
-                        map[i][j] = 2;
-                        break;
-                    case '@':
-                        map[i][j] = 3;
-                        break;
-                    case '.':
-                        map[i][j] = 4;
-                        break;
-                }
-            }
+    private static class LevelInfo{
+        String layout;
+        int layout_rows;
+        int layout_cols;
+        public LevelInfo(int layout_rows, int layout_cols, String layout){
+            this.layout = layout;
+            this.layout_rows = layout_rows;
+            this.layout_cols = layout_cols;
         }
-        return map;
+
+        public String getLayout() {
+            return layout;
+        }
+
+        public int getLayoutRows() {
+            return layout_rows;
+        }
+
+        public int getLayoutCols() {
+            return layout_cols;
+        }
     }
 }
