@@ -4,12 +4,12 @@ import Sokoban.Interfaces.Map;
 
 public class Level implements Map {
 
-    private int[][] map;
+    private TILES[][] map;
     private final String layout;
     private final int layout_rows;
     private final int layout_cols;
 
-    public Level(String layout, int rows, int cols, int[][] map){
+    public Level(String layout, int rows, int cols, TILES[][] map){
        this.map = map;
        this.layout = layout;
        this.layout_rows = rows;
@@ -24,12 +24,12 @@ public class Level implements Map {
         return this.layout_cols;
     }
 
-   public void setMap(int[][] map){
+   public void setMap(TILES[][] map){
         this.map = map;
    }
 
     @Override
-    public int[][] getMap() {
+    public TILES[][] getMap() {
         return this.map;
     }
 

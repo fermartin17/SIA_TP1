@@ -2,7 +2,11 @@ package Sokoban.Interfaces;
 
 public interface Map {
 
-    int[][] getMap();
+    enum TILES {
+        OUT_OF_BOUNDS, FLOOR, WALL, BLOCK, PLAYER, TARGET;
+    }
+
+    TILES[][] getMap();
 
     String getLayout();
 
