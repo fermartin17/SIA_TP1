@@ -40,6 +40,31 @@ public class Level implements Map {
 
     @Override
     public void printMap(){
-        //TODO
+        char aux = 0;
+        for(int i = 0; i < getLayoutRows(); i++){
+            for(int j = 0; j < getLayoutCols(); j++){
+                switch(getMap()[i][j]){
+                    case OUT_OF_BOUNDS:
+                    case FLOOR:
+                        aux = ' ';
+                        break;
+                    case WALL:
+                            aux = '#';
+                    break;
+                    case BLOCK:
+                        aux = '$';
+                        break;
+                    case PLAYER:
+                        aux = '@';
+                        break;
+                    case TARGET:
+                        aux = '·';
+                        break;
+                }
+                System.out.print(aux);
+                System.out.print(' ');
+            }
+            System.out.println();
+        }
     }
 }
