@@ -5,4 +5,6 @@ public interface Map {
     int[][] getMap();
 
     String getLayout();
+
+    void printMap();
 }
