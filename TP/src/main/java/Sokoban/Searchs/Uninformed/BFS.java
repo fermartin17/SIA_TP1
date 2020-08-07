@@ -12,15 +12,14 @@ import java.util.TreeSet;
 public class BFS<T extends Neighbors<T> & Comparable<T>> implements UninformedSearch<T> {
 
     List<Heuristic<T>> heuristics;
-    Queue<T> queue;
 
     public BFS(List<Heuristic<T>> heuristic){
         this.heuristics = heuristic;
-        this.queue = new LinkedList<>();
     }
 
     public T search(T root){
         if( root == null ) return null;
+        Queue<T> queue = new LinkedList<>();
         TreeSet<T> visited = new TreeSet<>();
         queue.add(root);
         while(!queue.isEmpty()){
