@@ -22,7 +22,6 @@ public class BFS<T extends Neighbors<T> & Comparable<T>> implements UninformedSe
     public T search(T root){
         if( root == null ) return null;
         TreeSet<T> visited = new TreeSet<>();
-        queue.clear();
         queue.add(root);
         while(!queue.isEmpty()){
             T aux = queue.poll();
