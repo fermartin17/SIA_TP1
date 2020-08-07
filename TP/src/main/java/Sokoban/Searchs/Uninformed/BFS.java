@@ -5,23 +5,25 @@ import Sokoban.Interfaces.Neighbors;
 import Sokoban.Interfaces.UninformedSearch;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 import java.util.TreeSet;
 
-public class BFS<T extends Neighbors<T>> implements UninformedSearch<T> {
+public class BFS<T extends Neighbors<T> & Comparable<T>> implements UninformedSearch<T> {
 
-    Heuristic<T>[] heuristics;
+    List<Heuristic<T>> heuristics;
     Queue<T> queue;
 
-    public BFS(Heuristic<T>[] heuristic){
+    public BFS(List<Heuristic<T>> heuristic){
         this.heuristics = heuristic;
         this.queue = new LinkedList<>();
     }
 
     public T search(T root){
+        if( root == null ) return null;
         TreeSet<T> visited = new TreeSet<>();
+        queue.clear();
         queue.add(root);
-        visited.add(root);
         while(!queue.isEmpty()){
             T aux = queue.poll();
             if(!visited.contains(aux)){
@@ -35,7 +37,7 @@ public class BFS<T extends Neighbors<T>> implements UninformedSearch<T> {
                         passEvaluations++;
                     }
                 }
-                if (passEvaluations == heuristics.length) return aux;
+                if (passEvaluations == heuristics.size()) return aux;
             }
         }
         return null;
