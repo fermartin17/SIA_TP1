@@ -1,4 +1,6 @@
 package Sokoban.Interfaces;
 
-public interface UninformedSearch {
+public interface UninformedSearch<T> {
+
+    T search(T root);
 }
