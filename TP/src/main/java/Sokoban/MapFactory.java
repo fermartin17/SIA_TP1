@@ -2,6 +2,7 @@ package Sokoban;
 
 import Sokoban.Interfaces.Map;
 import Sokoban.Interfaces.Map.TILES;
+import Sokoban.Model.Level;
 
 public class MapFactory {
 

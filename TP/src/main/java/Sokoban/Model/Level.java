@@ -1,4 +1,4 @@
-package Sokoban;
+package Sokoban.Model;
 
 import Sokoban.Interfaces.Map;
 
