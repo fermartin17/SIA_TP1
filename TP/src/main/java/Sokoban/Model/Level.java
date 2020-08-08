@@ -1,7 +1,11 @@
 package Sokoban.Model;
 
 import Sokoban.Interfaces.Map;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class Level implements Map {
 
     private TILES[][] map;
