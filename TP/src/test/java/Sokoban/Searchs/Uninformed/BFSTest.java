@@ -14,159 +14,98 @@ public class BFSTest{
 
     @Test
     public void searchNoResultTest() {
-        List<Heuristic<Node>> heuristics = new ArrayList<>();
-        //defino heurística, busco a algún elemento mayor a 5
-        heuristics.add((i)->(i.value > 5));
         Node root = new Node(4);
         root.neighbors.add(new Node(3));
         root.neighbors.add(new Node(1));
-        BFS<Node> bfs = new BFS<>(heuristics);
-        Node result = bfs.search(root);
+        BFS<Node> bfs = new BFS<>();
+        List<Node> result = bfs.search(root, new Node(7));
         Assert.assertNull(result);
     }
 
     @Test
     public void searchNoResultTest2() {
-        List<Heuristic<Node>> heuristics = new ArrayList<>();
-        //defino heurística, busco a algún elemento mayor a 5
-        heuristics.add((i)->(i.value > 5));
         Node root = new Node(1);
-        root.neighbors.add(new Node(0));
-        root.neighbors.add(new Node(-1));
-        BFS<Node> bfs = new BFS<>(heuristics);
-        Node result = bfs.search(root);
+        BFS<Node> bfs = new BFS<>();
+        List<Node> result = bfs.search(root, new Node(7));
         Assert.assertNull(result);
     }
 
     @Test
     public void searchResultFoundTest() {
-        List<Heuristic<Node>> heuristics = new ArrayList<>();
-        //defino heurística, busco a algún elemento mayor a 5
-        heuristics.add((i)->(i.value > 5));
         Node root = new Node(4);
         root.neighbors.add(new Node(5));
         root.neighbors.add(new Node(7));
-        BFS<Node> bfs = new BFS<>(heuristics);
-        Node result = bfs.search(root);
+        List<Node> expected = new ArrayList<>();
+        expected.add(new Node(4));
+        expected.add(new Node(7));
+        BFS<Node> bfs = new BFS<>();
+        List<Node> result = bfs.search(root, new Node(7));
         Assert.assertNotNull(result);
+        Assert.assertArrayEquals(expected.toArray(), result.toArray());
+    }
+
+    @Test
+    public void searchResultFoundTest2() {
+        Node root = new Node(3);
+        Node aux1 = new Node(7);
+        aux1.neighbors.add(new Node(9));
+        root.neighbors.add(aux1);
+        Node aux2 = new Node(4);
+        aux2.neighbors.add(new Node(1));
+        aux2.neighbors.add(new Node(8));
+        root.neighbors.add(aux2);
+        List<Node> expected = new ArrayList<>();
+        expected.add(new Node(3));
+        expected.add(new Node(4));
+        expected.add(new Node(1));
+        BFS<Node> bfs = new BFS<>();
+        List<Node> result = bfs.search(root, new Node(1));
+        Assert.assertNotNull(result);
+        Assert.assertArrayEquals(expected.toArray(), result.toArray());
     }
 
     @Test
     public void correctOrderTest(){
-        List<Heuristic<Node>> heuristics = new ArrayList<>();
-        //defino heurística, busco a algún elemento mayor a 5
-        heuristics.add((i)->(i.value > 5));
         Node root = new Node(6);
         root.neighbors.add(new Node(5));
-        root.neighbors.add(new Node(7));
-        BFS<Node> bfs = new BFS<>(heuristics);
-        Node result = bfs.search(root);
+        Node aux = new Node(7);
+        aux.neighbors.add(new Node(5));
+        aux.neighbors.add(new Node(9));
+        root.neighbors.add(aux);
+        List<Node> expected = new ArrayList<>();
+        expected.add(new Node(6));
+        expected.add(new Node(5));
+        BFS<Node> bfs = new BFS<>();
+        List<Node> result = bfs.search(root, new Node(5));
         Assert.assertNotNull(result);
-        Assert.assertEquals(6, result.value);
-    }
-
-    @Test
-    public void correctOrderTest2(){
-        List<Heuristic<Node>> heuristics = new ArrayList<>();
-        //defino heurística, busco a algún elemento mayor a 5
-        heuristics.add((i)->(i.value > 5));
-        Node root = new Node(1);
-        root.neighbors.add(new Node(6));
-        root.neighbors.add(new Node(7));
-        BFS<Node> bfs = new BFS<>(heuristics);
-        Node result = bfs.search(root);
-        Assert.assertNotNull(result);
-        Assert.assertEquals(6, result.value);
-    }
-
-    @Test
-    public void correctOrderTest3(){
-        List<Heuristic<Node>> heuristics = new ArrayList<>();
-        //defino heurística, busco a algún elemento mayor a 5
-        heuristics.add((i)->(i.value > 5));
-        Node root = new Node(1);
-        Node aux1 = new Node(2);
-        aux1.neighbors.add(new Node(3));
-        aux1.neighbors.add(new Node(8));
-        root.neighbors.add(aux1);
-        root.neighbors.add(new Node(9));
-        BFS<Node> bfs = new BFS<>(heuristics);
-        Node result = bfs.search(root);
-        Assert.assertNotNull(result);
-        Assert.assertEquals(9, result.value);
+        Assert.assertArrayEquals(expected.toArray(), result.toArray());
     }
 
     @Test
     public void NullRootTest(){
-        List<Heuristic<Node>> heuristics = new ArrayList<>();
-        //defino heurística, busco a algún elemento mayor a 5
-        heuristics.add((i)->(i.value > 5));
-        BFS<Node> bfs = new BFS<>(heuristics);
-        Node result = bfs.search(null);
+        BFS<Node> bfs = new BFS<>();
+        List<Node> result = bfs.search(null, null);
         Assert.assertNull(result);
     }
 
     @Test
     public void onlyNodeNotFoundTest(){
-        List<Heuristic<Node>> heuristics = new ArrayList<>();
-        //defino heurística, busco a algún elemento mayor a 5
-        heuristics.add((i)->(i.value > 5));
         Node root = new Node(1);
-        BFS<Node> bfs = new BFS<>(heuristics);
-        Node result = bfs.search(root);
+        BFS<Node> bfs = new BFS<>();
+        List<Node> result = bfs.search(root, new Node(3));
         Assert.assertNull(result);
     }
 
     @Test
     public void onlyNodeFoundTest(){
-        List<Heuristic<Node>> heuristics = new ArrayList<>();
-        //defino heurística, busco a algún elemento mayor a 5
-        heuristics.add((i)->(i.value > 5));
         Node root = new Node(7);
-        BFS<Node> bfs = new BFS<>(heuristics);
-        Node result = bfs.search(root);
+        BFS<Node> bfs = new BFS<>();
+        List<Node> result = bfs.search(root, root);
         Assert.assertNotNull(result);
+        Assert.assertEquals(1, result.size());
+        Assert.assertEquals(root, result.get(0));
     }
 
-    @Test
-    public void multipleHeuristicsTest(){
-        List<Heuristic<Node>> heuristics = new ArrayList<>();
-        //defino heurística, busco a algún elemento mayor a 5 y menor a 7
-        heuristics.add((i)->(i.value > 5));
-        heuristics.add((i)->(i.value < 7));
-        Node root = new Node(6);
-        BFS<Node> bfs = new BFS<>(heuristics);
-        Node result = bfs.search(root);
-        Assert.assertNotNull(result);
-        Assert.assertEquals(6, result.value);
-    }
-
-    @Test
-    public void multipleHeuristicsTest2(){
-        List<Heuristic<Node>> heuristics = new ArrayList<>();
-        //defino heurística, busco a algún elemento mayor a 5 y menor a 7
-        heuristics.add((i)->(i.value > 5));
-        heuristics.add((i)->(i.value < 5));
-        Node root = new Node(6);
-        BFS<Node> bfs = new BFS<>(heuristics);
-        Node result = bfs.search(root);
-        Assert.assertNull(result);
-    }
-
-    @Test
-    public void multipleHeuristicsTest3(){
-        List<Heuristic<Node>> heuristics = new ArrayList<>();
-        //defino heurística, busco a algún elemento mayor a 5 y menor a 7
-        heuristics.add((i)->(i.value > 5));
-        heuristics.add((i)->(i.value < 7));
-        Node root = new Node(8);
-        root.neighbors.add(new Node(1));
-        root.neighbors.add(new Node(6));
-        BFS<Node> bfs = new BFS<>(heuristics);
-        Node result = bfs.search(root);
-        Assert.assertNotNull(result);
-        Assert.assertEquals(6, result.value);
-    }
 
     private class Node implements Neighbors<Node>, Comparable<Node>{
         int value;
@@ -181,10 +120,8 @@ public class BFSTest{
             return this.value;
         }
 
-        public List<Node> getNeighbors() {return this.neighbors;}
-
         @Override
-        public List<Node> getNeighbors(Node n) {return n.getNeighbors();}
+        public List<Node> getNeighbors() {return this.neighbors;}
 
         @Override
         public int compareTo(Node o){
@@ -193,6 +130,13 @@ public class BFSTest{
 
         public String toString(){
             return String.valueOf(this.value);
+        }
+
+        public boolean equals(Object o){
+            if (o == this) return true;
+            if (o == null || o.getClass() != this.getClass()) return false;
+            Node n = (Node) o;
+            return this.value == n.value;
         }
     }
 }

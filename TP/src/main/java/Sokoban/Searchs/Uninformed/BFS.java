@@ -4,38 +4,55 @@ import Sokoban.Interfaces.Heuristic;
 import Sokoban.Interfaces.Neighbors;
 import Sokoban.Interfaces.UninformedSearch;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-import java.util.TreeSet;
+import java.util.*;
 
 public class BFS<T extends Neighbors<T> & Comparable<T>> implements UninformedSearch<T> {
 
-    List<Heuristic<T>> heuristics;
+    Heuristic<T> heuristic;
 
-    public BFS(List<Heuristic<T>> heuristic){
-        this.heuristics = heuristic;
+    public BFS(){
+        this.heuristic = new Heuristic<>() {
+            @Override
+            public boolean evaluate(T elem) {
+                return true;
+            }
+        };
     }
 
-    public T search(T root){
-        if( root == null ) return null;
-        Queue<T> queue = new LinkedList<>();
+    public BFS(Heuristic<T> heuristic){
+        this.heuristic = heuristic;
+    }
+
+    public List<T> search(T root, T goal) {
+        if (root == null && goal == null) return null;
+        //en vez de guardar los nodos, vamos guardando los paths
+        Queue<Stack<T>> queue = new LinkedList<>();
         TreeSet<T> visited = new TreeSet<>();
-        queue.add(root);
+        List<T> ret = new ArrayList<>();
+        List<T> neighbors = null;
+        Stack<T> stack = new Stack<>();
+        stack.push(root);
+        queue.add(stack);
         while(!queue.isEmpty()){
-            T aux = queue.poll();
+            Stack<T> currPath = queue.poll();
+            T aux = currPath.peek();
             if(!visited.contains(aux)){
-                int passEvaluations = 0;
                 visited.add(aux);
-                for(Heuristic<T> h : heuristics){
-                    if(!h.evaluate(aux)){
-                        queue.addAll(aux.getNeighbors(aux));
-                        break;
-                    }else{
-                        passEvaluations++;
-                    }
+                if(aux.equals(goal)){
+                    ret.addAll(currPath);
+                    return ret;
                 }
-                if (passEvaluations == heuristics.size()) return aux;
+                if(heuristic.evaluate(aux)){
+                    neighbors = aux.getNeighbors();
+                    for(T neighbor : neighbors){
+                        if(!visited.contains(neighbor)){
+                            currPath.push(neighbor);
+                            queue.offer((Stack<T>)currPath.clone());
+                            currPath.pop();
+                        }
+                    }
+
+                }
             }
         }
         return null;
