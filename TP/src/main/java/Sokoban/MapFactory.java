@@ -2,6 +2,7 @@ package Sokoban;
 
 import Sokoban.Interfaces.Map;
 import Sokoban.Interfaces.Map.TILES;
+import Sokoban.Model.MapImpl;
 
 public class MapFactory {
 
@@ -24,7 +25,7 @@ public class MapFactory {
         if(index < 0 || index > levels.length) return null;
         LevelInfo li = levels[index];
         TILES[][] map = parse_map(li);
-        return new Level(li.getLayout(), li.getLayoutRows(), li.getLayoutCols(), map);
+        return new MapImpl(li.getLayout(), li.getLayoutRows(), li.getLayoutCols(), map);
     }
 
     private TILES[][] parse_map(LevelInfo li){

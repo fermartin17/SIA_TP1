@@ -1,0 +1,12 @@
+Sokoban/MapFactory.class
+Sokoban/Interfaces/Map.class
+Sokoban/App.class
+Sokoban/Interfaces/Map$TILES.class
+Sokoban/Interfaces/Heuristic.class
+Sokoban/Searchs/Uninformed/BFS.class
+Sokoban/Model/MapImpl$1.class
+Sokoban/MapFactory$LevelInfo.class
+Sokoban/Interfaces/UninformedSearch.class
+Sokoban/Model/MapImpl.class
+Sokoban/Interfaces/Neighbors.class
+Sokoban/Searchs/Uninformed/BFS$1.class

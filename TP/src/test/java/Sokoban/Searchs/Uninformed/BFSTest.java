@@ -1,11 +1,7 @@
 package Sokoban.Searchs.Uninformed;
-
-import Sokoban.Interfaces.Heuristic;
 import Sokoban.Interfaces.Neighbors;
 import org.junit.Assert;
 import org.junit.Test;
-
-
 import java.util.ArrayList;
 import java.util.List;
 

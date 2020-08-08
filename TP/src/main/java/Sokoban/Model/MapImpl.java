@@ -1,19 +1,27 @@
-package Sokoban;
+package Sokoban.Model;
 
 import Sokoban.Interfaces.Map;
 
-public class Level implements Map {
+import java.util.ArrayList;
+import java.util.List;
+
+public class MapImpl implements Map {
 
     private TILES[][] map;
     private final String layout;
     private final int layout_rows;
     private final int layout_cols;
+    private Position playerPosition;
+    private List<Position> goalsPositions;
 
-    public Level(String layout, int rows, int cols, TILES[][] map){
+
+    public MapImpl(String layout, int rows, int cols, TILES[][] map){
        this.map = map;
        this.layout = layout;
        this.layout_rows = rows;
        this.layout_cols = cols;
+       this.playerPosition = new Position();
+       this.goalsPositions = new ArrayList<Position>();
     }
 
     public int getLayoutRows(){
@@ -26,6 +34,10 @@ public class Level implements Map {
 
    public void setMap(TILES[][] map){
         this.map = map;
+   }
+
+   public void moveBox(int directionX,int directionY, Position position){
+        return;
    }
 
     @Override
