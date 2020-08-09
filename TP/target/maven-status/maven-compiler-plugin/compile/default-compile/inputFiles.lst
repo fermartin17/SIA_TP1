@@ -1,1 +1,10 @@
-/home/lautaro/Escritorio/sia/tps/SIA_TP1/TP/src/main/java/Sokoban/App.java
+/home/fer/Documents/SIA/TP1/SIA_TP1/TP/src/main/java/Sokoban/Searchs/Uninformed/DFS.java
+/home/fer/Documents/SIA/TP1/SIA_TP1/TP/src/main/java/Sokoban/Searchs/Uninformed/BFS.java
+/home/fer/Documents/SIA/TP1/SIA_TP1/TP/src/main/java/Sokoban/Interfaces/Heuristic.java
+/home/fer/Documents/SIA/TP1/SIA_TP1/TP/src/main/java/Sokoban/Interfaces/UninformedSearch.java
+/home/fer/Documents/SIA/TP1/SIA_TP1/TP/src/main/java/Sokoban/MapFactory.java
+/home/fer/Documents/SIA/TP1/SIA_TP1/TP/src/main/java/Sokoban/App.java
+/home/fer/Documents/SIA/TP1/SIA_TP1/TP/src/main/java/Sokoban/Interfaces/Neighbors.java
+/home/fer/Documents/SIA/TP1/SIA_TP1/TP/src/main/java/Sokoban/Interfaces/Map.java
+/home/fer/Documents/SIA/TP1/SIA_TP1/TP/src/main/java/Sokoban/Model/MapImpl.java
+/home/fer/Documents/SIA/TP1/SIA_TP1/TP/src/main/java/Sokoban/Model/Position.java

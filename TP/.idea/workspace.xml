@@ -23,12 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/MapFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/MapFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/BFSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/BFSTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/MapImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Model/MapImpl$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/MapImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Model/MapImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Sokoban/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/TP/Sokoban/MapFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/TP/Sokoban/MapFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/TP/Sokoban/Model/Level$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/TP/Sokoban/Model/Level.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +150,8 @@
       <workItem from="1596746586454" duration="4217000" />
       <workItem from="1596916635388" duration="276000" />
       <workItem from="1596916918852" duration="4323000" />
+      <workItem from="1596976131858" duration="255000" />
+      <workItem from="1596976393202" duration="343000" />
     </task>
     <servers />
   </component>
@@ -185,22 +191,22 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1250" height="172" key="GridCell.Tab.0.bottom" timestamp="1596918539979">
+    <state width="1250" height="172" key="GridCell.Tab.0.bottom" timestamp="1596976103009">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1596918539979" />
-    <state width="1250" height="172" key="GridCell.Tab.0.center" timestamp="1596918539975">
+    <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1596976103009" />
+    <state width="1250" height="172" key="GridCell.Tab.0.center" timestamp="1596976103008">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1596918539975" />
-    <state width="1250" height="172" key="GridCell.Tab.0.left" timestamp="1596918539973">
+    <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1596976103008" />
+    <state width="1250" height="172" key="GridCell.Tab.0.left" timestamp="1596976103007">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1596918539973" />
-    <state width="1250" height="172" key="GridCell.Tab.0.right" timestamp="1596918539977">
+    <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1596976103007" />
+    <state width="1250" height="172" key="GridCell.Tab.0.right" timestamp="1596976103008">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1596918539977" />
+    <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1596976103008" />
     <state x="390" y="291" width="646" height="229" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1596917037105">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
