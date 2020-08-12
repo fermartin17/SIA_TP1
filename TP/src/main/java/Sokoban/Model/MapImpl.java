@@ -56,4 +56,14 @@ public class MapImpl implements Map {
             System.out.println();
         }
     }
+
+    @Override
+    public Boolean isWinner() {
+        return null;
+    }
+
+    @Override
+    public Boolean checkMap() {
+        return null;
+    }
 }

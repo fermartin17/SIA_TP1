@@ -11,13 +11,11 @@ import java.util.Set;
 @Getter
 @Setter
 public class State implements Comparable<State>, Neighbors<State> {
-    private Set<Integer> history;
     private MapImpl map;
 
     public State(){}
 
-    public State(Set<Integer> history, MapImpl map){
-        this.history = history;
+    public State(MapImpl map){
         this.map = map;
     }
 
@@ -30,20 +28,17 @@ public class State implements Comparable<State>, Neighbors<State> {
     public List<State> getNeighbors() {
         List<State> list = new ArrayList<State>();
 
-        Set<Integer> auxSet = this.history;
-        auxSet.add(map.hashCode());
-
         Position pos = this.map.getPlayerPosition();
         MapImpl auxMap = this.map;
 
         auxMap.setPlayerPosition(new Position(pos.getX()+1, pos.getY()));
-        list.add(new State(auxSet,auxMap));
+        list.add(new State(auxMap));
         auxMap.setPlayerPosition(new Position(pos.getX()-1, pos.getY()));
-        list.add(new State(auxSet,auxMap));
+        list.add(new State(auxMap));
         auxMap.setPlayerPosition(new Position(pos.getX(), pos.getY()+1));
-        list.add(new State(auxSet,auxMap));
+        list.add(new State(auxMap));
         auxMap.setPlayerPosition(new Position(pos.getX(), pos.getY()-1));
-        list.add(new State(auxSet,auxMap));
+        list.add(new State(auxMap));
 
         return list;
     }
