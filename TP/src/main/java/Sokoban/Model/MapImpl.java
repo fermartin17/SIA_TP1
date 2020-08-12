@@ -27,37 +27,11 @@ public class MapImpl implements Map {
        this.goalsPositions = new ArrayList<Position>();
     }
 
-    public int getLayoutRows(){
-        return this.layout_rows;
-    }
-
-    public int getLayoutCols(){
-        return this.layout_cols;
-    }
-
-   public void setMap(TILES[][] map){
-        this.map = map;
-   }
-
-   public void moveBox(int directionX,int directionY, Position position){
-        return;
-   }
-
-    @Override
-    public TILES[][] getMap() {
-        return this.map;
-    }
-
-    @Override
-    public String getLayout(){
-        return this.layout;
-    }
-
     @Override
     public void printMap(){
         char aux = 0;
-        for(int i = 0; i < getLayoutRows(); i++){
-            for(int j = 0; j < getLayoutCols(); j++){
+        for(int i = 0; i < this.getLayout_rows(); i++){
+            for(int j = 0; j < this.getLayout_cols(); j++){
                 switch(getMap()[i][j]){
                     case OUT_OF_BOUNDS:
                     case FLOOR:

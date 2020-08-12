@@ -11,4 +11,10 @@ public interface Map {
     String getLayout();
 
     void printMap();
+
+    //Checks if goal's positions are marked
+    Boolean isWinner();
+
+    //Checks if the map is valid with player movement
+    Boolean checkMap();
 }
