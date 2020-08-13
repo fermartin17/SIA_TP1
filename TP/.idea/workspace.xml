@@ -23,7 +23,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/MapFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/MapFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +167,7 @@
       <workItem from="1597283581992" duration="2842000" />
       <workItem from="1597286450698" duration="23000" />
       <workItem from="1597348615284" duration="1482000" />
-      <workItem from="1597352940936" duration="3616000" />
+      <workItem from="1597352940936" duration="4189000" />
     </task>
     <task id="LOCAL-00001" summary="Hechos métodos isWinner, isValid (viejo checkmap) y método para precalcular posiciones de deadlock">
       <created>1597355743262</created>
@@ -177,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597355743262</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Movido el parseo del mapa a las implementaciones de mapa">
+      <created>1597356579388</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597356579388</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +203,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hechos métodos isWinner, isValid (viejo checkmap) y método para precalcular posiciones de deadlock" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hechos métodos isWinner, isValid (viejo checkmap) y método para precalcular posiciones de deadlock" />
+    <MESSAGE value="Movido el parseo del mapa a las implementaciones de mapa" />
+    <option name="LAST_COMMIT_MESSAGE" value="Movido el parseo del mapa a las implementaciones de mapa" />
   </component>
   <component name="WindowStateProjectService">
     <state x="201" y="27" width="1024" height="741" key="#Project_Structure" timestamp="1596916893780">
@@ -217,10 +224,10 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="450" y="202" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog/70.27.1296.741@70.27.1296.741" timestamp="1596746616117" />
-    <state x="140" y="-54" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597355743150">
+    <state x="138" y="-72" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597356579287">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="140" y="-54" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597355743150" />
+    <state x="138" y="-72" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597356579287" />
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl" timestamp="1596916891944">
       <screen x="70" y="27" width="1296" height="741" />
     </state>

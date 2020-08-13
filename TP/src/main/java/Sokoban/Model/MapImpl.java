@@ -75,8 +75,7 @@ public class MapImpl implements Map {
         return boxPositions.stream().noneMatch(b -> deadlockPositions.contains(b));
     }
 
-    public List<Position> precalculateDeadlocks(){
-        List<Position> ret = new ArrayList<>();
+    public void precalculateDeadlocks(){
         int aux;
         for(int i = 0; i < layout_rows; i++){
             for(int j = 0; j < layout_cols; j++){
@@ -92,12 +91,11 @@ public class MapImpl implements Map {
                     aux += (map[i][j-1] == TILES.WALL)? 1: 0;
                     //si la posicion tiene +2 paredes alrededor, es un deadlock
                     if(aux >= 2){
-                        ret.add(new Position(i,j));
+                        deadlockPositions.add(new Position(i,j));
                     }
                 }
             }
         }
-        return ret;
     }
 
 
