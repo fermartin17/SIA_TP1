@@ -1,5 +1,6 @@
 package Sokoban.Model;
 import Sokoban.Interfaces.Map;
+import Sokoban.MapFactory;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,8 +22,8 @@ public class MapImpl implements Map {
     private List<Position> deadlockPositions;
 
 
-    public MapImpl(String layout, int rows, int cols, TILES[][] map){
-       this.map = map;
+    public MapImpl(String layout, int rows, int cols){
+       this.map = new TILES[rows][cols];
        this.layout = layout;
        this.layout_rows = rows;
        this.layout_cols = cols;
@@ -34,8 +35,8 @@ public class MapImpl implements Map {
     @Override
     public void printMap(){
         char aux = 0;
-        for(int i = 0; i < this.getLayout_rows(); i++){
-            for(int j = 0; j < this.getLayout_cols(); j++){
+        for(int i = 0; i < this.layout_rows; i++){
+            for(int j = 0; j < this.layout_cols; j++){
                 switch(getMap()[i][j]){
                     case OUT_OF_BOUNDS:
                     case FLOOR:
@@ -97,5 +98,40 @@ public class MapImpl implements Map {
             }
         }
         return ret;
+    }
+
+
+    public void parse_map(){
+        this.map = new TILES[layout_rows][layout_cols];
+        String[] lines = layout.split("\n");
+        char[] aux;
+        for(int i = 0; i < lines.length; i++){
+            aux = lines[i].toCharArray();
+            for(int j = 0; j < aux.length; j++){
+                switch(aux[j]){
+                    case '~':
+                        map[i][j] = Map.TILES.OUT_OF_BOUNDS;
+                        break;
+                    case ' ':
+                        map[i][j] = Map.TILES.FLOOR;
+                        break;
+                    case '#':
+                        map[i][j] = Map.TILES.WALL;
+                        break;
+                    case '$':
+                        map[i][j] = Map.TILES.BLOCK;
+                        boxPositions.add(new Position(i, j));
+                        break;
+                    case '@':
+                        map[i][j] = Map.TILES.PLAYER;
+                        playerPosition = new Position(i, j);
+                        break;
+                    case '.':
+                        map[i][j] = Map.TILES.TARGET;
+                        goalsPositions.add(new Position(i, j));
+                        break;
+                }
+            }
+        }
     }
 }

@@ -24,40 +24,10 @@ public class MapFactory {
     public Map loadMap(int index){
         if(index < 0 || index > levels.length) return null;
         LevelInfo li = levels[index];
-        TILES[][] map = parse_map(li);
-        return new MapImpl(li.getLayout(), li.getLayoutRows(), li.getLayoutCols(), map);
-    }
-
-    private TILES[][] parse_map(LevelInfo li){
-        TILES[][] map = new TILES[li.layout_rows][li.layout_cols];
-        String[] lines = li.layout.split("\n");
-        char[] aux;
-        for(int i = 0; i < lines.length; i++){
-            aux = lines[i].toCharArray();
-            for(int j = 0; j < aux.length; j++){
-                switch(aux[j]){
-                    case '~':
-                        map[i][j] = Map.TILES.OUT_OF_BOUNDS;
-                        break;
-                    case ' ':
-                        map[i][j] = Map.TILES.FLOOR;
-                        break;
-                    case '#':
-                        map[i][j] = Map.TILES.WALL;
-                        break;
-                    case '$':
-                        map[i][j] = Map.TILES.BLOCK;
-                        break;
-                    case '@':
-                        map[i][j] = Map.TILES.PLAYER;
-                        break;
-                    case '.':
-                        map[i][j] = Map.TILES.TARGET;
-                        break;
-                }
-            }
-        }
-        return map;
+        MapImpl ret = new MapImpl(li.getLayout(), li.getLayoutRows(), li.getLayoutCols());
+        ret.parse_map();
+        ret.precalculateDeadlocks();
+        return ret;
     }
 
     private static class LevelInfo{
