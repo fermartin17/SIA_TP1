@@ -16,5 +16,5 @@ public interface Map {
     Boolean isWinner();
 
     //Checks if the map is valid with player movement
-    Boolean checkMap();
+    Boolean isValid();
 }

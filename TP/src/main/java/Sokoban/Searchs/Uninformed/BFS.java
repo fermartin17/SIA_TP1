@@ -8,20 +8,8 @@ import java.util.*;
 
 public class BFS<T extends Neighbors<T> & Comparable<T>> implements UninformedSearch<T> {
 
-    Heuristic<T> heuristic;
 
-    public BFS(){
-        this.heuristic = new Heuristic<>() {
-            @Override
-            public boolean evaluate(T elem) {
-                return true;
-            }
-        };
-    }
-
-    public BFS(Heuristic<T> heuristic){
-        this.heuristic = heuristic;
-    }
+    public BFS(){ }
 
     public List<T> search(T root, T goal) {
         if (root == null && goal == null) return null;
@@ -42,16 +30,13 @@ public class BFS<T extends Neighbors<T> & Comparable<T>> implements UninformedSe
                     ret.addAll(currPath);
                     return ret;
                 }
-                if(heuristic.evaluate(aux)){
-                    neighbors = aux.getNeighbors();
-                    for(T neighbor : neighbors){
-                        if(!visited.contains(neighbor)){
-                            currPath.push(neighbor);
-                            queue.offer((Stack<T>)currPath.clone());
-                            currPath.pop();
-                        }
+                neighbors = aux.getNeighbors();
+                for(T neighbor : neighbors){
+                    if(!visited.contains(neighbor)){
+                        currPath.push(neighbor);
+                        queue.offer((Stack<T>)currPath.clone());
+                        currPath.pop();
                     }
-
                 }
             }
         }

@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 @Getter
 @Setter
@@ -15,7 +16,9 @@ public class MapImpl implements Map {
     private final int layout_rows;
     private final int layout_cols;
     private Position playerPosition;
+    private List<Position> boxPositions;
     private List<Position> goalsPositions;
+    private List<Position> deadlockPositions;
 
 
     public MapImpl(String layout, int rows, int cols, TILES[][] map){
@@ -24,7 +27,8 @@ public class MapImpl implements Map {
        this.layout_rows = rows;
        this.layout_cols = cols;
        this.playerPosition = new Position();
-       this.goalsPositions = new ArrayList<Position>();
+       this.boxPositions = new ArrayList<>();
+       this.goalsPositions = new ArrayList<>();
     }
 
     @Override
@@ -59,11 +63,39 @@ public class MapImpl implements Map {
 
     @Override
     public Boolean isWinner() {
-        return null;
+        return goalsPositions.containsAll(boxPositions);
     }
 
     @Override
-    public Boolean checkMap() {
-        return null;
+    public Boolean isValid() {
+        //solo calcula si la caja está en alguna posición pre-calculada,
+        //se podría hacer también un checkeo "dinámico" o dejarlo así y buscar
+        //otra forma de podar
+        return boxPositions.stream().noneMatch(b -> deadlockPositions.contains(b));
+    }
+
+    public List<Position> precalculateDeadlocks(){
+        List<Position> ret = new ArrayList<>();
+        int aux;
+        for(int i = 0; i < layout_rows; i++){
+            for(int j = 0; j < layout_cols; j++){
+                aux = 0;
+                if(map[i][j] == TILES.FLOOR){
+                    //arriba
+                    aux += (map[i+1][j] == TILES.WALL)? 1: 0;
+                    //derecha
+                    aux += (map[i][j+1] == TILES.WALL)? 1: 0;
+                    //abajo
+                    aux += (map[i-1][j] == TILES.WALL)? 1: 0;
+                    //izquierda
+                    aux += (map[i][j-1] == TILES.WALL)? 1: 0;
+                    //si la posicion tiene +2 paredes alrededor, es un deadlock
+                    if(aux >= 2){
+                        ret.add(new Position(i,j));
+                    }
+                }
+            }
+        }
+        return ret;
     }
 }
