@@ -1,48 +1,37 @@
-package Sokoban;
-
+package Sokoban.Model;
 import Sokoban.Interfaces.Map;
+import lombok.Getter;
+import lombok.Setter;
 
-public class Level implements Map {
+import java.util.ArrayList;
+import java.util.List;
+
+@Getter
+@Setter
+public class MapImpl implements Map {
 
     private TILES[][] map;
     private final String layout;
     private final int layout_rows;
     private final int layout_cols;
+    private Position playerPosition;
+    private List<Position> goalsPositions;
 
-    public Level(String layout, int rows, int cols, TILES[][] map){
+
+    public MapImpl(String layout, int rows, int cols, TILES[][] map){
        this.map = map;
        this.layout = layout;
        this.layout_rows = rows;
        this.layout_cols = cols;
-    }
-
-    public int getLayoutRows(){
-        return this.layout_rows;
-    }
-
-    public int getLayoutCols(){
-        return this.layout_cols;
-    }
-
-   public void setMap(TILES[][] map){
-        this.map = map;
-   }
-
-    @Override
-    public TILES[][] getMap() {
-        return this.map;
-    }
-
-    @Override
-    public String getLayout(){
-        return this.layout;
+       this.playerPosition = new Position();
+       this.goalsPositions = new ArrayList<Position>();
     }
 
     @Override
     public void printMap(){
         char aux = 0;
-        for(int i = 0; i < getLayoutRows(); i++){
-            for(int j = 0; j < getLayoutCols(); j++){
+        for(int i = 0; i < this.getLayout_rows(); i++){
+            for(int j = 0; j < this.getLayout_cols(); j++){
                 switch(getMap()[i][j]){
                     case OUT_OF_BOUNDS:
                     case FLOOR:
@@ -66,5 +55,15 @@ public class Level implements Map {
             }
             System.out.println();
         }
+    }
+
+    @Override
+    public Boolean isWinner() {
+        return null;
+    }
+
+    @Override
+    public Boolean checkMap() {
+        return null;
     }
 }
