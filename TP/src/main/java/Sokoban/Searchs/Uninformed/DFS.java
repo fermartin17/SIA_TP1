@@ -1,8 +1,8 @@
 package Sokoban.Searchs.Uninformed;
 
 import Sokoban.Interfaces.Neighbors;
+import Sokoban.Interfaces.Stateful;
 import Sokoban.Interfaces.UninformedSearch;
-import Sokoban.Model.State;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,31 +10,36 @@ import java.util.*;
 
 @Getter
 @Setter
-public class DFS <T extends Neighbors<T> & Comparable<T>> {
+public class DFS <T extends Neighbors<T> & Comparable<T> & Stateful<T>> implements UninformedSearch<T>{
 
-    private Deque<State> stack;
+    private Deque<T> stack;
     private Set<Integer> history;
 
     public DFS(){
-        this.stack = new ArrayDeque<State>();
-        this.history = new HashSet<Integer>();
+        this.stack = new LinkedList<>();
+        this.history = new HashSet<>();
     }
 
-    public Deque<State> search(State initial){
+    @Override
+    public List<T> search(T initial){
+        if(initial == null) return null;
         searchDFS(initial);
-        return stack;
+        if(stack.isEmpty()) return null;
+        List<T> ret = new ArrayList<>(stack);
+        stack.clear();
+        return ret;
     }
 
-    private Boolean searchDFS(State state){
-        if(state.getMap().isWinner()){
+    private Boolean searchDFS(T state){
+        if(state.isDone()){
            this.stack.push(state);
            return true;
         }
-        if(!state.getMap().checkMap() || this.history.contains(state.getMap().hashCode()))
+        if(!state.isValid() || this.history.contains(state.hashCode()))
             return false;
 
-        this.history.add(state.getMap().hashCode());
-        for(State neighbors : state.getNeighbors()) {
+        this.history.add(state.hashCode());
+        for(T neighbors : state.getNeighbors()) {
             if (searchDFS(neighbors)) {
                 this.stack.push(state);
                 return true;
@@ -42,4 +47,7 @@ public class DFS <T extends Neighbors<T> & Comparable<T>> {
         }
         return false;
     }
+
+    public String searchName() {return "DFS";}
+
 }

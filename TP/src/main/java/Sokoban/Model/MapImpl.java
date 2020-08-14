@@ -1,16 +1,14 @@
 package Sokoban.Model;
-import Sokoban.Interfaces.Map;
-import Sokoban.MapFactory;
+import Sokoban.Interfaces.GameMap;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
 @Getter
 @Setter
-public class MapImpl implements Map {
+public class MapImpl implements GameMap {
 
     private TILES[][] map;
     private final String layout;
@@ -108,24 +106,24 @@ public class MapImpl implements Map {
             for(int j = 0; j < aux.length; j++){
                 switch(aux[j]){
                     case '~':
-                        map[i][j] = Map.TILES.OUT_OF_BOUNDS;
+                        map[i][j] = GameMap.TILES.OUT_OF_BOUNDS;
                         break;
                     case ' ':
-                        map[i][j] = Map.TILES.FLOOR;
+                        map[i][j] = GameMap.TILES.FLOOR;
                         break;
                     case '#':
-                        map[i][j] = Map.TILES.WALL;
+                        map[i][j] = GameMap.TILES.WALL;
                         break;
                     case '$':
-                        map[i][j] = Map.TILES.BLOCK;
+                        map[i][j] = GameMap.TILES.BLOCK;
                         boxPositions.add(new Position(i, j));
                         break;
                     case '@':
-                        map[i][j] = Map.TILES.PLAYER;
+                        map[i][j] = GameMap.TILES.PLAYER;
                         playerPosition = new Position(i, j);
                         break;
                     case '.':
-                        map[i][j] = Map.TILES.TARGET;
+                        map[i][j] = GameMap.TILES.TARGET;
                         goalsPositions.add(new Position(i, j));
                         break;
                 }

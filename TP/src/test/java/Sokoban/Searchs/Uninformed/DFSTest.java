@@ -1,12 +1,13 @@
 package Sokoban.Searchs.Uninformed;
-import Sokoban.Interfaces.Neighbors;
+
+import Sokoban.Interfaces.UninformedSearch;
 import org.junit.Assert;
 import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class BFSTest{
+public class DFSTest {
 
     @Test
     public void correctOrderTest(){
@@ -18,11 +19,12 @@ public class BFSTest{
         root.neighbors.add(new Node(5, 5));
         List<Node> expected = new ArrayList<>();
         expected.add(new Node(6, 5));
+        expected.add(new Node(7, 5));
         expected.add(new Node(5, 5));
-        BFS<Node> bfs = new BFS<>();
-        List<Node> result = bfs.search(root);
+        DFS<Node> dfs = new DFS<>();
+        List<Node> result = (List<Node>) dfs.search(root);
         Assert.assertNotNull(result);
+        Assert.assertEquals(3, result.size());
         Assert.assertArrayEquals(expected.toArray(), result.toArray());
     }
-
 }

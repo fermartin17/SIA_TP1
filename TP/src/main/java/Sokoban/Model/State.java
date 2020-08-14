@@ -1,22 +1,23 @@
 package Sokoban.Model;
+import Sokoban.Interfaces.GameMap;
 import Sokoban.Interfaces.Neighbors;
+import Sokoban.Interfaces.Stateful;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Getter
 @Setter
-public class State implements Comparable<State>, Neighbors<State> {
+public class State implements Comparable<State>, Neighbors<State>, Stateful<State> {
+
     private MapImpl map;
 
     public State(){}
 
-    public State(MapImpl map){
-        this.map = map;
+    public State(GameMap map){
+        this.map = (MapImpl) map;
     }
 
     @Override
@@ -41,5 +42,19 @@ public class State implements Comparable<State>, Neighbors<State> {
         list.add(new State(auxMap));
 
         return list;
+    }
+
+    public int hashcode(){
+        return this.map.hashCode();
+    }
+
+    @Override
+    public Boolean isDone() {
+        return this.map.isWinner();
+    }
+
+    @Override
+    public Boolean isValid() {
+        return this.map.isValid();
     }
 }

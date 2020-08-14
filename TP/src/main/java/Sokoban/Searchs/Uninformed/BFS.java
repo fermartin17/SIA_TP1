@@ -2,39 +2,40 @@ package Sokoban.Searchs.Uninformed;
 
 import Sokoban.Interfaces.Heuristic;
 import Sokoban.Interfaces.Neighbors;
+import Sokoban.Interfaces.Stateful;
 import Sokoban.Interfaces.UninformedSearch;
 
 import java.util.*;
 
-public class BFS<T extends Neighbors<T> & Comparable<T>> implements UninformedSearch<T> {
+public class BFS<T extends Neighbors<T> & Comparable<T> & Stateful<T>> implements UninformedSearch<T> {
 
+    public BFS(){
+    }
 
-    public BFS(){ }
-
-    public List<T> search(T root, T goal) {
-        if (root == null && goal == null) return null;
+    public List<T> search(T initialState) {
+        if (initialState == null) return null;
         //en vez de guardar los nodos, vamos guardando los paths
         Queue<Stack<T>> queue = new LinkedList<>();
-        TreeSet<T> visited = new TreeSet<>();
+        Set<T> visited = new HashSet<T>();
         List<T> ret = new ArrayList<>();
-        List<T> neighbors = null;
+        List<T> neighbors;
         Stack<T> stack = new Stack<>();
-        stack.push(root);
+        stack.push(initialState);
         queue.add(stack);
         while(!queue.isEmpty()){
             Stack<T> currPath = queue.poll();
             T aux = currPath.peek();
             if(!visited.contains(aux)){
                 visited.add(aux);
-                if(aux.equals(goal)){
+                if(aux.isDone()){
                     ret.addAll(currPath);
                     return ret;
                 }
                 neighbors = aux.getNeighbors();
                 for(T neighbor : neighbors){
-                    if(!visited.contains(neighbor)){
+                    if(!visited.contains(neighbor) && neighbor.isValid()){
                         currPath.push(neighbor);
-                        queue.offer((Stack<T>)currPath.clone());
+                        queue.offer((Stack<T>) currPath.clone());
                         currPath.pop();
                     }
                 }
@@ -42,4 +43,6 @@ public class BFS<T extends Neighbors<T> & Comparable<T>> implements UninformedSe
         }
         return null;
     }
+
+    public String searchName() {return "BFS";}
 }

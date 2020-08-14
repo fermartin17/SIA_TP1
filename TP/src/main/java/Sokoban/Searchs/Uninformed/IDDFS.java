@@ -7,27 +7,29 @@ import lombok.Setter;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.LinkedList;
+import java.util.List;
 
 @Getter
 @Setter
 public class IDDFS<T extends Neighbors<T> & Comparable<T>>  {
 
     private DLS myDLS;
-    private Deque<State> stack;
+    private List<T> stack;
 
     public IDDFS(){
         this.myDLS = new DLS();
-        this.stack = new ArrayDeque<State>();
+        this.stack = new LinkedList<T>();
     }
 
     //In class said that all maps have solution so is not an infinite loop
-    public Deque<State> search(State initial,int jump){
+    public List<T> search(T initial,int jump){
         for(int i = jump;;) {
             stack = myDLS.search(initial, i);
             if(stack.isEmpty())
                 i+=jump;
             else
-                return stack;
+                return  stack;
         }
     }
 }

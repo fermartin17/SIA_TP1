@@ -1,7 +1,6 @@
 package Sokoban;
 
-import Sokoban.Interfaces.Map;
-import Sokoban.Interfaces.Map.TILES;
+import Sokoban.Interfaces.GameMap;
 import Sokoban.Model.MapImpl;
 
 public class MapFactory {
@@ -21,7 +20,7 @@ public class MapFactory {
                             "~~~#### ####~~~\n"
             )};
 
-    public Map loadMap(int index){
+    public GameMap loadMap(int index){
         if(index < 0 || index > levels.length) return null;
         LevelInfo li = levels[index];
         MapImpl ret = new MapImpl(li.getLayout(), li.getLayoutRows(), li.getLayoutCols());

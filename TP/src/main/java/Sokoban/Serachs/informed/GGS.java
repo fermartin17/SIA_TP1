@@ -6,13 +6,10 @@ import Sokoban.Model.State;
 import Sokoban.Model.StatePackage;
 import lombok.NoArgsConstructor;
 
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 @NoArgsConstructor
-public class GGS<T extends Neighbors<T> & Comparable<T>> implements UninformedSearch<T> {
+public class GGS<T extends Neighbors<T> & Comparable<T>> {
 
     StatePackage statePackage;
 
@@ -30,18 +27,12 @@ public class GGS<T extends Neighbors<T> & Comparable<T>> implements UninformedSe
                 return list;
 
             for(State neighbor : aux.getState().getNeighbors()){
-                if(neighbor.getMap().checkMap()) {
+                if(neighbor.getMap().isValid()) {
                     queue.add(new StatePackage(list,neighbor,aux.getCost()));
                 }
             }
         }
         return list;
     }
-
-    @Override
-    public Collection<T> search(T start, T goal) {
-        return null;
-    }
-
 
 }
