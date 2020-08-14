@@ -13,4 +13,14 @@ public class Position {
         this.x = x;
         this.y = y;
     }
+
+    public double euclideanDistance(Position other){
+        double deltaX = Math.abs(other.x - x);
+        double deltaY = Math.abs(other.y - y);
+        return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+    }
+
+    public double manhattanDistance(Position other){
+        return Math.abs(other.x - x) + Math.abs(other.y - y);
+    }
 }

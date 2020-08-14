@@ -23,10 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/EucledianDistance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Interfaces/Heuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Interfaces/Heuristic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/StatePackage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/StatePackage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Serachs/informed/GGS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/Position.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +212,7 @@
       <workItem from="1597366390546" duration="8601000" />
       <workItem from="1597409547011" duration="1769000" />
       <workItem from="1597413102838" duration="1044000" />
-      <workItem from="1597414174426" duration="8235000" />
+      <workItem from="1597414174426" duration="10737000" />
     </task>
     <task id="LOCAL-00001" summary="Hechos métodos isWinner, isValid (viejo checkmap) y método para precalcular posiciones de deadlock">
       <created>1597355743262</created>
@@ -242,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597414441361</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adaptado GGS a HPA para permitir que se convierta en A*">
+      <created>1597428426848</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1597428426848</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +272,8 @@
     <MESSAGE value="Movido el parseo del mapa a las implementaciones de mapa" />
     <MESSAGE value="hecho método precalculatedDeadlocks void" />
     <MESSAGE value="Correcciones varias, clases pasadas a Generics y hechos tests para la interfaz UninformedSearch, BFS y DFS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correcciones varias, clases pasadas a Generics y hechos tests para la interfaz UninformedSearch, BFS y DFS" />
+    <MESSAGE value="Adaptado GGS a HPA para permitir que se convierta en A*" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adaptado GGS a HPA para permitir que se convierta en A*" />
   </component>
   <component name="WindowStateProjectService">
     <state x="201" y="27" width="1024" height="741" key="#Project_Structure" timestamp="1596916893780">
@@ -276,10 +284,10 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="176" y="55" width="1084" height="710" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.27.1296.741@70.27.1296.741" timestamp="1596746618246" />
-    <state x="461" y="51" width="378" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1597377387671">
+    <state x="459" y="33" width="378" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1597428790330">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="461" y="51" width="378" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1597377387671" />
+    <state x="459" y="33" width="378" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1597428790330" />
     <state x="526" y="105" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/70.27.1296.741@70.27.1296.741" timestamp="1597262695986" />
     <state x="450" y="202" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1596746616117">
       <screen x="70" y="27" width="1296" height="741" />
@@ -289,10 +297,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="303" y="-18" width="740" height="758" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1597359409893" />
-    <state x="134" y="-108" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597414440928">
+    <state x="132" y="-126" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597428426753">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="134" y="-108" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597414440928" />
+    <state x="132" y="-126" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597428426753" />
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl" timestamp="1596916891944">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
@@ -321,6 +329,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="155" y="11" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1597366352226" />
+    <state x="276" y="110" width="804" height="521" key="Vcs.Push.Dialog.v2" timestamp="1597428575214">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="276" y="110" width="804" height="521" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1597428575214" />
     <state x="390" y="291" width="646" height="229" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1596917037105">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
