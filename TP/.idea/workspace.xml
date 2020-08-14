@@ -23,40 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Interfaces/Stateful.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/DFSTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/UninformedSearchTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Interfaces/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Interfaces/GameMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Interfaces/UninformedSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Interfaces/UninformedSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/MapFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/MapFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/BFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DLS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DLS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/IDDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/IDDFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Serachs/informed/GGS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Serachs/informed/GGS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/BFSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/BFSTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Interfaces/Heuristic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Interfaces/Heuristic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Interfaces/Map$TILES.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Interfaces/Map.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Interfaces/UninformedSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Interfaces/UninformedSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/MapFactory$LevelInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/MapFactory$LevelInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/MapFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/MapFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/MapImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Model/MapImpl$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/MapImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Model/MapImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/Position.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Model/Position.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/State.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Model/State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/BFS$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/BFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/BFS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/DFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/DFS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/DLS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/DLS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Sokoban/AppTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Sokoban/Searchs/Uninformed/BFSTest$Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Sokoban/Searchs/Uninformed/BFSTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Sokoban/Searchs/Uninformed/BFSTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Interfaces/Heuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Interfaces/Heuristic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/StatePackage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/StatePackage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Serachs/informed/GGS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,6 +212,7 @@
       <workItem from="1597366390546" duration="8601000" />
       <workItem from="1597409547011" duration="1769000" />
       <workItem from="1597413102838" duration="1044000" />
+      <workItem from="1597414174426" duration="8235000" />
     </task>
     <task id="LOCAL-00001" summary="Hechos métodos isWinner, isValid (viejo checkmap) y método para precalcular posiciones de deadlock">
       <created>1597355743262</created>
@@ -264,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597357176039</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Correcciones varias, clases pasadas a Generics y hechos tests para la interfaz UninformedSearch, BFS y DFS">
+      <created>1597414441361</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1597414441361</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +264,8 @@
     <MESSAGE value="Hechos métodos isWinner, isValid (viejo checkmap) y método para precalcular posiciones de deadlock" />
     <MESSAGE value="Movido el parseo del mapa a las implementaciones de mapa" />
     <MESSAGE value="hecho método precalculatedDeadlocks void" />
-    <option name="LAST_COMMIT_MESSAGE" value="hecho método precalculatedDeadlocks void" />
+    <MESSAGE value="Correcciones varias, clases pasadas a Generics y hechos tests para la interfaz UninformedSearch, BFS y DFS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correcciones varias, clases pasadas a Generics y hechos tests para la interfaz UninformedSearch, BFS y DFS" />
   </component>
   <component name="WindowStateProjectService">
     <state x="201" y="27" width="1024" height="741" key="#Project_Structure" timestamp="1596916893780">
@@ -310,33 +289,33 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="303" y="-18" width="740" height="758" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1597359409893" />
-    <state x="136" y="-90" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597357175940">
+    <state x="134" y="-108" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597414440928">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="136" y="-90" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597357175940" />
+    <state x="134" y="-108" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597414440928" />
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl" timestamp="1596916891944">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1312" height="239" key="GridCell.Tab.0.bottom" timestamp="1597412064254">
+    <state width="1312" height="240" key="GridCell.Tab.0.bottom" timestamp="1597414233428">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="239" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597412064254" />
+    <state width="1312" height="240" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597414233428" />
     <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
-    <state width="1312" height="239" key="GridCell.Tab.0.center" timestamp="1597412064253">
+    <state width="1312" height="240" key="GridCell.Tab.0.center" timestamp="1597414233426">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="239" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597412064253" />
+    <state width="1312" height="240" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597414233426" />
     <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1312" height="239" key="GridCell.Tab.0.left" timestamp="1597412064253">
+    <state width="1312" height="240" key="GridCell.Tab.0.left" timestamp="1597414233425">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="239" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597412064253" />
+    <state width="1312" height="240" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597414233425" />
     <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1312" height="239" key="GridCell.Tab.0.right" timestamp="1597412064253">
+    <state width="1312" height="240" key="GridCell.Tab.0.right" timestamp="1597414233427">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="239" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597412064253" />
+    <state width="1312" height="240" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597414233427" />
     <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
     <state x="155" y="11" key="SettingsEditor" timestamp="1597366352226">
       <screen x="0" y="0" width="1366" height="768" />
