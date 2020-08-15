@@ -22,18 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="Hechas algunas heurísticas y test para algunos de sus métodos (falta testear)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/Heuristic1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/HungarianAlgorithm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/MinMatching.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Heuristics/HungarianTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Heuristics/MinMatchingTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Model/PositionTest.java" afterDir="false" />
+    <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/NodeExpander.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Interfaces/Heuristic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Interfaces/Heuristic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/Position.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Model/Position.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/BFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/BFS.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +213,7 @@
       <workItem from="1597409547011" duration="1769000" />
       <workItem from="1597413102838" duration="1044000" />
       <workItem from="1597414174426" duration="22502000" />
-      <workItem from="1597498776475" duration="2970000" />
+      <workItem from="1597498776475" duration="9089000" />
     </task>
     <task id="LOCAL-00001" summary="Hechos métodos isWinner, isValid (viejo checkmap) y método para precalcular posiciones de deadlock">
       <created>1597355743262</created>
@@ -266,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597431065961</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Hechas algunas heurísticas y test para algunos de sus métodos (falta testear)">
+      <created>1597502487878</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1597502487878</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,10 +301,10 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="176" y="55" width="1084" height="710" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.27.1296.741@70.27.1296.741" timestamp="1596746618246" />
-    <state x="453" y="-21" width="378" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1597454154103">
+    <state x="451" y="-39" width="378" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1597505370167">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="453" y="-21" width="378" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1597454154103" />
+    <state x="451" y="-39" width="378" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1597505370167" />
     <state x="526" y="105" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/70.27.1296.741@70.27.1296.741" timestamp="1597262695986" />
     <state x="450" y="202" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1596746616117">
       <screen x="70" y="27" width="1296" height="741" />
@@ -316,33 +314,33 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="301" y="-36" width="740" height="758" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1597501361363" />
-    <state x="128" y="-72" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597502399391">
+    <state x="126" y="-90" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597502487710">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="128" y="-72" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597502399391" />
+    <state x="126" y="-90" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597502487710" />
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl" timestamp="1596916891944">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1312" height="236" key="GridCell.Tab.0.bottom" timestamp="1597502348480">
+    <state width="1258" height="200" key="GridCell.Tab.0.bottom" timestamp="1597502459042">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="236" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597502348480" />
+    <state width="1258" height="200" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597502459042" />
     <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
-    <state width="1312" height="236" key="GridCell.Tab.0.center" timestamp="1597502348479">
+    <state width="1258" height="200" key="GridCell.Tab.0.center" timestamp="1597502459041">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="236" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597502348479" />
+    <state width="1258" height="200" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597502459041" />
     <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1312" height="236" key="GridCell.Tab.0.left" timestamp="1597502348478">
+    <state width="1258" height="200" key="GridCell.Tab.0.left" timestamp="1597502459040">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="236" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597502348478" />
+    <state width="1258" height="200" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597502459040" />
     <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1312" height="236" key="GridCell.Tab.0.right" timestamp="1597502348479">
+    <state width="1258" height="200" key="GridCell.Tab.0.right" timestamp="1597502459041">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="236" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597502348479" />
+    <state width="1258" height="200" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597502459041" />
     <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
     <state x="155" y="11" key="SettingsEditor" timestamp="1597366352226">
       <screen x="0" y="0" width="1366" height="768" />
