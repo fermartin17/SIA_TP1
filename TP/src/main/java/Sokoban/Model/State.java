@@ -27,20 +27,19 @@ public class State implements Comparable<State>, Neighbors<State>, Stateful<Stat
 
     @Override
     public List<State> getNeighbors() {
-        List<State> list = new ArrayList<State>();
-
-        Position pos = this.map.getPlayerPosition();
-        MapImpl auxMap = this.map;
-
-        auxMap.setPlayerPosition(new Position(pos.getX()+1, pos.getY()));
-        list.add(new State(auxMap));
-        auxMap.setPlayerPosition(new Position(pos.getX()-1, pos.getY()));
-        list.add(new State(auxMap));
-        auxMap.setPlayerPosition(new Position(pos.getX(), pos.getY()+1));
-        list.add(new State(auxMap));
-        auxMap.setPlayerPosition(new Position(pos.getX(), pos.getY()-1));
-        list.add(new State(auxMap));
-
+        List<State> list = new ArrayList<>();
+        MapImpl mapUp = new MapImpl(this.map);
+        MapImpl mapRight = new MapImpl(this.map);
+        MapImpl mapDown = new MapImpl(this.map);
+        MapImpl mapLeft = new MapImpl(this.map);
+        mapUp.movePlayer(GameMap.DIRECTION.UP);
+        mapRight.movePlayer(GameMap.DIRECTION.RIGHT);
+        mapDown.movePlayer(GameMap.DIRECTION.DOWN);
+        mapLeft.movePlayer(GameMap.DIRECTION.LEFT);
+        list.add(new State(mapUp));
+        list.add(new State(mapRight));
+        list.add(new State(mapDown));
+        list.add(new State(mapLeft));
         return list;
     }
 

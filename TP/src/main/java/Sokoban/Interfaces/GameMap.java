@@ -3,8 +3,12 @@ package Sokoban.Interfaces;
 public interface GameMap {
 
     enum TILES {
-        OUT_OF_BOUNDS, FLOOR, WALL, BLOCK, PLAYER, TARGET;
-    }
+        OUT_OF_BOUNDS, FLOOR, WALL, BLOCK, PLAYER, TARGET
+    };
+
+    enum DIRECTION {
+        UP, RIGHT, DOWN, LEFT
+    };
 
     TILES[][] getMap();
 

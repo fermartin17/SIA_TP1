@@ -10,7 +10,7 @@ import java.util.List;
 @Setter
 public class MapImpl implements GameMap {
 
-    private TILES[][] map;
+    private TILES[][] board;
     private final String layout;
     private final int layout_rows;
     private final int layout_cols;
@@ -21,13 +21,94 @@ public class MapImpl implements GameMap {
 
 
     public MapImpl(String layout, int rows, int cols){
-       this.map = new TILES[rows][cols];
+       this.board = new TILES[rows][cols];
        this.layout = layout;
        this.layout_rows = rows;
        this.layout_cols = cols;
        this.playerPosition = new Position();
        this.boxPositions = new ArrayList<>();
        this.goalsPositions = new ArrayList<>();
+    }
+
+    public MapImpl(MapImpl map){
+        this.board = map.board.clone();
+        this.layout = map.layout;
+        this.layout_rows = map.layout_rows;
+        this.layout_cols = map.layout_cols;
+        this.playerPosition = new Position(map.playerPosition.getX(), map.playerPosition.getY());
+        this.boxPositions = new ArrayList<>(map.boxPositions);
+        this.goalsPositions = new ArrayList<>(map.goalsPositions);
+        this.deadlockPositions = new ArrayList<>(map.deadlockPositions);
+    }
+
+    public Position getTargetPosition(Position p, DIRECTION dir){
+        Position ret = new Position(p.getX(), p.getY());
+        switch (dir){
+            case UP:
+                p.setY(p.getY() - 1);
+                break;
+            case RIGHT:
+                p.setX(p.getX() + 1);
+                break;
+            case DOWN:
+                p.setY(p.getY() + 1);
+                break;
+            case LEFT:
+                p.setX(p.getX() - 1);
+                break;
+        }
+        return ret;
+    }
+
+    public boolean canMoveDirection(boolean player, Position targetPosition, DIRECTION dir){
+        TILES targetTile = board[targetPosition.getX()][targetPosition.getY()];
+        if(targetTile == TILES.WALL || targetTile == TILES.OUT_OF_BOUNDS) return false;
+        if(player){
+            if(targetTile == TILES.BLOCK) return canMoveDirection(false, getTargetPosition(targetPosition, dir), dir);
+        }else{ //if its a block
+            return targetTile != TILES.BLOCK;
+        }
+        return true;
+    }
+
+    public void moveObjectOnMap(Position start, Position finish){
+        if(start == null || finish == null) return;
+        board[finish.getX()][finish.getY()] = board[start.getX()][start.getX()];
+        if(goalsPositions.stream().anyMatch(g -> g.equals(start))){
+            board[start.getX()][start.getY()] = TILES.TARGET;
+        }else{
+            board[start.getX()][start.getY()] = TILES.FLOOR;
+        }
+    }
+
+    //función para mover al jugador, asumimos que se puede mover en la dirección que se indica
+    public void movePlayer(DIRECTION dir){
+        Position newPosition = getTargetPosition(getPlayerPosition(), dir);
+        Position collidedBox = null;
+        int collisionIndex;
+        //checkear si nos podemos mover en esa dirección (si hay una caja, toma en cuenta si se puede mover)
+        if(!canMoveDirection(true, newPosition, dir)) return;
+        //ver si está en la misma posición que una caja
+        for(collisionIndex = 0; collisionIndex < boxPositions.size(); collisionIndex++){
+            if(boxPositions.get(collisionIndex).equals(newPosition)){
+                collidedBox = boxPositions.get(collisionIndex);
+                break;
+            }
+        }
+        //si es así, mover esa caja (ya sabemos que es posible)
+        if(collidedBox != null){
+            Position boxPushedPosition = getTargetPosition(newPosition, dir);
+            moveObjectOnMap(collidedBox, boxPushedPosition);
+            boxPositions.set(collisionIndex, boxPushedPosition);
+        }
+        //mover al jugador
+        moveObjectOnMap(playerPosition, newPosition);
+        playerPosition = newPosition;
+    }
+
+    @Override
+    public TILES[][] getMap() {
+        return board;
     }
 
     @Override
@@ -41,7 +122,7 @@ public class MapImpl implements GameMap {
                         aux = ' ';
                         break;
                     case WALL:
-                            aux = '#';
+                        aux = '#';
                     break;
                     case BLOCK:
                         aux = '$';
@@ -78,15 +159,15 @@ public class MapImpl implements GameMap {
         for(int i = 0; i < layout_rows; i++){
             for(int j = 0; j < layout_cols; j++){
                 aux = 0;
-                if(map[i][j] == TILES.FLOOR){
+                if(board[i][j] == TILES.FLOOR){
                     //arriba
-                    aux += (map[i+1][j] == TILES.WALL)? 1: 0;
+                    aux += (board[i+1][j] == TILES.WALL)? 1: 0;
                     //derecha
-                    aux += (map[i][j+1] == TILES.WALL)? 1: 0;
+                    aux += (board[i][j+1] == TILES.WALL)? 1: 0;
                     //abajo
-                    aux += (map[i-1][j] == TILES.WALL)? 1: 0;
+                    aux += (board[i-1][j] == TILES.WALL)? 1: 0;
                     //izquierda
-                    aux += (map[i][j-1] == TILES.WALL)? 1: 0;
+                    aux += (board[i][j-1] == TILES.WALL)? 1: 0;
                     //si la posicion tiene +2 paredes alrededor, es un deadlock
                     if(aux >= 2){
                         deadlockPositions.add(new Position(i,j));
@@ -96,9 +177,8 @@ public class MapImpl implements GameMap {
         }
     }
 
-
     public void parse_map(){
-        this.map = new TILES[layout_rows][layout_cols];
+        this.board = new TILES[layout_rows][layout_cols];
         String[] lines = layout.split("\n");
         char[] aux;
         for(int i = 0; i < lines.length; i++){
@@ -106,24 +186,24 @@ public class MapImpl implements GameMap {
             for(int j = 0; j < aux.length; j++){
                 switch(aux[j]){
                     case '~':
-                        map[i][j] = GameMap.TILES.OUT_OF_BOUNDS;
+                        board[i][j] = GameMap.TILES.OUT_OF_BOUNDS;
                         break;
                     case ' ':
-                        map[i][j] = GameMap.TILES.FLOOR;
+                        board[i][j] = GameMap.TILES.FLOOR;
                         break;
                     case '#':
-                        map[i][j] = GameMap.TILES.WALL;
+                        board[i][j] = GameMap.TILES.WALL;
                         break;
                     case '$':
-                        map[i][j] = GameMap.TILES.BLOCK;
+                        board[i][j] = GameMap.TILES.BLOCK;
                         boxPositions.add(new Position(i, j));
                         break;
                     case '@':
-                        map[i][j] = GameMap.TILES.PLAYER;
+                        board[i][j] = GameMap.TILES.PLAYER;
                         playerPosition = new Position(i, j);
                         break;
                     case '.':
-                        map[i][j] = GameMap.TILES.TARGET;
+                        board[i][j] = GameMap.TILES.TARGET;
                         goalsPositions.add(new Position(i, j));
                         break;
                 }

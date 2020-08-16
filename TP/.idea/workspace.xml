@@ -22,9 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/NodeExpander.java" afterDir="false" />
+    <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="Hecho método movePlayer y adaptado el getNeighbors en state">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Interfaces/GameMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Interfaces/GameMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/State.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +76,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="JUnit.MinMatchingTest">
+  <component name="RunManager" selected="JUnit.UninformedSearchTests">
     <configuration name="Play" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Sokoban.App" />
       <module name="TP" />
@@ -93,6 +97,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HungarianTest.hungarianMethodTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Heuristics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Heuristics" />
+      <option name="MAIN_CLASS_NAME" value="Heuristics.HungarianTest" />
+      <option name="METHOD_NAME" value="hungarianMethodTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MinMatchingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP" />
       <extension name="coverage">
@@ -104,37 +124,6 @@
       <option name="PACKAGE_NAME" value="Heuristics" />
       <option name="MAIN_CLASS_NAME" value="Heuristics.MinMatchingTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PositionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Model" />
-      <option name="MAIN_CLASS_NAME" value="Model.PositionTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PositionTest.euclideanDistanceTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Model" />
-      <option name="MAIN_CLASS_NAME" value="Model.PositionTest" />
-      <option name="METHOD_NAME" value="euclideanDistanceTest1" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -171,21 +160,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UninformedSearchTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Sokoban.Searchs.Uninformed.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Sokoban.Searchs.Uninformed" />
+      <option name="MAIN_CLASS_NAME" value="Sokoban.Searchs.Uninformed.UninformedSearchTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Play" />
-      <item itemvalue="JUnit.PositionTest.euclideanDistanceTest1" />
-      <item itemvalue="JUnit.PositionTest" />
       <item itemvalue="JUnit.PositionTest.euclideanDistanceTest2" />
       <item itemvalue="JUnit.PositionTest.manhattanDistanceTest" />
       <item itemvalue="JUnit.MinMatchingTest" />
+      <item itemvalue="JUnit.HungarianTest.hungarianMethodTest" />
+      <item itemvalue="JUnit.UninformedSearchTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UninformedSearchTests" />
+        <item itemvalue="JUnit.HungarianTest.hungarianMethodTest" />
         <item itemvalue="JUnit.MinMatchingTest" />
         <item itemvalue="JUnit.PositionTest.manhattanDistanceTest" />
         <item itemvalue="JUnit.PositionTest.euclideanDistanceTest2" />
-        <item itemvalue="JUnit.PositionTest" />
-        <item itemvalue="JUnit.PositionTest.euclideanDistanceTest1" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +217,7 @@
       <workItem from="1597409547011" duration="1769000" />
       <workItem from="1597413102838" duration="1044000" />
       <workItem from="1597414174426" duration="22502000" />
-      <workItem from="1597498776475" duration="9089000" />
+      <workItem from="1597498776475" duration="30652000" />
     </task>
     <task id="LOCAL-00001" summary="Hechos métodos isWinner, isValid (viejo checkmap) y método para precalcular posiciones de deadlock">
       <created>1597355743262</created>
@@ -264,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597502487878</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Heurística NodeExpander">
+      <created>1597509138878</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1597509138878</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +301,9 @@
     <MESSAGE value="Adaptado GGS a HPA para permitir que se convierta en A*" />
     <MESSAGE value="Hechas heurísticas distancia euclidiana y distancia manhattan" />
     <MESSAGE value="Hechas algunas heurísticas y test para algunos de sus métodos (falta testear)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hechas algunas heurísticas y test para algunos de sus métodos (falta testear)" />
+    <MESSAGE value="Heurística NodeExpander" />
+    <MESSAGE value="Hecho método movePlayer y adaptado el getNeighbors en state" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hecho método movePlayer y adaptado el getNeighbors en state" />
   </component>
   <component name="WindowStateProjectService">
     <state x="201" y="27" width="1024" height="741" key="#Project_Structure" timestamp="1596916893780">
@@ -301,10 +314,10 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="176" y="55" width="1084" height="710" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.27.1296.741@70.27.1296.741" timestamp="1596746618246" />
-    <state x="451" y="-39" width="378" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1597505370167">
+    <state x="445" y="27" width="378" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1597538843949">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="451" y="-39" width="378" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1597505370167" />
+    <state x="445" y="27" width="378" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1597538843949" />
     <state x="526" y="105" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/70.27.1296.741@70.27.1296.741" timestamp="1597262695986" />
     <state x="450" y="202" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1596746616117">
       <screen x="70" y="27" width="1296" height="741" />
@@ -314,33 +327,33 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="301" y="-36" width="740" height="758" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1597501361363" />
-    <state x="126" y="-90" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597502487710">
+    <state x="122" y="-36" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597546954519">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="126" y="-90" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597502487710" />
+    <state x="122" y="-36" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597546954519" />
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl" timestamp="1596916891944">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1258" height="200" key="GridCell.Tab.0.bottom" timestamp="1597502459042">
+    <state width="1258" height="198" key="GridCell.Tab.0.bottom" timestamp="1597522624237">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1258" height="200" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597502459042" />
+    <state width="1258" height="198" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597522624237" />
     <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
-    <state width="1258" height="200" key="GridCell.Tab.0.center" timestamp="1597502459041">
+    <state width="1258" height="198" key="GridCell.Tab.0.center" timestamp="1597522624236">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1258" height="200" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597502459041" />
+    <state width="1258" height="198" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597522624236" />
     <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1258" height="200" key="GridCell.Tab.0.left" timestamp="1597502459040">
+    <state width="1258" height="198" key="GridCell.Tab.0.left" timestamp="1597522624236">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1258" height="200" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597502459040" />
+    <state width="1258" height="198" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597522624236" />
     <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1258" height="200" key="GridCell.Tab.0.right" timestamp="1597502459041">
+    <state width="1258" height="198" key="GridCell.Tab.0.right" timestamp="1597522624237">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1258" height="200" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597502459041" />
+    <state width="1258" height="198" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597522624237" />
     <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
     <state x="155" y="11" key="SettingsEditor" timestamp="1597366352226">
       <screen x="0" y="0" width="1366" height="768" />
@@ -362,6 +375,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="438" y="268" width="479" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1597355677818" />
+    <state x="345" y="167" key="run.anything.popup" timestamp="1597523218203">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="345" y="167" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1597523218203" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1597455416222">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

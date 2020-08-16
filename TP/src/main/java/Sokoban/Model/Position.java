@@ -23,4 +23,11 @@ public class Position {
     public double manhattanDistance(Position other){
         return Math.abs(other.x - x) + Math.abs(other.y - y);
     }
+
+    public boolean equals(Object o){
+        if(o == null || o.getClass() != this.getClass()) return false;
+        if(o == this) return true;
+        Position p = (Position) o;
+        return this.x == p.x && this.y == p.y;
+    }
 }

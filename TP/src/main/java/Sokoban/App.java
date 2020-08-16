@@ -1,5 +1,7 @@
 package Sokoban;
 
+import Sokoban.Interfaces.Heuristic;
+
 import java.time.Instant;
 import java.time.Period;
 import java.util.concurrent.TimeUnit;
@@ -15,7 +17,6 @@ public class App
         long startTime = System.currentTimeMillis();
 
         TimeUnit.SECONDS.sleep(5);
-
         long endTime = System.currentTimeMillis();
 
         long elapsedTime = endTime - startTime;
