@@ -22,22 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="Hecho método movePlayer y adaptado el getNeighbors en state">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Model/MapImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/GameTest.java" afterDir="false" />
+    <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Model/StateTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/MapFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/MapFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/BFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/MapFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/MapFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/MapImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Model/MapImpl$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DFS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/MapImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Model/MapImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/Position.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Model/Position.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/State.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Model/State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/BFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/BFS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/DFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/DFS.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,53 +115,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MapImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Model" />
-      <option name="MAIN_CLASS_NAME" value="Model.MapImplTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MapImplTest.isValidTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Model" />
-      <option name="MAIN_CLASS_NAME" value="Model.MapImplTest" />
-      <option name="METHOD_NAME" value="isValidTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MapImplTest.isValidTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Model" />
-      <option name="MAIN_CLASS_NAME" value="Model.MapImplTest" />
-      <option name="METHOD_NAME" value="isValidTest2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MapImplTest.movePlayerDontChangeMapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP" />
       <extension name="coverage">
@@ -183,21 +131,68 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Model" />
+      <option name="MAIN_CLASS_NAME" value="Model.StateTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StateTest.hashTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Model" />
+      <option name="MAIN_CLASS_NAME" value="Model.StateTest" />
+      <option name="METHOD_NAME" value="hashTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StateTest.neighborHashTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Model" />
+      <option name="MAIN_CLASS_NAME" value="Model.StateTest" />
+      <option name="METHOD_NAME" value="neighborHashTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Play" />
-      <item itemvalue="JUnit.MapImplTest" />
-      <item itemvalue="JUnit.MapImplTest.isValidTest" />
-      <item itemvalue="JUnit.MapImplTest.isValidTest2" />
       <item itemvalue="JUnit.GameTest.solveTest" />
       <item itemvalue="JUnit.MapImplTest.movePlayerDontChangeMapTest" />
+      <item itemvalue="JUnit.StateTest.hashTest" />
+      <item itemvalue="JUnit.StateTest" />
+      <item itemvalue="JUnit.StateTest.neighborHashTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.GameTest.solveTest" />
+        <item itemvalue="JUnit.StateTest" />
+        <item itemvalue="JUnit.StateTest.neighborHashTest" />
+        <item itemvalue="JUnit.StateTest.hashTest" />
         <item itemvalue="JUnit.MapImplTest.movePlayerDontChangeMapTest" />
-        <item itemvalue="JUnit.MapImplTest" />
-        <item itemvalue="JUnit.MapImplTest.isValidTest2" />
-        <item itemvalue="JUnit.MapImplTest.isValidTest" />
       </list>
     </recent_temporary>
   </component>
@@ -283,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597509138878</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Solucionado problema para mover player, funciona BFS con método simple pero DFS entra en loop, revisar">
+      <created>1597606025511</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1597606025511</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +313,8 @@
     <MESSAGE value="Hechas algunas heurísticas y test para algunos de sus métodos (falta testear)" />
     <MESSAGE value="Heurística NodeExpander" />
     <MESSAGE value="Hecho método movePlayer y adaptado el getNeighbors en state" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hecho método movePlayer y adaptado el getNeighbors en state" />
+    <MESSAGE value="Solucionado problema para mover player, funciona BFS con método simple pero DFS entra en loop, revisar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solucionado problema para mover player, funciona BFS con método simple pero DFS entra en loop, revisar" />
   </component>
   <component name="WindowStateProjectService">
     <state x="201" y="27" width="1024" height="741" key="#Project_Structure" timestamp="1596916893780">
@@ -335,50 +338,50 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="301" y="-36" width="740" height="758" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1597501361363" />
-    <state x="122" y="-36" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597546954519">
+    <state x="116" y="-90" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597606025306">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="122" y="-36" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597546954519" />
+    <state x="116" y="-90" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597606025306" />
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl" timestamp="1596916891944">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1312" height="201" key="GridCell.Tab.0.bottom" timestamp="1597605629089">
+    <state width="1312" height="247" key="GridCell.Tab.0.bottom" timestamp="1597611725756">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="201" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597605629089" />
+    <state width="1312" height="247" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597611725756" />
     <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
-    <state width="1312" height="201" key="GridCell.Tab.0.center" timestamp="1597605629087">
+    <state width="1312" height="247" key="GridCell.Tab.0.center" timestamp="1597611725756">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="201" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597605629087" />
+    <state width="1312" height="247" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597611725756" />
     <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1312" height="201" key="GridCell.Tab.0.left" timestamp="1597605629087">
+    <state width="1312" height="247" key="GridCell.Tab.0.left" timestamp="1597611725755">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="201" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597605629087" />
+    <state width="1312" height="247" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597611725755" />
     <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1312" height="201" key="GridCell.Tab.0.right" timestamp="1597605629088">
+    <state width="1312" height="247" key="GridCell.Tab.0.right" timestamp="1597611725756">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="201" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597605629088" />
+    <state width="1312" height="247" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597611725756" />
     <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
-    <state width="1312" height="272" key="GridCell.Tab.1.bottom" timestamp="1597604191943">
+    <state width="1312" height="276" key="GridCell.Tab.1.bottom" timestamp="1597611222550">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="272" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597604191943" />
-    <state width="1312" height="272" key="GridCell.Tab.1.center" timestamp="1597604191943">
+    <state width="1312" height="276" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597611222550" />
+    <state width="1312" height="276" key="GridCell.Tab.1.center" timestamp="1597611222549">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="272" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1597604191943" />
-    <state width="1312" height="272" key="GridCell.Tab.1.left" timestamp="1597604191942">
+    <state width="1312" height="276" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1597611222549" />
+    <state width="1312" height="276" key="GridCell.Tab.1.left" timestamp="1597611222549">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="272" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1597604191942" />
-    <state width="1312" height="272" key="GridCell.Tab.1.right" timestamp="1597604191943">
+    <state width="1312" height="276" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1597611222549" />
+    <state width="1312" height="276" key="GridCell.Tab.1.right" timestamp="1597611222550">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="272" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1597604191943" />
+    <state width="1312" height="276" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1597611222550" />
     <state x="155" y="11" key="SettingsEditor" timestamp="1597366352226">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -407,18 +410,23 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="345" y="167" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1597523218203" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1597455416222">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1597610247798">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1597455416222" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1597610247798" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Sokoban/Model/State.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="12" />
+          <url>file://$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/BFS.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DFS.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

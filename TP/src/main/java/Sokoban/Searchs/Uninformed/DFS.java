@@ -13,7 +13,7 @@ import java.util.*;
 public class DFS <T extends Neighbors<T> & Comparable<T> & Stateful<T>> implements UninformedSearch<T>{
 
     private Deque<T> stack;
-    private Set<Integer> history;
+    private Set<T> history;
 
     public DFS(){
         this.stack = new LinkedList<>();
@@ -35,10 +35,10 @@ public class DFS <T extends Neighbors<T> & Comparable<T> & Stateful<T>> implemen
            this.stack.push(state);
            return true;
         }
-        if(!state.isValid() || this.history.contains(state.hashCode()))
+        if(!state.isValid() || this.history.contains(state))
             return false;
 
-        this.history.add(state.hashCode());
+        this.history.add(state);
         for(T neighbors : state.getNeighbors()) {
             if (searchDFS(neighbors)) {
                 this.stack.push(state);

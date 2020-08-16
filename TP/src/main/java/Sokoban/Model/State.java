@@ -46,10 +46,6 @@ public class State implements Comparable<State>, Neighbors<State>, Stateful<Stat
         return list;
     }
 
-    public int hashcode(){
-        return this.map.hashCode();
-    }
-
     @Override
     public Boolean isDone() {
         return this.map.isWinner();
@@ -59,4 +55,17 @@ public class State implements Comparable<State>, Neighbors<State>, Stateful<Stat
     public Boolean isValid() {
         return this.map.isValid();
     }
+
+    @Override
+    public int hashCode(){
+        return this.map.hashCode();
+    }
+
+    public boolean equals(Object o){
+        if(o == null || o.getClass() != this.getClass()) return false;
+        if(o == this) return true;
+        State s = (State) o;
+        return map.equals(s.map);
+    }
+
 }

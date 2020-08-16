@@ -227,4 +227,21 @@ public class MapImpl implements GameMap {
             }
         }
     }
+
+    @Override
+    public int hashCode(){
+        int player = playerPosition.hashCode();
+        int aux = 0;
+        for(Position b : boxPositions){
+            aux ^= b.hashCode();
+        }
+        return player ^ aux;
+    }
+
+    public boolean equals(Object o){
+        if(o == null || o.getClass() != this.getClass()) return false;
+        if(o == this) return true;
+        MapImpl m = (MapImpl) o;
+        return playerPosition.equals(((MapImpl) o).playerPosition) && boxPositions.equals(((MapImpl) o).boxPositions);
+    }
 }
