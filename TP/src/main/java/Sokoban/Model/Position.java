@@ -14,6 +14,11 @@ public class Position {
         this.y = y;
     }
 
+    public Position(Position p){
+        this.x = p.x;
+        this.y = p.y;
+    }
+
     public double euclideanDistance(Position other){
         double deltaX = Math.abs(other.x - x);
         double deltaY = Math.abs(other.y - y);

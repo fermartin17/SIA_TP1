@@ -1,9 +1,7 @@
 package Sokoban.Searchs.Uninformed;
 
-import Sokoban.Interfaces.Heuristic;
-import Sokoban.Interfaces.Neighbors;
-import Sokoban.Interfaces.Stateful;
-import Sokoban.Interfaces.UninformedSearch;
+import Sokoban.Interfaces.*;
+import Sokoban.Model.MapImpl;
 
 import java.util.*;
 
@@ -16,7 +14,7 @@ public class BFS<T extends Neighbors<T> & Comparable<T> & Stateful<T>> implement
         if (initialState == null) return null;
         //en vez de guardar los nodos, vamos guardando los paths
         Queue<Stack<T>> queue = new LinkedList<>();
-        Set<T> visited = new HashSet<T>();
+        Set<T> visited = new HashSet<>();
         List<T> ret = new ArrayList<>();
         List<T> neighbors;
         Stack<T> stack = new Stack<>();

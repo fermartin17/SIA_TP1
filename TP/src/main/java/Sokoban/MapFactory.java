@@ -7,7 +7,7 @@ public class MapFactory {
 
     //se podría leer de un archivo
     private static final LevelInfo[] levels = new LevelInfo[]{
-            new LevelInfo(9, 16,
+            new LevelInfo(10, 15,
                     "~~~~~~###~~~~~~\n" +
                             "~~~~~~#.#~~~~~~\n" +
                             "~~#####.#####~~\n" +
@@ -17,8 +17,17 @@ public class MapFactory {
                             "# ##  # #  ## #\n" +
                             "#     $@$     #\n" +
                             "####  ###  ####\n" +
-                            "~~~#### ####~~~\n"
-            )};
+                            "~~~####~####~~~\n"
+            ),
+            new LevelInfo(6, 6,
+                    "######\n" +
+                            "# .  #\n" +
+                            "#    #\n" +
+                            "# $  #\n" +
+                            "#   @#\n" +
+                            "######\n"
+                    )
+    };
 
     public GameMap loadMap(int index){
         if(index < 0 || index > levels.length) return null;

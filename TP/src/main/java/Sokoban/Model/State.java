@@ -13,11 +13,13 @@ import java.util.List;
 public class State implements Comparable<State>, Neighbors<State>, Stateful<State> {
 
     private MapImpl map;
+    private GameMap.DIRECTION givenDirection;
 
     public State(){}
 
-    public State(GameMap map){
+    public State(GameMap map, GameMap.DIRECTION givenDirection){
         this.map = (MapImpl) map;
+        this.givenDirection = givenDirection;
     }
 
     @Override
@@ -27,19 +29,20 @@ public class State implements Comparable<State>, Neighbors<State>, Stateful<Stat
 
     @Override
     public List<State> getNeighbors() {
-        List<State> list = new ArrayList<>();
+        List<State> list = new ArrayList<>(4);
+        this.map.printMap();
         MapImpl mapUp = new MapImpl(this.map);
         MapImpl mapRight = new MapImpl(this.map);
         MapImpl mapDown = new MapImpl(this.map);
         MapImpl mapLeft = new MapImpl(this.map);
-        mapUp.movePlayer(GameMap.DIRECTION.UP);
-        mapRight.movePlayer(GameMap.DIRECTION.RIGHT);
-        mapDown.movePlayer(GameMap.DIRECTION.DOWN);
-        mapLeft.movePlayer(GameMap.DIRECTION.LEFT);
-        list.add(new State(mapUp));
-        list.add(new State(mapRight));
-        list.add(new State(mapDown));
-        list.add(new State(mapLeft));
+        if(mapUp.movePlayer(GameMap.DIRECTION.UP)) list.add(new State(mapUp, GameMap.DIRECTION.UP));
+        if(mapRight.movePlayer(GameMap.DIRECTION.RIGHT)) list.add(new State(mapRight, GameMap.DIRECTION.RIGHT));
+        if(mapDown.movePlayer(GameMap.DIRECTION.DOWN)) list.add(new State(mapDown, GameMap.DIRECTION.DOWN));
+        if(mapLeft.movePlayer(GameMap.DIRECTION.LEFT)) list.add(new State(mapLeft, GameMap.DIRECTION.LEFT));
+        //mapUp.printMap();
+        //mapRight.printMap();
+        //mapDown.printMap();
+        //mapLeft.printMap();
         return list;
     }
 
