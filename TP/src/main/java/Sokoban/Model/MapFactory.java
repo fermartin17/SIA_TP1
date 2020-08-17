@@ -1,4 +1,4 @@
-package Sokoban;
+package Sokoban.Model;
 
 import Sokoban.Interfaces.GameMap;
 import Sokoban.Model.MapImpl;
@@ -7,7 +7,31 @@ public class MapFactory {
 
     //se podría leer de un archivo
     private static final LevelInfo[] levels = new LevelInfo[]{
-            new LevelInfo(10, 15,
+            new LevelInfo("easy-test", 6, 6,
+                    "######\n" +
+                            "# .  #\n" +
+                            "#    #\n" +
+                            "# $  #\n" +
+                            "#   @#\n" +
+                            "######\n"
+            ),
+            new LevelInfo("demo-level1", 6,8,
+                    "########\n" +
+                            "#      #\n" +
+                            "#@ $   #\n" +
+                            "#   $  #\n" +
+                            "# . .  #\n" +
+                            "########\n"
+            ),
+            new LevelInfo("demo-level2", 6, 8,
+                            "########" +
+                                    "#     .#" +
+                                    "#@ $   #" +
+                                    "#   $  #" +
+                                    "# . *  #" +
+                                    "########"
+            ),
+            new LevelInfo("original-tp",10, 15,
                     "~~~~~~###~~~~~~\n" +
                             "~~~~~~#.#~~~~~~\n" +
                             "~~#####.#####~~\n" +
@@ -18,15 +42,7 @@ public class MapFactory {
                             "#     $@$     #\n" +
                             "####  ###  ####\n" +
                             "~~~####~####~~~\n"
-            ),
-            new LevelInfo(6, 6,
-                    "######\n" +
-                            "# .  #\n" +
-                            "#    #\n" +
-                            "# $  #\n" +
-                            "#   @#\n" +
-                            "######\n"
-                    )
+            )
     };
 
     public GameMap loadMap(int index){
@@ -39,10 +55,12 @@ public class MapFactory {
     }
 
     private static class LevelInfo{
+        String levelName;
         String layout;
         int layout_rows;
         int layout_cols;
-        public LevelInfo(int layout_rows, int layout_cols, String layout){
+        public LevelInfo(String levelName, int layout_rows, int layout_cols, String layout){
+            this.levelName = levelName;
             this.layout = layout;
             this.layout_rows = layout_rows;
             this.layout_cols = layout_cols;

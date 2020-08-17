@@ -6,7 +6,7 @@ import Sokoban.Model.State;
 
 import java.util.List;
 
-public class Heuristic1 implements Heuristic<State> {
+public class PlayerBoxGoalDistance implements Heuristic<State> {
 
     //Ha = distManhattan(jugador, caja*) + distManhattan(caja, objetivo*)
     //caja* = caja más cercana al jugador

@@ -22,30 +22,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="métodos de búsqueda con Heurísticas funcionan en ambos mapas, removida heurística NodeExpander">
+    <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Benchmark.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/EuclideanDistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/EuclideanDistance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/Heuristic1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/Heuristic1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/ManhattanDistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/ManhattanDistance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/MinMatching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/MinMatching.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/NodeExpander.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Interfaces/UninformedSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Interfaces/SearchMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/StatePackage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/StatePackage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/BFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DLS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DLS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/IDDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/IDDFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Heuristics/HungarianTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Heuristics/HungarianTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/DFSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/DFSTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/Heuristic1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/PlayerBoxGoalDistance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/MapFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Model/MapImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Model/MapImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Model/StateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Model/StateTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/GameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/UninformedSearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/UninformedSearchTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Interfaces/UninformedSearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/State.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Model/State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/BFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/BFS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/DFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/DFS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/DLS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/DLS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/IDDFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/IDDFS.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +78,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="JUnit.GameTest.testInformedMethods">
+  <component name="RunManager" selected="Application.Play">
     <configuration name="Play" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Sokoban.App" />
       <module name="TP" />
@@ -236,7 +221,7 @@
       <workItem from="1597414174426" duration="22502000" />
       <workItem from="1597498776475" duration="30652000" />
       <workItem from="1597625594746" duration="8620000" />
-      <workItem from="1597671701570" duration="5398000" />
+      <workItem from="1597671701570" duration="11042000" />
     </task>
     <task id="LOCAL-00001" summary="Hechos métodos isWinner, isValid (viejo checkmap) y método para precalcular posiciones de deadlock">
       <created>1597355743262</created>
@@ -315,7 +300,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597635137802</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="métodos de búsqueda con Heurísticas funcionan en ambos mapas, removida heurística NodeExpander">
+      <created>1597677915416</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1597677915416</updated>
+    </task>
+    <task id="LOCAL-00013" summary="arreglado del toString de GGS">
+      <created>1597678145889</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1597678145889</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +346,8 @@
     <MESSAGE value="Arreglado el tema de hashcode en DFS" />
     <MESSAGE value="Funciona IDDFS, con esto funcionan todos los métodos desinformados" />
     <MESSAGE value="métodos de búsqueda con Heurísticas funcionan en ambos mapas, removida heurística NodeExpander" />
-    <option name="LAST_COMMIT_MESSAGE" value="métodos de búsqueda con Heurísticas funcionan en ambos mapas, removida heurística NodeExpander" />
+    <MESSAGE value="arreglado del toString de GGS" />
+    <option name="LAST_COMMIT_MESSAGE" value="arreglado del toString de GGS" />
   </component>
   <component name="WindowStateProjectService">
     <state x="201" y="27" width="1024" height="741" key="#Project_Structure" timestamp="1596916893780">
@@ -367,37 +367,41 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="450" y="202" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog/70.27.1296.741@70.27.1296.741" timestamp="1596746616117" />
+    <state x="408" y="166" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1597692572470">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="408" y="166" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1366.768@0.0.1366.768" timestamp="1597692572470" />
     <state x="297" y="-72" width="740" height="758" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597674675964">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="297" y="-72" width="740" height="758" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1597674675964" />
-    <state x="108" y="-102" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597677647538">
+    <state x="102" y="-156" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597678145812">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="108" y="-102" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597677647538" />
+    <state x="102" y="-156" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597678145812" />
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl" timestamp="1596916891944">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1258" height="240" key="GridCell.Tab.0.bottom" timestamp="1597677670500">
+    <state width="1312" height="277" key="GridCell.Tab.0.bottom" timestamp="1597693194885">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1258" height="240" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597677670500" />
+    <state width="1312" height="277" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597693194885" />
     <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
-    <state width="1258" height="240" key="GridCell.Tab.0.center" timestamp="1597677670498">
+    <state width="1312" height="277" key="GridCell.Tab.0.center" timestamp="1597693194884">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1258" height="240" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597677670498" />
+    <state width="1312" height="277" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597693194884" />
     <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1258" height="240" key="GridCell.Tab.0.left" timestamp="1597677670498">
+    <state width="1312" height="277" key="GridCell.Tab.0.left" timestamp="1597693194883">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1258" height="240" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597677670498" />
+    <state width="1312" height="277" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597693194883" />
     <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1258" height="240" key="GridCell.Tab.0.right" timestamp="1597677670499">
+    <state width="1312" height="277" key="GridCell.Tab.0.right" timestamp="1597693194885">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1258" height="240" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597677670499" />
+    <state width="1312" height="277" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597693194885" />
     <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
     <state width="1312" height="244" key="GridCell.Tab.1.bottom" timestamp="1597671906333">
       <screen x="0" y="0" width="1366" height="768" />
@@ -431,10 +435,10 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="390" y="291" width="646" height="229" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/70.27.1296.741@70.27.1296.741" timestamp="1596917037105" />
-    <state x="285" y="-36" width="770" height="669" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597460827092">
+    <state x="281" y="-72" width="770" height="669" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597692241670">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="285" y="-36" width="770" height="669" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.768@0.0.1366.768" timestamp="1597460827092" />
+    <state x="281" y="-72" width="770" height="669" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.768@0.0.1366.768" timestamp="1597692241670" />
     <state x="438" y="268" width="479" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597355677818">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -443,10 +447,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="345" y="167" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1597523218203" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1597674558849">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1597691960608">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1597674558849" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1597691960608" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

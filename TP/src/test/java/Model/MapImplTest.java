@@ -1,10 +1,9 @@
 package Model;
 
 import Sokoban.Interfaces.GameMap;
-import Sokoban.MapFactory;
+import Sokoban.Model.MapFactory;
 import Sokoban.Model.MapImpl;
 import Sokoban.Model.Position;
-import com.sun.source.tree.AssertTree;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

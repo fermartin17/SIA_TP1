@@ -3,7 +3,7 @@ package Sokoban.Searchs.Uninformed;
 import Sokoban.Heuristics.*;
 import Sokoban.Interfaces.GameMap;
 import Sokoban.Interfaces.SearchMethod;
-import Sokoban.MapFactory;
+import Sokoban.Model.MapFactory;
 import Sokoban.Model.State;
 import Sokoban.Searchs.informed.GGS;
 import org.junit.Assert;
@@ -32,7 +32,7 @@ public class GameTest {
         informedSearchMethods.add(new GGS<>(0));
         informedSearchMethods.add(new GGS<>(1, new EuclideanDistance()));
         informedSearchMethods.add(new GGS<>(1, new ManhattanDistance()));
-        informedSearchMethods.add(new GGS<>(1, new Heuristic1()));
+        informedSearchMethods.add(new GGS<>(1, new PlayerBoxGoalDistance()));
         informedSearchMethods.add(new GGS<>(1, new MinMatching()));
     }
 
