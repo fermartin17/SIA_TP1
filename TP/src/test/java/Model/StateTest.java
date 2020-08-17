@@ -2,7 +2,6 @@ package Model;
 
 import Sokoban.Interfaces.GameMap;
 import Sokoban.Model.MapFactory;
-import Sokoban.Model.MapImpl;
 import Sokoban.Model.State;
 import org.junit.Assert;
 import org.junit.Before;
