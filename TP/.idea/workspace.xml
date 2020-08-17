@@ -22,15 +22,28 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
+    <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="métodos de búsqueda con Heurísticas funcionan en ambos mapas, removida heurística NodeExpander">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/EuclideanDistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/EuclideanDistance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/Heuristic1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/Heuristic1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/ManhattanDistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/ManhattanDistance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/MinMatching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/MinMatching.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/NodeExpander.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Interfaces/UninformedSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Interfaces/SearchMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/StatePackage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/StatePackage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/BFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DFS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DLS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DLS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/IDDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/IDDFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Model/StateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Model/StateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Heuristics/HungarianTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Heuristics/HungarianTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/DFSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/DFSTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/GameTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/UninformedSearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/UninformedSearchTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Interfaces/UninformedSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/State.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Model/State.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/BFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/BFS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/DFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/DFS.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/DLS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/DLS.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/IDDFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/IDDFS.class" afterDir="false" />
     </list>
@@ -80,7 +93,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="JUnit.GameTest.solveIDDFSTest">
+  <component name="RunManager" selected="JUnit.GameTest.testInformedMethods">
     <configuration name="Play" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Sokoban.App" />
       <module name="TP" />
@@ -88,20 +101,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameTest.solveIDDFSTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest.heuristic1Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP" />
       <extension name="coverage">
         <pattern>
@@ -111,13 +122,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="Sokoban.Searchs.Uninformed" />
       <option name="MAIN_CLASS_NAME" value="Sokoban.Searchs.Uninformed.GameTest" />
-      <option name="METHOD_NAME" value="solveIDDFSTest" />
+      <option name="METHOD_NAME" value="heuristic1Test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UninformedSearchTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest.manhattanDistanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP" />
       <extension name="coverage">
         <pattern>
@@ -126,29 +137,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Sokoban.Searchs.Uninformed" />
-      <option name="MAIN_CLASS_NAME" value="Sokoban.Searchs.Uninformed.UninformedSearchTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UninformedSearchTests.NullRootTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Sokoban.Searchs.Uninformed.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Sokoban.Searchs.Uninformed" />
-      <option name="MAIN_CLASS_NAME" value="Sokoban.Searchs.Uninformed.UninformedSearchTests" />
-      <option name="METHOD_NAME" value="NullRootTest" />
+      <option name="MAIN_CLASS_NAME" value="Sokoban.Searchs.Uninformed.GameTest" />
+      <option name="METHOD_NAME" value="manhattanDistanceTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UninformedSearchTests.searchNoResultTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest.minMatchingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP" />
       <extension name="coverage">
         <pattern>
@@ -157,14 +153,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Sokoban.Searchs.Uninformed" />
-      <option name="MAIN_CLASS_NAME" value="Sokoban.Searchs.Uninformed.UninformedSearchTests" />
-      <option name="METHOD_NAME" value="searchNoResultTest1" />
+      <option name="MAIN_CLASS_NAME" value="Sokoban.Searchs.Uninformed.GameTest" />
+      <option name="METHOD_NAME" value="minMatchingTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UninformedSearchTests.searchResultFoundTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest.testInformedMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP" />
       <extension name="coverage">
         <pattern>
@@ -173,8 +169,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Sokoban.Searchs.Uninformed" />
-      <option name="MAIN_CLASS_NAME" value="Sokoban.Searchs.Uninformed.UninformedSearchTests" />
-      <option name="METHOD_NAME" value="searchResultFoundTest2" />
+      <option name="MAIN_CLASS_NAME" value="Sokoban.Searchs.Uninformed.GameTest" />
+      <option name="METHOD_NAME" value="testInformedMethods" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HungarianTest.oneSizeCostMatrixTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Heuristics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Heuristics" />
+      <option name="MAIN_CLASS_NAME" value="Heuristics.HungarianTest" />
+      <option name="METHOD_NAME" value="oneSizeCostMatrixTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -182,19 +194,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Play" />
-      <item itemvalue="JUnit.GameTest.solveIDDFSTest" />
-      <item itemvalue="JUnit.UninformedSearchTests" />
-      <item itemvalue="JUnit.UninformedSearchTests.NullRootTest" />
-      <item itemvalue="JUnit.UninformedSearchTests.searchNoResultTest1" />
-      <item itemvalue="JUnit.UninformedSearchTests.searchResultFoundTest2" />
+      <item itemvalue="JUnit.GameTest.manhattanDistanceTest" />
+      <item itemvalue="JUnit.GameTest.heuristic1Test" />
+      <item itemvalue="JUnit.GameTest.minMatchingTest" />
+      <item itemvalue="JUnit.HungarianTest.oneSizeCostMatrixTest" />
+      <item itemvalue="JUnit.GameTest.testInformedMethods" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GameTest.solveIDDFSTest" />
-        <item itemvalue="JUnit.UninformedSearchTests" />
-        <item itemvalue="JUnit.UninformedSearchTests.searchResultFoundTest2" />
-        <item itemvalue="JUnit.UninformedSearchTests.searchNoResultTest1" />
-        <item itemvalue="JUnit.UninformedSearchTests.NullRootTest" />
+        <item itemvalue="JUnit.GameTest.testInformedMethods" />
+        <item itemvalue="JUnit.GameTest.minMatchingTest" />
+        <item itemvalue="JUnit.HungarianTest.oneSizeCostMatrixTest" />
+        <item itemvalue="JUnit.GameTest.heuristic1Test" />
+        <item itemvalue="JUnit.GameTest.manhattanDistanceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +235,8 @@
       <workItem from="1597413102838" duration="1044000" />
       <workItem from="1597414174426" duration="22502000" />
       <workItem from="1597498776475" duration="30652000" />
-      <workItem from="1597625594746" duration="5557000" />
+      <workItem from="1597625594746" duration="8620000" />
+      <workItem from="1597671701570" duration="5398000" />
     </task>
     <task id="LOCAL-00001" summary="Hechos métodos isWinner, isValid (viejo checkmap) y método para precalcular posiciones de deadlock">
       <created>1597355743262</created>
@@ -295,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597612014981</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Funciona IDDFS, con esto funcionan todos los métodos desinformados">
+      <created>1597635137802</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1597635137802</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +345,9 @@
     <MESSAGE value="Hecho método movePlayer y adaptado el getNeighbors en state" />
     <MESSAGE value="Solucionado problema para mover player, funciona BFS con método simple pero DFS entra en loop, revisar" />
     <MESSAGE value="Arreglado el tema de hashcode en DFS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arreglado el tema de hashcode en DFS" />
+    <MESSAGE value="Funciona IDDFS, con esto funcionan todos los métodos desinformados" />
+    <MESSAGE value="métodos de búsqueda con Heurísticas funcionan en ambos mapas, removida heurística NodeExpander" />
+    <option name="LAST_COMMIT_MESSAGE" value="métodos de búsqueda con Heurísticas funcionan en ambos mapas, removida heurística NodeExpander" />
   </component>
   <component name="WindowStateProjectService">
     <state x="201" y="27" width="1024" height="741" key="#Project_Structure" timestamp="1596916893780">
@@ -336,63 +358,63 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="176" y="55" width="1084" height="710" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.27.1296.741@70.27.1296.741" timestamp="1596746618246" />
-    <state x="443" y="9" width="378" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1597613096337">
+    <state x="435" y="-63" width="378" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1597674915038">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="443" y="9" width="378" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1597613096337" />
+    <state x="435" y="-63" width="378" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1597674915038" />
     <state x="526" y="105" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/70.27.1296.741@70.27.1296.741" timestamp="1597262695986" />
     <state x="450" y="202" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1596746616117">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="450" y="202" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog/70.27.1296.741@70.27.1296.741" timestamp="1596746616117" />
-    <state x="301" y="-36" width="740" height="758" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597501361363">
+    <state x="297" y="-72" width="740" height="758" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597674675964">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="301" y="-36" width="740" height="758" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1597501361363" />
-    <state x="114" y="-108" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597612014874">
+    <state x="297" y="-72" width="740" height="758" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1597674675964" />
+    <state x="108" y="-102" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597677647538">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="114" y="-108" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597612014874" />
+    <state x="108" y="-102" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597677647538" />
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl" timestamp="1596916891944">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1312" height="272" key="GridCell.Tab.0.bottom" timestamp="1597634733839">
+    <state width="1258" height="240" key="GridCell.Tab.0.bottom" timestamp="1597677670500">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="272" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597634733839" />
+    <state width="1258" height="240" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597677670500" />
     <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
-    <state width="1312" height="272" key="GridCell.Tab.0.center" timestamp="1597634733838">
+    <state width="1258" height="240" key="GridCell.Tab.0.center" timestamp="1597677670498">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="272" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597634733838" />
+    <state width="1258" height="240" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597677670498" />
     <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1312" height="272" key="GridCell.Tab.0.left" timestamp="1597634733837">
+    <state width="1258" height="240" key="GridCell.Tab.0.left" timestamp="1597677670498">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="272" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597634733837" />
+    <state width="1258" height="240" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597677670498" />
     <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1312" height="272" key="GridCell.Tab.0.right" timestamp="1597634733838">
+    <state width="1258" height="240" key="GridCell.Tab.0.right" timestamp="1597677670499">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="272" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597634733838" />
+    <state width="1258" height="240" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597677670499" />
     <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
-    <state width="1312" height="272" key="GridCell.Tab.1.bottom" timestamp="1597634734661">
+    <state width="1312" height="244" key="GridCell.Tab.1.bottom" timestamp="1597671906333">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="272" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597634734661" />
-    <state width="1312" height="272" key="GridCell.Tab.1.center" timestamp="1597634734660">
+    <state width="1312" height="244" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597671906333" />
+    <state width="1312" height="244" key="GridCell.Tab.1.center" timestamp="1597671906332">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="272" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1597634734660" />
-    <state width="1312" height="272" key="GridCell.Tab.1.left" timestamp="1597634734660">
+    <state width="1312" height="244" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1597671906332" />
+    <state width="1312" height="244" key="GridCell.Tab.1.left" timestamp="1597671906332">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="272" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1597634734660" />
-    <state width="1312" height="272" key="GridCell.Tab.1.right" timestamp="1597634734661">
+    <state width="1312" height="244" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1597671906332" />
+    <state width="1312" height="244" key="GridCell.Tab.1.right" timestamp="1597671906333">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="272" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1597634734661" />
+    <state width="1312" height="244" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1597671906333" />
     <state x="155" y="11" key="SettingsEditor" timestamp="1597366352226">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -421,17 +443,17 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="345" y="167" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1597523218203" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1597610247798">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1597674558849">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1597610247798" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1597674558849" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/IDDFS.java</url>
-          <line>29</line>
+          <line>28</line>
           <properties class="Sokoban.Searchs.Uninformed.IDDFS" method="search">
             <option name="EMULATED" value="true" />
           </properties>

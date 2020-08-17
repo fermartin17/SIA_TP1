@@ -1,47 +1,58 @@
 package Sokoban.Searchs.Uninformed;
 
+import Sokoban.Heuristics.*;
 import Sokoban.Interfaces.GameMap;
-import Sokoban.Interfaces.UninformedSearch;
+import Sokoban.Interfaces.SearchMethod;
 import Sokoban.MapFactory;
 import Sokoban.Model.State;
-import Sokoban.Model.StatePackage;
+import Sokoban.Searchs.informed.GGS;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GameTest {
 
-    @Test
-    public void solveBFSTest(){
+    State initialState;
+    List<SearchMethod<State>> uninformedSearchMethods;
+    List<SearchMethod<State>> informedSearchMethods;
+
+    @Before
+    public void setup(){
         MapFactory mapFactory = new MapFactory();
-        GameMap gameMap = mapFactory.loadMap(0);
-        State initialState = new State(gameMap, GameMap.DIRECTION.INITIAL);
-        UninformedSearch<State> uninformedSearch = new BFS<>();
-        List<State> ret = (List<State>) uninformedSearch.search(initialState);
-        Assert.assertNotNull(ret);
-        ret.forEach(s -> s.getMap().printMap());
+        GameMap gameMap = mapFactory.loadMap(0); //EASY MAP
+        initialState = new State(gameMap, GameMap.DIRECTION.INITIAL);
+        uninformedSearchMethods = new ArrayList<>(3);
+        uninformedSearchMethods.add(new BFS<>());
+        uninformedSearchMethods.add(new DFS<>());
+        uninformedSearchMethods.add(new IDDFS<>(15));
+        informedSearchMethods = new ArrayList<>();
+        informedSearchMethods.add(new GGS<>(0));
+        informedSearchMethods.add(new GGS<>(1, new EuclideanDistance()));
+        informedSearchMethods.add(new GGS<>(1, new ManhattanDistance()));
+        informedSearchMethods.add(new GGS<>(1, new Heuristic1()));
+        informedSearchMethods.add(new GGS<>(1, new MinMatching()));
     }
 
     @Test
-    public void solveDFSTest(){
-        MapFactory mapFactory = new MapFactory();
-        GameMap gameMap = mapFactory.loadMap(0);
-        State initialState = new State(gameMap, GameMap.DIRECTION.INITIAL);
-        UninformedSearch<State> uninformedSearch = new DFS<>();
-        List<State> ret = (List<State>) uninformedSearch.search(initialState);
-        Assert.assertNotNull(ret);
-        ret.forEach(s -> s.getMap().printMap());
+    public void testUninformedMethods(){
+        for(SearchMethod<State> method : uninformedSearchMethods){
+            List<State> ret = (List<State>) method.search(initialState);
+            Assert.assertNotNull(ret);
+            //ret.forEach(s -> s.getMap().printMap());
+        }
     }
 
     @Test
-    public void solveIDDFSTest(){
-        MapFactory mapFactory = new MapFactory();
-        GameMap gameMap = mapFactory.loadMap(0);
-        State initialState = new State(gameMap, GameMap.DIRECTION.INITIAL);
-        UninformedSearch<State> uninformedSearch = new IDDFS<>(30);
-        List<State> ret = (List<State>) uninformedSearch.search(initialState);
-        Assert.assertNotNull(ret);
-        ret.forEach(s -> s.getMap().printMap());
+    public void testInformedMethods(){
+        for(SearchMethod<State> method : informedSearchMethods){
+            List<State> ret = (List<State>) method.search(initialState);
+            Assert.assertNotNull(ret);
+            //ret.forEach(s -> s.getMap().printMap());
+        }
     }
+
+
 }

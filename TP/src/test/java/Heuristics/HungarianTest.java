@@ -11,8 +11,8 @@ public class HungarianTest {
 
     int[][] cost;
 
-    @Before
-    public void setup(){
+    @Test
+    public void hungarianMethodTest(){
         cost = new int[3][3];
         cost[0][0] = 2;
         cost[0][1] = 6;
@@ -25,10 +25,6 @@ public class HungarianTest {
         cost[2][2] = 2;
         HungarianAlgorithm hungarianAlgorithm = new HungarianAlgorithm(cost);
         hungarianAlgorithm.findOptimalAssignment();
-    }
-
-    @Test
-    public void hungarianMethodTest(){
         Integer[][] expected = new Integer[cost.length][cost.length];
         expected[0][0] = 0;
         expected[0][1] = 2;
@@ -39,13 +35,21 @@ public class HungarianTest {
         expected[2][0] = 0;
         expected[2][1] = 0;
         expected[2][2] = 1;
-        //for(int i = 0; i < 3; i++){
-        //    for(int j = 0; j< 3; j++){
+        //for(int i = 0; i < cost.length; i++){
+        //    for(int j = 0; j< cost[0].length; j++){
         //        System.out.print(cost[i][j] + " ");
         //    }
         //    System.out.println();
         //}
         Assert.assertArrayEquals(expected, cost);
+    }
+
+    @Test
+    public void oneSizeCostMatrixTest(){
+        cost = new int[1][1];
+        cost[0][0] = 2;
+        HungarianAlgorithm hungarianAlgorithm = new HungarianAlgorithm(cost);
+        hungarianAlgorithm.findOptimalAssignment();
     }
 
 }

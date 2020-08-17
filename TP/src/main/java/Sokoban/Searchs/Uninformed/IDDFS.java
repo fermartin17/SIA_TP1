@@ -2,8 +2,7 @@ package Sokoban.Searchs.Uninformed;
 
 import Sokoban.Interfaces.Neighbors;
 import Sokoban.Interfaces.Stateful;
-import Sokoban.Interfaces.UninformedSearch;
-import Sokoban.Model.State;
+import Sokoban.Interfaces.SearchMethod;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,7 +10,7 @@ import java.util.*;
 
 @Getter
 @Setter
-public class IDDFS<T extends Neighbors<T> & Comparable<T> & Stateful<T>> implements UninformedSearch<T> {
+public class IDDFS<T extends Neighbors<T> & Comparable<T> & Stateful<T>> implements SearchMethod<T> {
 
     private DLS<T> myDLS;
     private List<T> stack;

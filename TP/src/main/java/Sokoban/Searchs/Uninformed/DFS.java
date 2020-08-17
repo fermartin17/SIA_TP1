@@ -2,7 +2,7 @@ package Sokoban.Searchs.Uninformed;
 
 import Sokoban.Interfaces.Neighbors;
 import Sokoban.Interfaces.Stateful;
-import Sokoban.Interfaces.UninformedSearch;
+import Sokoban.Interfaces.SearchMethod;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,7 +10,7 @@ import java.util.*;
 
 @Getter
 @Setter
-public class DFS <T extends Neighbors<T> & Comparable<T> & Stateful<T>> implements UninformedSearch<T>{
+public class DFS <T extends Neighbors<T> & Comparable<T> & Stateful<T>> implements SearchMethod<T> {
 
     private Deque<T> stack;
     private Set<T> history;

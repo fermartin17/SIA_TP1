@@ -2,8 +2,6 @@ package Sokoban.Searchs.Uninformed;
 
 import Sokoban.Interfaces.Neighbors;
 import Sokoban.Interfaces.Stateful;
-import Sokoban.Interfaces.UninformedSearch;
-import Sokoban.Model.State;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,7 +16,7 @@ public class DLS <T extends Neighbors<T> & Comparable<T> & Stateful<T>> {
 
     public DLS(){
         this.stack = new LinkedList<>();
-        this.history = new HashSet<T>();
+        this.history = new HashSet<>();
     }
 
     public List<T> search(T initial,int depth){
