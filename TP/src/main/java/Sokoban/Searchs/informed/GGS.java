@@ -29,7 +29,10 @@ public class GGS<T extends Neighbors<T> & Comparable<T> & Stateful<T>> implement
 
     @Override
     public String searchName() {
-        return ""; //cambiar
+        if(omega == 0) return "Global greedy";
+        if(omega == 0.5) return "A* using heuristic " + heuristic.toString();
+        if(omega == 1) return "using only heuristic " + heuristic.toString();
+        return "";
     }
 
     public List<T> search(T state){
