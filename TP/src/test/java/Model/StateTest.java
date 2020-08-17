@@ -43,7 +43,6 @@ public class StateTest {
     public void neighborHashTest(){
         List<State> neighbors = state.getNeighbors();
         Set<State> set = new HashSet<>(state.getNeighbors());
-        //Assert.assertTrue(set.contains(neighbors.get(0)));
         neighbors.stream().map(set::contains).forEach(Assert::assertTrue);
     }
 }

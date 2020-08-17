@@ -20,6 +20,7 @@ public class UninformedSearchTests {
         searches = new ArrayList<>();
         searches.add(new BFS<>());
         searches.add(new DFS<>());
+        searches.add(new IDDFS<>(1 ));
     }
 
     @Test
