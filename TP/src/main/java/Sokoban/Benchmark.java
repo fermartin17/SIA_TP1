@@ -28,7 +28,7 @@ public class Benchmark {
     public Benchmark(){}
 
     public void setup(){
-        levels = Arrays.asList(0, 1, 2, 3);
+        levels = Arrays.asList(0, 1, 2, 3, 4, 5);
         mapFactory = new MapFactory();
         searchMethods = new ArrayList<>(3);
         searchMethods.add(new BFS<>());
@@ -51,17 +51,21 @@ public class Benchmark {
         initialState = new State(gameMap, GameMap.DIRECTION.INITIAL);
     }
 
-    public long measureTime(SearchMethod<State> method){
-        long startTime = System.nanoTime();
-        method.search(initialState);
-        long endTime = System.nanoTime();
-        return endTime - startTime;
+    public List<Long> measureTime(SearchMethod<State> method){
+        List<Long> times = new ArrayList<>(5);
+        for(int i = 0; i < 5; i++){
+            long startTime = System.nanoTime();
+            method.search(initialState);
+            long endTime = System.nanoTime();
+            times.add(endTime - startTime);
+        }
+        return times;
     }
 
     public void runBenchmark(){
         setup();
-        Map<Integer, List<Long>> totalResults = new TreeMap<>();
-        List<Long> levelResults;
+        Map<Integer, List<List<Long>>> totalResults = new TreeMap<>();
+        List<List<Long>> levelResults;
         for(Integer level : levels){
             setupInitialState(level);
             levelResults = new ArrayList<>(11);
@@ -73,14 +77,18 @@ public class Benchmark {
         saveResultsAsCSV(totalResults);
     }
 
-    public void saveResultsAsCSV(Map<Integer, List<Long>> results){
+    public void saveResultsAsCSV(Map<Integer, List<List<Long>>> results){
         try {
             PrintWriter file = new PrintWriter("benchmarkResults.csv");
+            file.println("6," + searchMethods.size() + ",5"); //levels, number of methods, times per method
             for (Integer i : results.keySet()) {
-                StringJoiner joiner = new StringJoiner(",");
-                results.get(i).stream().map(String::valueOf).forEach(joiner::add);
-                String collect =  joiner.toString();
-                file.println(collect);
+                file.println(i);
+                for(List<Long> methodTimes : results.get(i)){
+                    StringJoiner joiner = new StringJoiner(",");
+                    methodTimes.stream().map(String::valueOf).forEach(joiner::add);
+                    String collect = joiner.toString();
+                    file.println(collect);
+                }
             }
             file.close();
         }catch(IOException e){

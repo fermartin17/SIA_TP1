@@ -23,14 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Benchmark.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/Heuristic1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/PlayerBoxGoalDistance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/MapFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Model/MapImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Model/MapImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Model/StateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Model/StateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/GameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Benchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Benchmark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +216,7 @@
       <workItem from="1597414174426" duration="22502000" />
       <workItem from="1597498776475" duration="30652000" />
       <workItem from="1597625594746" duration="8620000" />
-      <workItem from="1597671701570" duration="11042000" />
+      <workItem from="1597671701570" duration="12883000" />
     </task>
     <task id="LOCAL-00001" summary="Hechos métodos isWinner, isValid (viejo checkmap) y método para precalcular posiciones de deadlock">
       <created>1597355743262</created>
@@ -314,7 +309,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597678145889</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Hecho benchmark para poder comparar después los diferentes algoritmos y heurísticas">
+      <created>1597693517702</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1597693517702</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Hecho benchmark para poder comparar después los diferentes algoritmos y heurísticas">
+      <created>1597693538941</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1597693538941</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +356,8 @@
     <MESSAGE value="Funciona IDDFS, con esto funcionan todos los métodos desinformados" />
     <MESSAGE value="métodos de búsqueda con Heurísticas funcionan en ambos mapas, removida heurística NodeExpander" />
     <MESSAGE value="arreglado del toString de GGS" />
-    <option name="LAST_COMMIT_MESSAGE" value="arreglado del toString de GGS" />
+    <MESSAGE value="Hecho benchmark para poder comparar después los diferentes algoritmos y heurísticas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hecho benchmark para poder comparar después los diferentes algoritmos y heurísticas" />
   </component>
   <component name="WindowStateProjectService">
     <state x="201" y="27" width="1024" height="741" key="#Project_Structure" timestamp="1596916893780">
@@ -375,33 +385,33 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="297" y="-72" width="740" height="758" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1597674675964" />
-    <state x="102" y="-156" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597678145812">
+    <state x="96" y="-120" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597693538863">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="102" y="-156" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597678145812" />
+    <state x="96" y="-120" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597693538863" />
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl" timestamp="1596916891944">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1312" height="277" key="GridCell.Tab.0.bottom" timestamp="1597693194885">
+    <state width="1312" height="275" key="GridCell.Tab.0.bottom" timestamp="1597693364523">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="277" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597693194885" />
+    <state width="1312" height="275" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597693364523" />
     <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
-    <state width="1312" height="277" key="GridCell.Tab.0.center" timestamp="1597693194884">
+    <state width="1312" height="275" key="GridCell.Tab.0.center" timestamp="1597693364522">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="277" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597693194884" />
+    <state width="1312" height="275" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597693364522" />
     <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1312" height="277" key="GridCell.Tab.0.left" timestamp="1597693194883">
+    <state width="1312" height="275" key="GridCell.Tab.0.left" timestamp="1597693364521">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="277" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597693194883" />
+    <state width="1312" height="275" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597693364521" />
     <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1312" height="277" key="GridCell.Tab.0.right" timestamp="1597693194885">
+    <state width="1312" height="275" key="GridCell.Tab.0.right" timestamp="1597693364522">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="277" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597693194885" />
+    <state width="1312" height="275" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597693364522" />
     <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
     <state width="1312" height="244" key="GridCell.Tab.1.bottom" timestamp="1597671906333">
       <screen x="0" y="0" width="1366" height="768" />
@@ -435,10 +445,10 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="390" y="291" width="646" height="229" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/70.27.1296.741@70.27.1296.741" timestamp="1596917037105" />
-    <state x="281" y="-72" width="770" height="669" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597692241670">
+    <state x="277" y="-108" width="770" height="669" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597694189256">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="281" y="-72" width="770" height="669" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.768@0.0.1366.768" timestamp="1597692241670" />
+    <state x="277" y="-108" width="770" height="669" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.768@0.0.1366.768" timestamp="1597694189256" />
     <state x="438" y="268" width="479" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597355677818">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -447,10 +457,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="345" y="167" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1597523218203" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1597691960608">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1597694150735">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1597691960608" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1597694150735" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
