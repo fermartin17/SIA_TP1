@@ -23,9 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Factories/HeuristicFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/GameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/Level$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Model/Level$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/Level.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Model/Level.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Sokoban/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Sokoban/AppTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +79,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="JUnit.GameTest.testInformedMethods">
+  <component name="RunManager" selected="Application.Play">
     <configuration name="Play" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Sokoban.App" />
       <module name="TP" />
@@ -81,15 +87,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -387,15 +391,19 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="176" y="55" width="1084" height="710" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.27.1296.741@70.27.1296.741" timestamp="1596746618246" />
-    <state x="433" y="-81" width="378" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1597715324795">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="526" y="105" width="378" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1597763867132">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="433" y="-81" width="378" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1597715324795" />
-    <state x="526" y="105" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/70.27.1296.741@70.27.1296.741" timestamp="1597262695986" />
+    <state x="526" y="105" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/70.27.1296.741@70.27.1296.741" timestamp="1597763867132" />
     <state x="450" y="202" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1596746616117">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="450" y="202" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog/70.27.1296.741@70.27.1296.741" timestamp="1596746616117" />
+    <state x="471" y="265" width="494" height="279" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1597761129654">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="471" y="265" width="494" height="279" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/70.27.1296.741@70.27.1296.741" timestamp="1597761129654" />
     <state x="408" y="166" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1597692572470">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -412,26 +420,26 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1312" height="330" key="GridCell.Tab.0.bottom" timestamp="1597756764339">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1250" height="497" key="GridCell.Tab.0.bottom" timestamp="1597765174710">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597756764339" />
-    <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
-    <state width="1312" height="330" key="GridCell.Tab.0.center" timestamp="1597756764338">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1250" height="497" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597765174710" />
+    <state width="1250" height="497" key="GridCell.Tab.0.center" timestamp="1597765174710">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597756764338" />
-    <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1312" height="330" key="GridCell.Tab.0.left" timestamp="1597756764338">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1250" height="497" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597765174710" />
+    <state width="1250" height="497" key="GridCell.Tab.0.left" timestamp="1597765174709">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597756764338" />
-    <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1312" height="330" key="GridCell.Tab.0.right" timestamp="1597756764339">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1250" height="497" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597765174709" />
+    <state width="1250" height="497" key="GridCell.Tab.0.right" timestamp="1597765174710">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597756764339" />
-    <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
+    <state width="1250" height="497" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597765174710" />
     <state width="1312" height="242" key="GridCell.Tab.1.bottom" timestamp="1597722323298">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
