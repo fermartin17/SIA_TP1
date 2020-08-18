@@ -23,28 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Benchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Benchmark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/ManhattanDistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/SimpleMinDistance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/MinMatching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/MinMatching.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/PlayerBoxGoalDistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/PlayerBoxGoalDistance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/MapFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Factories/MapFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/Level.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Factories/HeuristicFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Factories/HeuristicFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Heuristics/HungarianTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Heuristics/HungarianTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Heuristics/MinMatchingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Heuristics/MinMatchingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/GameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Interfaces/Map$TILES.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Interfaces/Map.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/MapFactory$LevelInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/MapFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/Level$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Model/Level$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/Level.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Model/Level.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Conf.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Conf.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +72,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="JUnit.GameTest.testInformedMethods (1)">
+  <component name="RunManager" selected="Application.Play">
     <configuration name="Play" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Sokoban.App" />
       <module name="TP" />
@@ -100,13 +80,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,6 +109,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameTest.minMatchingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Sokoban.Searchs.Uninformed.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Sokoban.Searchs.Uninformed" />
+      <option name="MAIN_CLASS_NAME" value="Sokoban.Searchs.Uninformed.GameTest" />
+      <option name="METHOD_NAME" value="minMatchingTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameTest.testInformedMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP" />
       <extension name="coverage">
@@ -137,22 +135,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="Sokoban.Searchs.Uninformed" />
       <option name="MAIN_CLASS_NAME" value="Sokoban.Searchs.Uninformed.GameTest" />
-      <option name="METHOD_NAME" value="testInformedMethods" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameTest.testInformedMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Sokoban.Searchs.Factories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Sokoban" />
-      <option name="MAIN_CLASS_NAME" value="Sokoban.GameTest" />
       <option name="METHOD_NAME" value="testInformedMethods" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -175,7 +157,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HungarianTest.hungarianMethodTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HungarianTest.oneSizeCostMatrixTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP" />
       <extension name="coverage">
         <pattern>
@@ -185,7 +167,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Heuristics" />
       <option name="MAIN_CLASS_NAME" value="Heuristics.HungarianTest" />
-      <option name="METHOD_NAME" value="hungarianMethodTest" />
+      <option name="METHOD_NAME" value="oneSizeCostMatrixTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -193,19 +175,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Play" />
+      <item itemvalue="JUnit.GameTest.minMatchingTest" />
+      <item itemvalue="JUnit.HungarianTest.oneSizeCostMatrixTest" />
       <item itemvalue="JUnit.GameTest.testInformedMethods" />
       <item itemvalue="JUnit.GameTest.testUninformedMethods" />
       <item itemvalue="JUnit.DFSTest.correctOrderTest" />
-      <item itemvalue="JUnit.GameTest.testInformedMethods (1)" />
-      <item itemvalue="JUnit.HungarianTest.hungarianMethodTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GameTest.testInformedMethods (1)" />
-        <item itemvalue="JUnit.HungarianTest.hungarianMethodTest" />
         <item itemvalue="JUnit.DFSTest.correctOrderTest" />
         <item itemvalue="JUnit.GameTest.testInformedMethods" />
         <item itemvalue="JUnit.GameTest.testUninformedMethods" />
+        <item itemvalue="JUnit.GameTest.minMatchingTest" />
+        <item itemvalue="JUnit.HungarianTest.oneSizeCostMatrixTest" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +220,6 @@
       <workItem from="1597671701570" duration="23455000" />
       <workItem from="1597754346137" duration="2586000" />
       <workItem from="1597766662815" duration="602000" />
-      <workItem from="1597780986000" duration="4697000" />
     </task>
     <task id="LOCAL-00001" summary="Hechos métodos isWinner, isValid (viejo checkmap) y método para precalcular posiciones de deadlock">
       <created>1597355743262</created>
@@ -406,10 +387,10 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="176" y="55" width="1084" height="710" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.27.1296.741@70.27.1296.741" timestamp="1596746618246" />
-    <state x="429" y="-117" width="378" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1597780840007">
+    <state x="433" y="-81" width="378" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1597715324795">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="429" y="-117" width="378" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1597780840007" />
+    <state x="433" y="-81" width="378" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1597715324795" />
     <state x="526" y="105" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/70.27.1296.741@70.27.1296.741" timestamp="1597262695986" />
     <state x="450" y="202" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1596746616117">
       <screen x="70" y="27" width="1296" height="741" />
@@ -431,42 +412,46 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1312" height="240" key="GridCell.Tab.0.bottom" timestamp="1597788713927">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1250" height="497" key="GridCell.Tab.0.bottom" timestamp="1597769907017">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1312" height="240" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597788713927" />
-    <state width="1250" height="497" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597767229805" />
-    <state width="1312" height="240" key="GridCell.Tab.0.center" timestamp="1597788713925">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1312" height="330" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597756764339" />
+    <state width="1250" height="497" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597769907017" />
+    <state width="1250" height="497" key="GridCell.Tab.0.center" timestamp="1597769907016">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1312" height="240" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597788713925" />
-    <state width="1250" height="497" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597767229804" />
-    <state width="1312" height="240" key="GridCell.Tab.0.left" timestamp="1597788713924">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1312" height="330" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597756764338" />
+    <state width="1250" height="497" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597769907016" />
+    <state width="1250" height="497" key="GridCell.Tab.0.left" timestamp="1597769907016">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1312" height="240" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597788713924" />
-    <state width="1250" height="497" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597767229804" />
-    <state width="1312" height="240" key="GridCell.Tab.0.right" timestamp="1597788713926">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1312" height="330" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597756764338" />
+    <state width="1250" height="497" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597769907016" />
+    <state width="1250" height="497" key="GridCell.Tab.0.right" timestamp="1597769907016">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1312" height="240" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597788713926" />
-    <state width="1250" height="497" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597767229805" />
-    <state width="1312" height="234" key="GridCell.Tab.1.bottom" timestamp="1597780950764">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1312" height="330" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597756764339" />
+    <state width="1250" height="497" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597769907016" />
+    <state width="1250" height="215" key="GridCell.Tab.1.bottom" timestamp="1597769868045">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1312" height="234" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597780950764" />
-    <state width="1312" height="234" key="GridCell.Tab.1.center" timestamp="1597780950763">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1312" height="242" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597722323298" />
+    <state width="1250" height="215" key="GridCell.Tab.1.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597769868045" />
+    <state width="1250" height="215" key="GridCell.Tab.1.center" timestamp="1597769868044">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1312" height="234" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1597780950763" />
-    <state width="1312" height="234" key="GridCell.Tab.1.left" timestamp="1597780950763">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1312" height="242" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1597722323297" />
+    <state width="1250" height="215" key="GridCell.Tab.1.center/70.27.1296.741@70.27.1296.741" timestamp="1597769868044" />
+    <state width="1250" height="215" key="GridCell.Tab.1.left" timestamp="1597769868044">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1312" height="234" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1597780950763" />
-    <state width="1312" height="234" key="GridCell.Tab.1.right" timestamp="1597780950764">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1312" height="242" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1597722323297" />
+    <state width="1250" height="215" key="GridCell.Tab.1.left/70.27.1296.741@70.27.1296.741" timestamp="1597769868043" />
+    <state width="1250" height="215" key="GridCell.Tab.1.right" timestamp="1597769868044">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1312" height="234" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1597780950764" />
+    <state width="1312" height="242" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1597722323298" />
+    <state width="1250" height="215" key="GridCell.Tab.1.right/70.27.1296.741@70.27.1296.741" timestamp="1597769868044" />
     <state x="155" y="11" key="SettingsEditor" timestamp="1597366352226">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -483,10 +468,10 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="390" y="291" width="646" height="229" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/70.27.1296.741@70.27.1296.741" timestamp="1596917037105" />
-    <state x="275" y="-126" width="770" height="669" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597788634449">
+    <state x="277" y="-108" width="770" height="669" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597694189256">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="-126" width="770" height="669" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.768@0.0.1366.768" timestamp="1597788634449" />
+    <state x="277" y="-108" width="770" height="669" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.768@0.0.1366.768" timestamp="1597694189256" />
     <state x="438" y="268" width="479" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597355677818">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -495,10 +480,31 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="345" y="167" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1597523218203" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1597775210712">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1597694150735">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1597775210712" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1597694150735" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Sokoban/App.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Sokoban/Game.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Sokoban/Game.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TP$MapImplTest.ic" NAME="MapImplTest Coverage Results" MODIFIED="1597593589813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
