@@ -1,6 +1,5 @@
 package Sokoban.Searchs.Uninformed;
 
-import Sokoban.Interfaces.UninformedSearch;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -22,7 +21,7 @@ public class DFSTest {
         expected.add(new Node(7, 5));
         expected.add(new Node(5, 5));
         DFS<Node> dfs = new DFS<>();
-        List<Node> result = (List<Node>) dfs.search(root);
+        List<Node> result = dfs.search(root);
         Assert.assertNotNull(result);
         Assert.assertEquals(3, result.size());
         Assert.assertArrayEquals(expected.toArray(), result.toArray());

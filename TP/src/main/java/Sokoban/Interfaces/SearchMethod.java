@@ -3,7 +3,7 @@ package Sokoban.Interfaces;
 import java.util.Collection;
 import java.util.List;
 
-public interface UninformedSearch<T> {
+public interface SearchMethod<T> {
 
     //método para hacer más fácil el testeo
     String searchName();

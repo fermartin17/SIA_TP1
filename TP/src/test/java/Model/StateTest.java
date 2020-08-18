@@ -1,8 +1,7 @@
 package Model;
 
 import Sokoban.Interfaces.GameMap;
-import Sokoban.MapFactory;
-import Sokoban.Model.MapImpl;
+import Sokoban.Model.MapFactory;
 import Sokoban.Model.State;
 import org.junit.Assert;
 import org.junit.Before;
@@ -11,7 +10,6 @@ import org.junit.Test;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.TreeSet;
 
 public class StateTest {
 
@@ -21,7 +19,7 @@ public class StateTest {
     @Before
     public void setup(){
         MapFactory mapFactory = new MapFactory();
-        GameMap map = (MapImpl) mapFactory.loadMap(1);
+        GameMap map = mapFactory.loadMap(1);
         state = new State(map, GameMap.DIRECTION.INITIAL);
     }
 
@@ -43,7 +41,6 @@ public class StateTest {
     public void neighborHashTest(){
         List<State> neighbors = state.getNeighbors();
         Set<State> set = new HashSet<>(state.getNeighbors());
-        //Assert.assertTrue(set.contains(neighbors.get(0)));
         neighbors.stream().map(set::contains).forEach(Assert::assertTrue);
     }
 }

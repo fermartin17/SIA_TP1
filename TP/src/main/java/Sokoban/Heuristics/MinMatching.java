@@ -13,6 +13,7 @@ import java.util.List;
 public class MinMatching implements Heuristic<State> {
 
     private int[][] costMatrix;
+    private int[][] costMatrixReduced;
 
     public MinMatching(){ }
 
@@ -20,6 +21,7 @@ public class MinMatching implements Heuristic<State> {
         this.costMatrix = costMatrix;
     }
 
+    //ver por que crea una matriz de 1x2
     public void buildCostMatrix(GameMap map, List<Position> boxes, List<Position> goals){
         int size = boxes.size();
         Position currBox, currGoal;
@@ -35,19 +37,19 @@ public class MinMatching implements Heuristic<State> {
                 deltaX = currGoal.getX() - currBox.getX();
                 //si el goal está abajo pero tiene una pared arriba
                 cost = Math.abs(deltaX) + Math.abs(deltaY);
-                if(map.getMap()[currBox.getX()][currBox.getY() - 1] == GameMap.TILES.WALL && deltaY > 0){
+                if(map.getMap()[currBox.getY()][currBox.getX() - 1] == GameMap.TILES.WALL && deltaY > 0){
                     cost = -1;
                 }
                 //si el goal está arriba pero tiene una pared abajo
-                if(map.getMap()[currBox.getX()][currBox.getY() + 1] == GameMap.TILES.WALL && deltaY < 0){
+                if(map.getMap()[currBox.getY()][currBox.getX() + 1] == GameMap.TILES.WALL && deltaY < 0){
                     cost = -1;
                 }
                 //si el goal está a la der pero tiene una pared a la izq
-                if(map.getMap()[currBox.getX() - 1][currBox.getY()] == GameMap.TILES.WALL && deltaX > 0){
+                if(map.getMap()[currBox.getY() - 1][currBox.getX()] == GameMap.TILES.WALL && deltaX > 0){
                     cost = -1;
                 }
                 //si el goal está a la izq pero tiene una pared a la der
-                if(map.getMap()[currBox.getX() + 1][currBox.getY()] == GameMap.TILES.WALL && deltaX < 0){
+                if(map.getMap()[currBox.getY() + 1][currBox.getX()] == GameMap.TILES.WALL && deltaX < 0){
                     cost = -1;
                 }
                 costMatrix[i][j] = cost;
@@ -57,16 +59,17 @@ public class MinMatching implements Heuristic<State> {
 
     public int sumMinDistancesForBox(){
         int ret = 0;
-        int min, aux;
-        for (int[] matrix : costMatrix) {
-            min = Integer.MAX_VALUE;
-            for (int j = 0; j < costMatrix.length; j++) {
-                aux = matrix[j];
-                if (aux > 0 && aux < min) {
-                    min = aux;
+        int minValue = Integer.MAX_VALUE, minIndex = 0, aux;
+        for(int i = 0; i < costMatrix.length; i++){
+            for(int j = 0; j < costMatrix[0].length; j++){
+                aux = costMatrixReduced[i][j];
+                if(aux == 0) continue;
+                if(aux < minValue){
+                    minValue = aux;
+                    minIndex = j;
                 }
             }
-            ret += min;
+            ret += costMatrix[i][minIndex];
         }
         return ret;
     }
@@ -77,7 +80,7 @@ public class MinMatching implements Heuristic<State> {
         buildCostMatrix(s.getMap(), s.getMap().getBoxPositions(), s.getMap().getGoalsPositions());
         //correr el método húngaro sobre la matriz
         HungarianAlgorithm hungarianAlgorithm = new HungarianAlgorithm(costMatrix);
-        costMatrix = hungarianAlgorithm.findOptimalAssignment();
+        costMatrixReduced = hungarianAlgorithm.findOptimalAssignment();
         //ahora el valor más chico != 0 de cada fila indica el objetivo más próximo
         //retornamos la suma de esos valores
         return (double) sumMinDistancesForBox();

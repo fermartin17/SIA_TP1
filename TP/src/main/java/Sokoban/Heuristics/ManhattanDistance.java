@@ -13,6 +13,14 @@ public class ManhattanDistance implements Heuristic<State> {
     public Double evaluate(State s) {
         List<Position> goals = s.getMap().getGoalsPositions();
         List<Position> boxes = s.getMap().getBoxPositions();
-        return goals.stream().mapToDouble(g -> g.euclideanDistance((Position) boxes.stream())).min().stream().sum();
+        double min = Double.MAX_VALUE;
+        double aux;
+        for(Position b : boxes){
+            for(Position g : goals){
+                aux = b.manhattanDistance(g);
+                if(aux < min) min = aux;
+            }
+        }
+        return min;
     }
 }

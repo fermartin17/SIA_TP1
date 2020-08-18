@@ -1,14 +1,12 @@
 package Sokoban.Searchs.Uninformed;
 
 import Sokoban.Interfaces.*;
-import Sokoban.Model.MapImpl;
 
 import java.util.*;
 
-public class BFS<T extends Neighbors<T> & Comparable<T> & Stateful<T>> implements UninformedSearch<T> {
+public class BFS<T extends Neighbors<T> & Comparable<T> & Stateful<T>> implements SearchMethod<T> {
 
-    public BFS(){
-    }
+    public BFS(){ }
 
     public List<T> search(T initialState) {
         if (initialState == null) return null;

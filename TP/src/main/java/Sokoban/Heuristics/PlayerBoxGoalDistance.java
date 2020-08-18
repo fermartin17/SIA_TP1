@@ -6,7 +6,7 @@ import Sokoban.Model.State;
 
 import java.util.List;
 
-public class Heuristic1 implements Heuristic<State> {
+public class PlayerBoxGoalDistance implements Heuristic<State> {
 
     //Ha = distManhattan(jugador, caja*) + distManhattan(caja, objetivo*)
     //caja* = caja más cercana al jugador
@@ -23,12 +23,10 @@ public class Heuristic1 implements Heuristic<State> {
         double aux;
         //encontrar la caja que no está en us objetivo más cercana al jugador
         for(Position box : boxes){
-            if(!goals.contains(box)){
-                aux = playerPosition.manhattanDistance(box);
-                if(aux < minPlayerBox){
-                    minPlayerBox = aux;
-                    nearestBox = box;
-                }
+            aux = playerPosition.manhattanDistance(box);
+            if(aux < minPlayerBox){
+                minPlayerBox = aux;
+                nearestBox = box;
             }
         }
         //encontrar el objetivo más cercano para dicha caja

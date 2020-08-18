@@ -5,25 +5,24 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 @Getter
 @Setter
 public class StatePackage<T extends Comparable<T>> implements Comparable<StatePackage<T>> {
 
-    private Queue<T> history;
+    private List<T> history;
     private T currState;
     private Double cost; //costo acumulado
 
     public StatePackage(){}
 
-    public StatePackage(Queue<T> states,T currState, double cost){
+    public StatePackage(List<T> states, T currState, double cost){
         this.history = states;
         this.currState= currState;
         this.cost = cost;
     }
-
-    public T getCurrState(){ return this.currState; }
 
     //default compareTo, comparar por el costo
     @Override
@@ -34,6 +33,19 @@ public class StatePackage<T extends Comparable<T>> implements Comparable<StatePa
     //comparar estados en base a una heurística
     public int compareTo(StatePackage<T> o, Heuristic<T> heuristic) {
         return heuristic.evaluate(currState).compareTo(heuristic.evaluate(o.currState));
+    }
+
+    @Override
+    public int hashCode(){
+        return this.currState.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if(o == null || o.getClass() != this.getClass()) return false;
+        if(o == this) return true;
+        StatePackage<T> s = (StatePackage<T>) o;
+        return this.currState.equals(s.currState);
     }
 
 }
