@@ -23,18 +23,18 @@ public class GameTest {
     @Before
     public void setup(){
         MapFactory mapFactory = new MapFactory();
-        GameMap gameMap = mapFactory.loadMap(0); //EASY MAP
+        GameMap gameMap = mapFactory.loadMap(1); //EASY MAP
         initialState = new State(gameMap, GameMap.DIRECTION.INITIAL);
         uninformedSearchMethods = new ArrayList<>(3);
         uninformedSearchMethods.add(new BFS<>());
         uninformedSearchMethods.add(new DFS<>());
         uninformedSearchMethods.add(new IDDFS<>(15));
         informedSearchMethods = new ArrayList<>();
-        //informedSearchMethods.add(new GGS<>(0));
-        //informedSearchMethods.add(new GGS<>(1, new EuclideanDistance()));
-        //informedSearchMethods.add(new GGS<>(1, new ManhattanDistance()));
-        //informedSearchMethods.add(new GGS<>(1, new PlayerBoxGoalDistance()));
-        //informedSearchMethods.add(new GGS<>(1, new MinMatching()));
+        informedSearchMethods.add(new GGS<>(0));
+        informedSearchMethods.add(new GGS<>(1, new EuclideanDistance()));
+        informedSearchMethods.add(new GGS<>(1, new ManhattanDistance()));
+        informedSearchMethods.add(new GGS<>(1, new PlayerBoxGoalDistance()));
+        informedSearchMethods.add(new GGS<>(1, new MinMatching()));
         informedSearchMethods.add(new IDA<>(new EuclideanDistance()));
     }
 
@@ -43,7 +43,7 @@ public class GameTest {
         for(SearchMethod<State> method : uninformedSearchMethods){
             List<State> ret = (List<State>) method.search(initialState);
             Assert.assertNotNull(ret);
-            //ret.forEach(s -> s.getMap().printMap());
+            ret.forEach(s -> s.getMap().printMap());
         }
     }
 

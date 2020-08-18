@@ -51,7 +51,7 @@ public class GGS<T extends Neighbors<T> & Comparable<T> & Stateful<T>> implement
             list = aux.getHistory();
             if(aux.getCurrState().isDone()) return list;
             for(T neighbor : aux.getCurrState().getNeighbors()){
-                if(neighbor.isValid()) queue.offer(new StatePackage<>(list, neighbor,aux.getCost() + 1.0));
+                if(neighbor.isValid()) queue.offer(new StatePackage<>(new LinkedList<T>(list), neighbor,aux.getCost() + 1.0));
             }
         }
         return list;

@@ -22,7 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="" />
+    <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/GameTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,13 +81,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -99,22 +105,6 @@
       <option name="PACKAGE_NAME" value="Sokoban.Searchs.Uninformed" />
       <option name="MAIN_CLASS_NAME" value="Sokoban.Searchs.Uninformed.GameTest" />
       <option name="METHOD_NAME" value="heuristic1Test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameTest.manhattanDistanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Sokoban.Searchs.Uninformed.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Sokoban.Searchs.Uninformed" />
-      <option name="MAIN_CLASS_NAME" value="Sokoban.Searchs.Uninformed.GameTest" />
-      <option name="METHOD_NAME" value="manhattanDistanceTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -152,6 +142,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameTest.testUninformedMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Sokoban.Searchs.Uninformed.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Sokoban.Searchs.Uninformed" />
+      <option name="MAIN_CLASS_NAME" value="Sokoban.Searchs.Uninformed.GameTest" />
+      <option name="METHOD_NAME" value="testUninformedMethods" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HungarianTest.oneSizeCostMatrixTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP" />
       <extension name="coverage">
@@ -170,19 +176,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Play" />
-      <item itemvalue="JUnit.GameTest.manhattanDistanceTest" />
       <item itemvalue="JUnit.GameTest.heuristic1Test" />
       <item itemvalue="JUnit.GameTest.minMatchingTest" />
       <item itemvalue="JUnit.HungarianTest.oneSizeCostMatrixTest" />
       <item itemvalue="JUnit.GameTest.testInformedMethods" />
+      <item itemvalue="JUnit.GameTest.testUninformedMethods" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.GameTest.testInformedMethods" />
+        <item itemvalue="JUnit.GameTest.testUninformedMethods" />
         <item itemvalue="JUnit.GameTest.minMatchingTest" />
         <item itemvalue="JUnit.HungarianTest.oneSizeCostMatrixTest" />
         <item itemvalue="JUnit.GameTest.heuristic1Test" />
-        <item itemvalue="JUnit.GameTest.manhattanDistanceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -213,6 +219,7 @@
       <workItem from="1597498776475" duration="30652000" />
       <workItem from="1597625594746" duration="8620000" />
       <workItem from="1597671701570" duration="23455000" />
+      <workItem from="1597754346137" duration="2586000" />
     </task>
     <task id="LOCAL-00001" summary="Hechos métodos isWinner, isValid (viejo checkmap) y método para precalcular posiciones de deadlock">
       <created>1597355743262</created>
@@ -326,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597695360655</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Hecho IDA, funciona pero falta testear">
+      <created>1597722301224</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1597722301224</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,7 +375,8 @@
     <MESSAGE value="arreglado del toString de GGS" />
     <MESSAGE value="Hecho benchmark para poder comparar después los diferentes algoritmos y heurísticas" />
     <MESSAGE value="cambiada la estructura del csv de benchmark para que se tomen 5 muestras de tiempo de cada método para cada nivel, también agregados algunos niveles" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambiada la estructura del csv de benchmark para que se tomen 5 muestras de tiempo de cada método para cada nivel, también agregados algunos niveles" />
+    <MESSAGE value="Hecho IDA, funciona pero falta testear" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hecho IDA, funciona pero falta testear" />
   </component>
   <component name="WindowStateProjectService">
     <state x="201" y="27" width="1024" height="741" key="#Project_Structure" timestamp="1596916893780">
@@ -389,50 +404,50 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="297" y="-72" width="740" height="758" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1597674675964" />
-    <state x="94" y="-138" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597695360590">
+    <state x="92" y="-36" width="1008" height="758" key="CommitChangelistDialog2" timestamp="1597722301153">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="94" y="-138" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597695360590" />
+    <state x="92" y="-36" width="1008" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597722301153" />
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl" timestamp="1596916891944">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1312" height="522" key="GridCell.Tab.0.bottom" timestamp="1597720926834">
+    <state width="1312" height="330" key="GridCell.Tab.0.bottom" timestamp="1597756764339">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="522" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597720926834" />
+    <state width="1312" height="330" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597756764339" />
     <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
-    <state width="1312" height="522" key="GridCell.Tab.0.center" timestamp="1597720926832">
+    <state width="1312" height="330" key="GridCell.Tab.0.center" timestamp="1597756764338">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="522" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597720926832" />
+    <state width="1312" height="330" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597756764338" />
     <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1312" height="522" key="GridCell.Tab.0.left" timestamp="1597720926831">
+    <state width="1312" height="330" key="GridCell.Tab.0.left" timestamp="1597756764338">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="522" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597720926831" />
+    <state width="1312" height="330" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597756764338" />
     <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1312" height="522" key="GridCell.Tab.0.right" timestamp="1597720926834">
+    <state width="1312" height="330" key="GridCell.Tab.0.right" timestamp="1597756764339">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="522" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597720926834" />
+    <state width="1312" height="330" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597756764339" />
     <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
-    <state width="1312" height="242" key="GridCell.Tab.1.bottom" timestamp="1597720632636">
+    <state width="1312" height="242" key="GridCell.Tab.1.bottom" timestamp="1597722323298">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="242" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597720632636" />
-    <state width="1312" height="242" key="GridCell.Tab.1.center" timestamp="1597720632634">
+    <state width="1312" height="242" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597722323298" />
+    <state width="1312" height="242" key="GridCell.Tab.1.center" timestamp="1597722323297">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="242" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1597720632634" />
-    <state width="1312" height="242" key="GridCell.Tab.1.left" timestamp="1597720632634">
+    <state width="1312" height="242" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1597722323297" />
+    <state width="1312" height="242" key="GridCell.Tab.1.left" timestamp="1597722323297">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="242" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1597720632634" />
-    <state width="1312" height="242" key="GridCell.Tab.1.right" timestamp="1597720632635">
+    <state width="1312" height="242" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1597722323297" />
+    <state width="1312" height="242" key="GridCell.Tab.1.right" timestamp="1597722323298">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="242" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1597720632635" />
+    <state width="1312" height="242" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1597722323298" />
     <state x="155" y="11" key="SettingsEditor" timestamp="1597366352226">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
