@@ -37,8 +37,16 @@ public class GGS<T extends Neighbors<T> & Comparable<T> & Stateful<T>> implement
 
     public List<T> search(T state){
         PriorityQueue<StatePackage<T>> queue = new PriorityQueue<>(
-                (s1, s2) -> (int) ( (1 - omega) * (s1.compareTo(s2)) + omega * s1.compareTo(s2, heuristic))
+                (s1, s2) ->  (int) (2 * (  (1 - omega) * (s1.compareTo(s2)) +  omega * s1.compareTo(s2, heuristic)))
         );
+        //PriorityQueue<StatePackage<T>> queue = null;
+        //if(omega == 0){
+        //     queue = new PriorityQueue<>((s1, s2) -> s1.compareTo(s2));
+        //}else if(omega == 0.5){
+        //    queue = new PriorityQueue<>((s1, s2) -> (s1.compareTo(s2)) + s1.compareTo(s2, heuristic));
+        //}else{
+        //    queue = new PriorityQueue<>((s1, s2) -> s1.compareTo(s2, heuristic));
+        //}
         List<T> list = new LinkedList<>();
         Set<StatePackage<T>> visited = new HashSet<>();
         statePackage = new StatePackage<>(new LinkedList<>(), state,0);

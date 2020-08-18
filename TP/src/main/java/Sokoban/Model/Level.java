@@ -1,12 +1,12 @@
 package Sokoban.Model;
 
-import Sokoban.Interfaces.Map;
+import Sokoban.Interfaces.GameMap;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class Level implements Map {
+public class Level implements GameMap{
 
     private TILES[][] map;
     private final String layout;
@@ -70,5 +70,15 @@ public class Level implements Map {
             }
             System.out.println();
         }
+    }
+
+    @Override
+    public Boolean isWinner() {
+        return null;
+    }
+
+    @Override
+    public Boolean isValid() {
+        return null;
     }
 }

@@ -1,10 +1,10 @@
-package Sokoban;
+package Sokoban.Searchs.Factories;
 
-import Sokoban.Interfaces.Map;
-import Sokoban.Interfaces.Map.TILES;
+import Sokoban.Interfaces.GameMap;
+import Sokoban.Interfaces.GameMap.*;
 import Sokoban.Model.Level;
 
-public class MapFactory {
+public class MapFactory{
 
     //se podría leer de un archivo
     private static final LevelInfo[] levels = new LevelInfo[]{
@@ -21,7 +21,7 @@ public class MapFactory {
                             "~~~#### ####~~~\n"
             )};
 
-    public Map loadMap(int index){
+    public GameMap loadGameMap(int index){
         if(index < 0 || index > levels.length) return null;
         LevelInfo li = levels[index];
         TILES[][] map = parse_map(li);
@@ -37,22 +37,22 @@ public class MapFactory {
             for(int j = 0; j < aux.length; j++){
                 switch(aux[j]){
                     case '~':
-                        map[i][j] = Map.TILES.OUT_OF_BOUNDS;
+                        map[i][j] = TILES.OUT_OF_BOUNDS;
                         break;
                     case ' ':
-                        map[i][j] = Map.TILES.FLOOR;
+                        map[i][j] = TILES.FLOOR;
                         break;
                     case '#':
-                        map[i][j] = Map.TILES.WALL;
+                        map[i][j] = TILES.WALL;
                         break;
                     case '$':
-                        map[i][j] = Map.TILES.BLOCK;
+                        map[i][j] = TILES.BLOCK;
                         break;
                     case '@':
-                        map[i][j] = Map.TILES.PLAYER;
+                        map[i][j] = TILES.PLAYER;
                         break;
                     case '.':
-                        map[i][j] = Map.TILES.TARGET;
+                        map[i][j] = TILES.TARGET;
                         break;
                 }
             }

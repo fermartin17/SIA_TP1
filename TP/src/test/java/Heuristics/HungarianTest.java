@@ -18,23 +18,23 @@ public class HungarianTest {
         cost[0][1] = 6;
         cost[0][2] = 9;
         cost[1][0] = 6;
-        cost[1][1] = -1;
-        cost[1][2] = -1;
-        cost[2][0] = -1;
+        cost[1][1] = 1000;
+        cost[1][2] = 1000;
+        cost[2][0] = 1000;
         cost[2][1] = 1;
         cost[2][2] = 2;
         HungarianAlgorithm hungarianAlgorithm = new HungarianAlgorithm(cost);
         hungarianAlgorithm.findOptimalAssignment();
         Integer[][] expected = new Integer[cost.length][cost.length];
         expected[0][0] = 0;
-        expected[0][1] = 2;
-        expected[0][2] = 5;
-        expected[1][0] = 9;
-        expected[1][1] = 0;
-        expected[1][2] = 0;
-        expected[2][0] = 0;
+        expected[0][1] = 0;
+        expected[0][2] = 2;
+        expected[1][0] = 0;
+        expected[1][1] = 990;
+        expected[1][2] = 989;
+        expected[2][0] = 1003;
         expected[2][1] = 0;
-        expected[2][2] = 1;
+        expected[2][2] = 0;
         //for(int i = 0; i < cost.length; i++){
         //    for(int j = 0; j< cost[0].length; j++){
         //        System.out.print(cost[i][j] + " ");

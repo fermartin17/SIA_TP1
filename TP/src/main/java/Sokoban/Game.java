@@ -1,28 +1,17 @@
 package Sokoban;
 
-import Sokoban.Heuristics.EuclideanDistance;
-import Sokoban.Heuristics.ManhattanDistance;
-import Sokoban.Heuristics.MinMatching;
-import Sokoban.Heuristics.PlayerBoxGoalDistance;
 import Sokoban.Interfaces.GameMap;
 import Sokoban.Interfaces.SearchMethod;
 import Sokoban.Model.MapFactory;
 import Sokoban.Model.State;
-import Sokoban.Searchs.Factories.SearchFactory;
-import Sokoban.Searchs.Uninformed.BFS;
-import Sokoban.Searchs.Uninformed.DFS;
-import Sokoban.Searchs.Uninformed.IDDFS;
-import Sokoban.Searchs.informed.GGS;
 
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.*;
 
 public class Game {
 
     Sokoban.Model.MapFactory mapFactory;
     State initialState;
-    SearchMethod searchMethod;
+    SearchMethod<> searchMethod;
     int level;
 
     public Game(){}
