@@ -23,9 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/TP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_7_0_M1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_0_M1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_0_M1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_7_0_M1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_0_M1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_0_M1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/GameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/App.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +80,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="JUnit.GameTest.testInformedMethods">
+  <component name="RunManager" selected="Application.Play">
     <configuration name="Play" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Sokoban.App" />
       <module name="TP" />
@@ -94,7 +101,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameTest.heuristic1Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DFSTest.correctOrderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP" />
       <extension name="coverage">
         <pattern>
@@ -103,8 +110,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Sokoban.Searchs.Uninformed" />
-      <option name="MAIN_CLASS_NAME" value="Sokoban.Searchs.Uninformed.GameTest" />
-      <option name="METHOD_NAME" value="heuristic1Test" />
+      <option name="MAIN_CLASS_NAME" value="Sokoban.Searchs.Uninformed.DFSTest" />
+      <option name="METHOD_NAME" value="correctOrderTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -176,19 +183,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Play" />
-      <item itemvalue="JUnit.GameTest.heuristic1Test" />
       <item itemvalue="JUnit.GameTest.minMatchingTest" />
       <item itemvalue="JUnit.HungarianTest.oneSizeCostMatrixTest" />
       <item itemvalue="JUnit.GameTest.testInformedMethods" />
       <item itemvalue="JUnit.GameTest.testUninformedMethods" />
+      <item itemvalue="JUnit.DFSTest.correctOrderTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DFSTest.correctOrderTest" />
         <item itemvalue="JUnit.GameTest.testInformedMethods" />
         <item itemvalue="JUnit.GameTest.testUninformedMethods" />
         <item itemvalue="JUnit.GameTest.minMatchingTest" />
         <item itemvalue="JUnit.HungarianTest.oneSizeCostMatrixTest" />
-        <item itemvalue="JUnit.GameTest.heuristic1Test" />
       </list>
     </recent_temporary>
   </component>
@@ -220,6 +227,7 @@
       <workItem from="1597625594746" duration="8620000" />
       <workItem from="1597671701570" duration="23455000" />
       <workItem from="1597754346137" duration="2586000" />
+      <workItem from="1597766662815" duration="602000" />
     </task>
     <task id="LOCAL-00001" summary="Hechos métodos isWinner, isValid (viejo checkmap) y método para precalcular posiciones de deadlock">
       <created>1597355743262</created>
@@ -412,26 +420,26 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1312" height="330" key="GridCell.Tab.0.bottom" timestamp="1597756764339">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1250" height="497" key="GridCell.Tab.0.bottom" timestamp="1597767229805">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597756764339" />
-    <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
-    <state width="1312" height="330" key="GridCell.Tab.0.center" timestamp="1597756764338">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1250" height="497" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597767229805" />
+    <state width="1250" height="497" key="GridCell.Tab.0.center" timestamp="1597767229804">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597756764338" />
-    <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1312" height="330" key="GridCell.Tab.0.left" timestamp="1597756764338">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1250" height="497" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597767229804" />
+    <state width="1250" height="497" key="GridCell.Tab.0.left" timestamp="1597767229804">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597756764338" />
-    <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1312" height="330" key="GridCell.Tab.0.right" timestamp="1597756764339">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1250" height="497" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597767229804" />
+    <state width="1250" height="497" key="GridCell.Tab.0.right" timestamp="1597767229805">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597756764339" />
-    <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
+    <state width="1250" height="497" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597767229805" />
     <state width="1312" height="242" key="GridCell.Tab.1.bottom" timestamp="1597722323298">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
