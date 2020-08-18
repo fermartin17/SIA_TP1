@@ -23,16 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/TP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_7_0_M1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_0_M1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_0_M1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_7_0_M1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_0_M1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_0_M1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Conf.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Conf.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -420,42 +412,46 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1250" height="497" key="GridCell.Tab.0.bottom" timestamp="1597767229805">
+    <state width="1250" height="497" key="GridCell.Tab.0.bottom" timestamp="1597769907017">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597756764339" />
-    <state width="1250" height="497" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597767229805" />
-    <state width="1250" height="497" key="GridCell.Tab.0.center" timestamp="1597767229804">
+    <state width="1250" height="497" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597769907017" />
+    <state width="1250" height="497" key="GridCell.Tab.0.center" timestamp="1597769907016">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597756764338" />
-    <state width="1250" height="497" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597767229804" />
-    <state width="1250" height="497" key="GridCell.Tab.0.left" timestamp="1597767229804">
+    <state width="1250" height="497" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597769907016" />
+    <state width="1250" height="497" key="GridCell.Tab.0.left" timestamp="1597769907016">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597756764338" />
-    <state width="1250" height="497" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597767229804" />
-    <state width="1250" height="497" key="GridCell.Tab.0.right" timestamp="1597767229805">
+    <state width="1250" height="497" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597769907016" />
+    <state width="1250" height="497" key="GridCell.Tab.0.right" timestamp="1597769907016">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597756764339" />
-    <state width="1250" height="497" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597767229805" />
-    <state width="1312" height="242" key="GridCell.Tab.1.bottom" timestamp="1597722323298">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1250" height="497" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597769907016" />
+    <state width="1250" height="215" key="GridCell.Tab.1.bottom" timestamp="1597769868045">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="242" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597722323298" />
-    <state width="1312" height="242" key="GridCell.Tab.1.center" timestamp="1597722323297">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1250" height="215" key="GridCell.Tab.1.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597769868045" />
+    <state width="1250" height="215" key="GridCell.Tab.1.center" timestamp="1597769868044">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="242" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1597722323297" />
-    <state width="1312" height="242" key="GridCell.Tab.1.left" timestamp="1597722323297">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1250" height="215" key="GridCell.Tab.1.center/70.27.1296.741@70.27.1296.741" timestamp="1597769868044" />
+    <state width="1250" height="215" key="GridCell.Tab.1.left" timestamp="1597769868044">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="242" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1597722323297" />
-    <state width="1312" height="242" key="GridCell.Tab.1.right" timestamp="1597722323298">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1250" height="215" key="GridCell.Tab.1.left/70.27.1296.741@70.27.1296.741" timestamp="1597769868043" />
+    <state width="1250" height="215" key="GridCell.Tab.1.right" timestamp="1597769868044">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="242" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1597722323298" />
+    <state width="1250" height="215" key="GridCell.Tab.1.right/70.27.1296.741@70.27.1296.741" timestamp="1597769868044" />
     <state x="155" y="11" key="SettingsEditor" timestamp="1597366352226">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -488,6 +484,27 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1597694150735" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Sokoban/App.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Sokoban/Game.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Sokoban/Game.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TP$MapImplTest.ic" NAME="MapImplTest Coverage Results" MODIFIED="1597593589813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
