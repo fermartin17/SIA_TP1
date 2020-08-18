@@ -58,7 +58,7 @@ public class Game {
             for(State state : states){
                 state.getMap().printMap();
             }
-            System.out.println("El tiempo de ejecucion fue " + key);
+            System.out.println("El tiempo de ejecucion fue " + key + " nanosegundos");
         }
 
     }

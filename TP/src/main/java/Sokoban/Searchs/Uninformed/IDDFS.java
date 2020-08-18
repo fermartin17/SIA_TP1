@@ -16,7 +16,7 @@ public class IDDFS<T extends Neighbors<T> & Comparable<T> & Stateful<T>> impleme
     private List<T> stack;
     private int jump;
     private int currenTry;
-    private final int maxTries = 10;
+    private final int maxTries = 100;
 
     public IDDFS(int jump){
         this.myDLS = new DLS<>();

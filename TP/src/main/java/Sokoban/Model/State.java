@@ -30,7 +30,6 @@ public class State implements Comparable<State>, Neighbors<State>, Stateful<Stat
     @Override
     public List<State> getNeighbors() {
         List<State> list = new ArrayList<>(4);
-        //this.map.printMap();
         MapImpl mapUp = new MapImpl(this.map);
         MapImpl mapRight = new MapImpl(this.map);
         MapImpl mapDown = new MapImpl(this.map);
@@ -39,10 +38,6 @@ public class State implements Comparable<State>, Neighbors<State>, Stateful<Stat
         if(mapRight.movePlayer(GameMap.DIRECTION.RIGHT)) list.add(new State(mapRight, GameMap.DIRECTION.RIGHT));
         if(mapDown.movePlayer(GameMap.DIRECTION.DOWN)) list.add(new State(mapDown, GameMap.DIRECTION.DOWN));
         if(mapLeft.movePlayer(GameMap.DIRECTION.LEFT)) list.add(new State(mapLeft, GameMap.DIRECTION.LEFT));
-        //mapUp.printMap();
-        //mapRight.printMap();
-        //mapDown.printMap();
-        //mapLeft.printMap();
         return list;
     }
 

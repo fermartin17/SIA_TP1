@@ -36,6 +36,7 @@ public class App
 
         game.start(searchMethod,Integer.parseInt(params[2]));
 
+
 //    Benchmark benchmark = new Benchmark();
 //        benchmark.runBenchmark();
     }

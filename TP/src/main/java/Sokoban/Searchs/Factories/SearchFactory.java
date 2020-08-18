@@ -20,7 +20,7 @@ public class SearchFactory {
         switch (params[0]){
             case Constants.ConstantsValues.DFS: return new DFS<State>();
             case Constants.ConstantsValues.BFS: return new BFS<State>();
-            case Constants.ConstantsValues.IDDFS: return new IDDFS<State>(10);
+            case Constants.ConstantsValues.IDDFS: return new IDDFS<State>(50);
             case Constants.ConstantsValues.GGS: return new GGS<State>(1,HeuristicFactory.heuristic(params[1]));
             case Constants.ConstantsValues.A: return new GGS<State>(0.5,HeuristicFactory.heuristic(params[1]));
             case Constants.ConstantsValues.IDA: return new IDA<State>(HeuristicFactory.heuristic(params[1]));

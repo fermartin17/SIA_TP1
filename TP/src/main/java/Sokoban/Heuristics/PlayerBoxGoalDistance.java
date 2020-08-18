@@ -10,7 +10,7 @@ public class PlayerBoxGoalDistance implements Heuristic<State> {
 
     //Ha = distManhattan(jugador, caja*) + distManhattan(caja, objetivo*)
     //caja* = caja más cercana al jugador
-    //objetivo* = caja más cercana al objetivo
+    //objetivo* = objetivo mas cerca de la caja
 
     @Override
     public Double evaluate(State s) {
