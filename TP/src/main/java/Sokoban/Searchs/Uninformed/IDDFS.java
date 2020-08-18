@@ -33,9 +33,10 @@ public class IDDFS<T extends Neighbors<T> & Comparable<T> & Stateful<T>> impleme
             if(currenTry < maxTries){
                 currenTry++;
                 i+= jump;
-            }else{
-                return null;
             }
+            else
+                return null;
+
         }
     }
 

@@ -24,8 +24,6 @@ public class StatePackage<T extends Comparable<T>> implements Comparable<StatePa
         this.cost = cost;
     }
 
-    public T getCurrState(){ return this.currState; }
-
     //default compareTo, comparar por el costo
     @Override
     public int compareTo(StatePackage<T> o) {
