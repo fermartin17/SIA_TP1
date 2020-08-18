@@ -23,7 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/IDA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DLS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DLS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/GameTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +74,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.Play">
+  <component name="RunManager" selected="JUnit.GameTest.testInformedMethods">
     <configuration name="Play" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Sokoban.App" />
       <module name="TP" />
@@ -214,7 +217,7 @@
       <workItem from="1597414174426" duration="22502000" />
       <workItem from="1597498776475" duration="30652000" />
       <workItem from="1597625594746" duration="8620000" />
-      <workItem from="1597671701570" duration="15662000" />
+      <workItem from="1597671701570" duration="23455000" />
     </task>
     <task id="LOCAL-00001" summary="Hechos métodos isWinner, isValid (viejo checkmap) y método para precalcular posiciones de deadlock">
       <created>1597355743262</created>
@@ -374,10 +377,10 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="176" y="55" width="1084" height="710" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.27.1296.741@70.27.1296.741" timestamp="1596746618246" />
-    <state x="435" y="-63" width="378" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1597674915038">
+    <state x="433" y="-81" width="378" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1597715324795">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="435" y="-63" width="378" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1597674915038" />
+    <state x="433" y="-81" width="378" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1597715324795" />
     <state x="526" y="105" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/70.27.1296.741@70.27.1296.741" timestamp="1597262695986" />
     <state x="450" y="202" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1596746616117">
       <screen x="70" y="27" width="1296" height="741" />
@@ -399,42 +402,42 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1312" height="275" key="GridCell.Tab.0.bottom" timestamp="1597695269096">
+    <state width="1312" height="522" key="GridCell.Tab.0.bottom" timestamp="1597720926834">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="275" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597695269096" />
+    <state width="1312" height="522" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597720926834" />
     <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
-    <state width="1312" height="275" key="GridCell.Tab.0.center" timestamp="1597695269095">
+    <state width="1312" height="522" key="GridCell.Tab.0.center" timestamp="1597720926832">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="275" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597695269095" />
+    <state width="1312" height="522" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597720926832" />
     <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1312" height="275" key="GridCell.Tab.0.left" timestamp="1597695269094">
+    <state width="1312" height="522" key="GridCell.Tab.0.left" timestamp="1597720926831">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="275" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597695269094" />
+    <state width="1312" height="522" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597720926831" />
     <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597261341901" />
-    <state width="1312" height="275" key="GridCell.Tab.0.right" timestamp="1597695269095">
+    <state width="1312" height="522" key="GridCell.Tab.0.right" timestamp="1597720926834">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="275" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597695269095" />
+    <state width="1312" height="522" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597720926834" />
     <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597261341902" />
-    <state width="1312" height="244" key="GridCell.Tab.1.bottom" timestamp="1597671906333">
+    <state width="1312" height="242" key="GridCell.Tab.1.bottom" timestamp="1597720632636">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="244" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597671906333" />
-    <state width="1312" height="244" key="GridCell.Tab.1.center" timestamp="1597671906332">
+    <state width="1312" height="242" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597720632636" />
+    <state width="1312" height="242" key="GridCell.Tab.1.center" timestamp="1597720632634">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="244" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1597671906332" />
-    <state width="1312" height="244" key="GridCell.Tab.1.left" timestamp="1597671906332">
+    <state width="1312" height="242" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1597720632634" />
+    <state width="1312" height="242" key="GridCell.Tab.1.left" timestamp="1597720632634">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="244" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1597671906332" />
-    <state width="1312" height="244" key="GridCell.Tab.1.right" timestamp="1597671906333">
+    <state width="1312" height="242" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1597720632634" />
+    <state width="1312" height="242" key="GridCell.Tab.1.right" timestamp="1597720632635">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1312" height="244" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1597671906333" />
+    <state width="1312" height="242" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1597720632635" />
     <state x="155" y="11" key="SettingsEditor" timestamp="1597366352226">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -472,12 +475,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/IDDFS.java</url>
-          <line>28</line>
-          <properties class="Sokoban.Searchs.Uninformed.IDDFS" method="search">
+          <url>file://$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/IDA.java</url>
+          <line>37</line>
+          <properties class="Sokoban.Searchs.informed.IDA" method="_search">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="29" />
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

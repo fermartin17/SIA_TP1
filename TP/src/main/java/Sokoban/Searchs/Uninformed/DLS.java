@@ -49,21 +49,4 @@ public class DLS <T extends Neighbors<T> & Comparable<T> & Stateful<T>> {
         return false;
     }
 
-    //private Boolean searchDLS(T state,int depth){
-    //    if(state.isDone()){
-    //        this.stack.push(state);
-    //        return true;
-    //    }
-    //    if(depth == 0 || !state.isValid() || this.history.contains(state))
-    //        return false;
-    //    this.history.add(state);
-    //    for(T neighbors : state.getNeighbors()) {
-    //        if (searchDLS(neighbors,depth-1)) {
-    //            this.stack.push(state);
-    //            return true;
-    //        }
-    //    }
-    //    return false;
-    //}
-
 }
