@@ -12,7 +12,6 @@ public class HeuristicFactory {
     public static Heuristic heuristic(String param){
 
         switch (param){
-            case Constants.ConstantsValues.EuclideanDistance: return new EuclideanDistance();
             case Constants.ConstantsValues.SimpleMinDistance: return new SimpleMinDistance();
             case Constants.ConstantsValues.MinMatching: return new MinMatching();
             case Constants.ConstantsValues.PlayerBoxGoalDistance: return new PlayerBoxGoalDistance();

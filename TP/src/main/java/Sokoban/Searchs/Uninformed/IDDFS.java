@@ -33,7 +33,7 @@ public class IDDFS<T extends Neighbors<T> & Comparable<T> & Stateful<T>> impleme
     //In class said that all maps have solution so is not an infinite loop
     public Result<T> search(T initial){
         Result<T> result;
-        if(initial == null) return new Result<T>(searchName(), false, 0,0,totalNodesExpanded, 0, null);
+        if(initial == null) return new Result<T>(searchName(), false, 0,0,totalNodesExpanded, nodesInFrontier, null);
         for(int i = jump;;) {
             result = myDLS.search(initial, i);
             if(result.isFound()){

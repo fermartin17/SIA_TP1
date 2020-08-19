@@ -25,15 +25,17 @@ public class DLS <T extends Neighbors<T> & Comparable<T> & Stateful<T>> {
     }
 
     public Result<T> search(T initial,int depth){
-        if(initial == null || depth < 0) return new Result<T>(searchName(), false, 0,0,totalNodesExpanded, 0, null);
+        this.history.clear();
+        this.stack.clear();
+        if(initial == null || depth < 0) return new Result<T>(searchName(), false, 0,0,totalNodesExpanded, nodesInFrontier, null);
         searchDLS(initial, depth);
         if(stack.isEmpty()){
-            history.clear();
-            stack.clear();
-            return new Result<T>(searchName(), false, 0,0,totalNodesExpanded, 0, null);
+            this.history.clear();
+            this.stack.clear();
+            this.nodesInFrontier = 0;
+            this.totalNodesExpanded = 0;
+            return new Result<T>(searchName(), false, 0,0,totalNodesExpanded, nodesInFrontier, null);
         }
-        history.clear();
-        stack.clear();
         return new Result<T>(searchName(), true, stack.size(), stack.size(), totalNodesExpanded, nodesInFrontier, (List<T>)stack);
     }
 
@@ -43,11 +45,13 @@ public class DLS <T extends Neighbors<T> & Comparable<T> & Stateful<T>> {
             this.stack.push(state);
             return true;
         }
+
+        this.nodesInFrontier--;
         if(depth == 0 || !state.isValid() || this.history.contains(state)) return false;
         this.history.add(state);
         List<T> neighbors = state.getNeighbors();
         for(T neighbor : neighbors) {
-            nodesInFrontier = neighbors.size();
+            this.nodesInFrontier += neighbors.size();
             if (searchDLS(neighbor,depth-1)) {
                 this.stack.push(state);
                 return true;

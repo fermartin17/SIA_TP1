@@ -22,15 +22,15 @@ public class DFS <T extends Neighbors<T> & Comparable<T> & Stateful<T>> implemen
         this.stack = new LinkedList<>();
         this.history = new HashSet<>();
         this.totalNodesExpanded = 0;
-        this.nodesInFrontier = 0;
+        this.nodesInFrontier = 1;
     }
 
     @Override
     public Result<T> search(T initial){
+        stack.clear();
         if(initial == null) return new Result<>(searchName(), false, 0,0,totalNodesExpanded, 0, null);
         searchDFS(initial);
         if(stack.isEmpty()) return new Result<>(searchName(), false, 0,0,totalNodesExpanded, 0, null);
-        stack.clear();
         return new Result<T>(searchName(), true, stack.size(), stack.size(), totalNodesExpanded, nodesInFrontier, (List<T>) stack);
     }
 
@@ -40,13 +40,16 @@ public class DFS <T extends Neighbors<T> & Comparable<T> & Stateful<T>> implemen
            this.stack.push(state);
            return true;
         }
+
+        this.nodesInFrontier--;
+
         if(!state.isValid() || this.history.contains(state))
             return false;
 
         this.history.add(state);
         List<T> neighbors = state.getNeighbors();
         for(T neighbor : state.getNeighbors()) {
-            nodesInFrontier = neighbors.size();
+            this.nodesInFrontier+= neighbors.size();
             if (searchDFS(neighbor)) {
                 this.stack.push(state);
                 return true;

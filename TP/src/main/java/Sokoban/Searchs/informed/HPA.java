@@ -6,13 +6,13 @@ import Sokoban.Model.StatePackage;
 
 import java.util.*;
 
-public class GGS<T extends Neighbors<T> & Comparable<T> & Stateful<T>> implements SearchMethod<T> {
+public class HPA<T extends Neighbors<T> & Comparable<T> & Stateful<T>> implements SearchMethod<T> {
 
     StatePackage<T> statePackage;
     double omega;
     Heuristic<T> heuristic;
 
-    public GGS(double omega){
+    public HPA(double omega){
         this.omega = omega;
         this.heuristic = new Heuristic<>() {
             @Override
@@ -22,7 +22,7 @@ public class GGS<T extends Neighbors<T> & Comparable<T> & Stateful<T>> implement
         };
     }
 
-    public GGS(double omega, Heuristic<T> heuristic){
+    public HPA(double omega, Heuristic<T> heuristic){
         this.omega = omega;
         this.heuristic = heuristic;
     }

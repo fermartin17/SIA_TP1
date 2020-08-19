@@ -3,6 +3,7 @@ package Sokoban;
 import Sokoban.Interfaces.GameMap;
 import Sokoban.Interfaces.SearchMethod;
 import Sokoban.Model.MapFactory;
+import Sokoban.Model.Result;
 import Sokoban.Model.State;
 
 import java.util.*;
@@ -27,11 +28,11 @@ public class Game {
         initialState = new State(gameMap, GameMap.DIRECTION.INITIAL);
     }
 
-    public Map<Long,List<State>> answerData(SearchMethod<State> method){
-        Map<Long,List<State>> resp = new HashMap<Long,List<State>>();
+    public Map<Long,Result<State>> answerData(SearchMethod<State> method){
+        Map<Long,Result<State>> resp = new HashMap<Long,Result<State>>();
         Double time;
         Long startTime = System.nanoTime();
-        List<State> aux = (List<State>) method.search(this.initialState);
+        Result<State> aux = method.search(this.initialState);
         Long endTime = System.nanoTime();
         resp.put(endTime - startTime,aux);
         return resp;
@@ -40,15 +41,20 @@ public class Game {
     public void start(SearchMethod<State> searchMethod, int level){
         setup(searchMethod, level);
         setupInitialState();
-        Map<Long,List<State>> answer = answerData(this.searchMethod);
+        Map<Long,Result<State>> answer = answerData(this.searchMethod);
 
         for (Long key: answer.keySet()){
-            List<State> states = answer.get(key);
-            for(State state : states){
+            Result<State> result = answer.get(key);
+            for(State state : result.getPath()){
                 state.getMap().printMap();
             }
             System.out.println("El tiempo de ejecucion fue " + key + " nanosegundos");
-            System.out.println("Numero de pasos: " + states.size());
+            System.out.println("Numero de pasos: " + result.getPath().size());
+            System.out.println("Cantidad de nodos frontera: " + result.getNodesInFrontier());
+            System.out.println("Cantidad de nodos expandidos: " + result.getNodesExpanded());
+            System.out.println("Profundidad: " + result.getDepth());
+            System.out.println("Encontro respuesta: " + result.isFound());
+            System.out.println("Tipo de algoritmo: " + result.getMethod());
         }
 
     }

@@ -1,6 +1,6 @@
 Choose one: BFS, DFS, IDDFS, GGS, A, IDA
-GGS
+IDDFS
 Choose one Heuristic: SimpleMinDistance, MinMatching, PlayerBoxGoalDistance
-MinMatching
+
 Choose map number: 0, 1, 2, 3, 4, 5
-3
+4

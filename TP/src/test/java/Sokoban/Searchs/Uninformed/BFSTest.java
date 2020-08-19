@@ -1,5 +1,6 @@
 package Sokoban.Searchs.Uninformed;
 import Sokoban.Interfaces.Neighbors;
+import Sokoban.Model.Result;
 import org.junit.Assert;
 import org.junit.Test;
 import java.util.ArrayList;
@@ -20,9 +21,9 @@ public class BFSTest{
         expected.add(new Node(6, 5));
         expected.add(new Node(5, 5));
         BFS<Node> bfs = new BFS<>();
-        List<Node> result = bfs.search(root);
+        Result<Node> result = bfs.search(root);
         Assert.assertNotNull(result);
-        Assert.assertArrayEquals(expected.toArray(), result.toArray());
+        Assert.assertArrayEquals(expected.toArray(), result.getPath().toArray());
     }
 
 }
