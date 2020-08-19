@@ -31,9 +31,9 @@ public class Game {
     public Map<Long,Result<State>> answerData(SearchMethod<State> method){
         Map<Long,Result<State>> resp = new HashMap<Long,Result<State>>();
         Double time;
-        Long startTime = System.nanoTime();
+        Long startTime = System.currentTimeMillis();
         Result<State> aux = method.search(this.initialState);
-        Long endTime = System.nanoTime();
+        Long endTime = System.currentTimeMillis();
         resp.put(endTime - startTime,aux);
         return resp;
     }
@@ -48,7 +48,7 @@ public class Game {
             for(State state : result.getPath()){
                 state.getMap().printMap();
             }
-            System.out.println("El tiempo de ejecucion fue " + key + " nanosegundos");
+            System.out.println("El tiempo de ejecucion fue " + key + " milisegundos");
             System.out.println("Numero de pasos: " + result.getPath().size());
             System.out.println("Cantidad de nodos frontera: " + result.getNodesInFrontier());
             System.out.println("Cantidad de nodos expandidos: " + result.getNodesExpanded());

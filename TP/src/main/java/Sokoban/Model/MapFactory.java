@@ -37,8 +37,8 @@ public class MapFactory {
                             "#     #\n" +
                             "#. #  #\n" +
                             "#. $$ #\n" +
-                            "#.$$  #\n" +
-                            "#.#  @#\n" +
+                            "#. $  #\n" +
+                            "# #  @#\n" +
                             "#######\n"
             ),
             new LevelInfo("original-tp",10, 15,
