@@ -26,4 +26,8 @@ public class SimpleMinDistance implements Heuristic<State> {
         return total;
     }
 
+    @Override
+    public String toString() {
+        return "Simple Min Distance";
+    }
 }

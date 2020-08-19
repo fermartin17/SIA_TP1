@@ -40,4 +40,9 @@ public class PlayerBoxGoalDistance implements Heuristic<State> {
         }
         return minPlayerBox + minBoxGoal;
     }
+
+    @Override
+    public String toString() {
+        return "Player-Box-Goal Distance";
+    }
 }

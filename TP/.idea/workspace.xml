@@ -25,23 +25,9 @@
     <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Conf.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Conf.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Benchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Benchmark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Factories/HeuristicFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Factories/HeuristicFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Factories/SearchFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Factories/SearchFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DLS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DLS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/IDDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/IDDFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/HPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/GameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/BFSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/BFSTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/DFSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/DFSTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/BFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/BFS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/DFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/DFS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/DLS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/DLS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/IDDFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/IDDFS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Sokoban/Searchs/Uninformed/BFSTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Sokoban/Searchs/Uninformed/BFSTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/MinMatching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/MinMatching.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/PlayerBoxGoalDistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/PlayerBoxGoalDistance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/SimpleMinDistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/SimpleMinDistance.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -416,11 +402,11 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="170" y="127" width="1096" height="541" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/70.27.1296.741@70.27.1296.741" timestamp="1597859588202" />
-    <state x="431" y="21" width="378" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1597849494556">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="526" y="105" width="378" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1597863071988">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="431" y="21" width="378" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1597849494556" />
-    <state x="526" y="105" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/70.27.1296.741@70.27.1296.741" timestamp="1597262695986" />
+    <state x="526" y="105" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/70.27.1296.741@70.27.1296.741" timestamp="1597863071988" />
     <state x="450" y="202" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1596746616117">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
@@ -441,26 +427,26 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1250" height="183" key="GridCell.Tab.0.bottom" timestamp="1597862546480">
+    <state width="1250" height="535" key="GridCell.Tab.0.bottom" timestamp="1597864521644">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="280" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597849387277" />
-    <state width="1250" height="183" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597862546480" />
-    <state width="1250" height="183" key="GridCell.Tab.0.center" timestamp="1597862546480">
+    <state width="1250" height="535" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597864521644" />
+    <state width="1250" height="535" key="GridCell.Tab.0.center" timestamp="1597864521642">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="280" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597849387276" />
-    <state width="1250" height="183" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597862546480" />
-    <state width="1250" height="183" key="GridCell.Tab.0.left" timestamp="1597862546479">
+    <state width="1250" height="535" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597864521642" />
+    <state width="1250" height="535" key="GridCell.Tab.0.left" timestamp="1597864521639">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="280" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597849387276" />
-    <state width="1250" height="183" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597862546479" />
-    <state width="1250" height="183" key="GridCell.Tab.0.right" timestamp="1597862546480">
+    <state width="1250" height="535" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597864521639" />
+    <state width="1250" height="535" key="GridCell.Tab.0.right" timestamp="1597864521643">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="280" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597849387277" />
-    <state width="1250" height="183" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597862546480" />
+    <state width="1250" height="535" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597864521643" />
     <state width="1250" height="215" key="GridCell.Tab.1.bottom" timestamp="1597861709689">
       <screen x="70" y="27" width="1296" height="741" />
     </state>

@@ -121,4 +121,9 @@ public class MinMatching implements Heuristic<State> {
         return playerPos.manhattanDistance(playerTarget);
     }
 
+    @Override
+    public String toString() {
+        return "Min Matching";
+    }
+
 }
