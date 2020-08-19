@@ -14,8 +14,8 @@ public class SimpleMinDistance implements Heuristic<State> {
         List<Position> goals = s.getMap().getGoalsPositions();
         List<Position> boxes = s.getMap().getBoxPositions();
         double total = 0;
+        double min = Double.MAX_VALUE;
         for(Position box : boxes) {
-            double min = Double.MAX_VALUE;
             double aux;
             for (Position g : goals) {
                 aux = box.manhattanDistance(g);

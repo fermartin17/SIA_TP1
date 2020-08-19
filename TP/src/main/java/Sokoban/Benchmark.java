@@ -35,18 +35,16 @@ public class Benchmark {
         searchMethods.add(new IDDFS<>(15));
         searchMethods = new ArrayList<>();
         searchMethods.add(new GGS<>(0));
-        searchMethods.add(new GGS<>(0.5, new EuclideanDistance()));
         searchMethods.add(new GGS<>(0.5, new SimpleMinDistance()));
         searchMethods.add(new GGS<>(0.5, new PlayerBoxGoalDistance()));
         searchMethods.add(new GGS<>(0.5, new MinMatching()));
-        searchMethods.add(new GGS<>(1, new EuclideanDistance()));
         searchMethods.add(new GGS<>(1, new SimpleMinDistance()));
         searchMethods.add(new GGS<>(1, new PlayerBoxGoalDistance()));
         searchMethods.add(new GGS<>(1, new MinMatching()));
     }
 
     public void setupInitialState(int level){
-        GameMap gameMap = mapFactory.loadMap(0); //EASY MAP
+        GameMap gameMap = mapFactory.loadMap(level);
         initialState = new State(gameMap, GameMap.DIRECTION.INITIAL);
     }
 
