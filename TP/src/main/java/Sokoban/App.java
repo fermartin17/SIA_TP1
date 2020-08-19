@@ -14,31 +14,31 @@ public class App
 {
     public static void main( String[] args ) throws IOException {
 
-//        File file = new File("Conf.txt");
-//
-//        BufferedReader br = new BufferedReader(new FileReader(file));
-//
-//        String st;
-//        int count = 1;
-//        int index = 0;
-//        String[] params = new String[3];
-//
-//
-//        while ((st = br.readLine()) != null) {
-//            if(count % 2 == 0)
-//                params[index++] = st;
-//            count++;
-//        }
-//
-//        SearchMethod searchMethod = SearchFactory.searchMethod(params);
-//
-//        Game game = new Game();
-//
-//        game.start(searchMethod,Integer.parseInt(params[2]));
+        File file = new File("Conf.txt");
+
+        BufferedReader br = new BufferedReader(new FileReader(file));
+
+        String st;
+        int count = 1;
+        int index = 0;
+        String[] params = new String[3];
 
 
-    Benchmark benchmark = new Benchmark();
-        benchmark.runBenchmark();
+        while ((st = br.readLine()) != null) {
+            if (count % 2 == 0)
+                params[index++] = st;
+            count++;
+        }
+
+        SearchMethod searchMethod = SearchFactory.searchMethod(params);
+
+        Game game = new Game();
+
+        game.start(searchMethod, Integer.parseInt(params[2]));
     }
+
+    //Benchmark benchmark = new Benchmark();
+    //    benchmark.runBenchmark();
+    //}
 
 }

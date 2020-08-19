@@ -1,6 +1,7 @@
 package Sokoban.Searchs.informed;
 
 import Sokoban.Interfaces.*;
+import Sokoban.Model.Result;
 import Sokoban.Model.StatePackage;
 
 import java.util.*;
@@ -35,11 +36,9 @@ public class GGS<T extends Neighbors<T> & Comparable<T> & Stateful<T>> implement
         return "";
     }
 
-    public List<T> search(T state){
-        //PriorityQueue<StatePackage<T>> queue = new PriorityQueue<>(
-        //        (s1, s2) ->  (int) (2 * (  (1 - omega) * (s1.compareTo(s2)) +  omega * s1.compareTo(s2, heuristic)))
-        //);
-        PriorityQueue<StatePackage<T>> queue = null;
+    public Result<T> search(T state){
+        if(state == null) return new Result<>(searchName(), false, 0, 0.0, 0, 0, null);
+        PriorityQueue<StatePackage<T>> queue;
         if(omega == 0){
              queue = new PriorityQueue<>((s1, s2) -> s1.compareTo(s2));
         }else if(omega == 0.5){
@@ -56,18 +55,22 @@ public class GGS<T extends Neighbors<T> & Comparable<T> & Stateful<T>> implement
         Set<StatePackage<T>> visited = new HashSet<>();
         statePackage = new StatePackage<>(new LinkedList<>(), state,0);
         queue.offer(statePackage);
+        int nodesExpanded = 0;
         while(!queue.isEmpty()){
+            nodesExpanded++;
             StatePackage<T> aux = queue.poll();
             if(visited.contains(aux)) continue;
             visited.add(aux);
             aux.getHistory().add(aux.getCurrState());
             list = aux.getHistory();
-            if(aux.getCurrState().isDone()) return list;
+            if(aux.getCurrState().isDone()){
+                return new Result<>(searchName(), true, list.size(), list.size(), nodesExpanded, queue.size(), list);
+            }
             for(T neighbor : aux.getCurrState().getNeighbors()){
                 if(neighbor.isValid()) queue.offer(new StatePackage<>(new LinkedList<T>(list), neighbor,aux.getCost() + 1.0));
             }
         }
-        return list;
+        return new Result<>(searchName(), false, 0, 0.0, 0, 0, null);
     }
 
 }

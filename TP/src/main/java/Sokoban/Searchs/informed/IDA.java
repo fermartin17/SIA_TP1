@@ -4,6 +4,7 @@ import Sokoban.Interfaces.Heuristic;
 import Sokoban.Interfaces.Neighbors;
 import Sokoban.Interfaces.SearchMethod;
 import Sokoban.Interfaces.Stateful;
+import Sokoban.Model.Result;
 import Sokoban.Model.State;
 import Sokoban.Model.StatePackage;
 
@@ -13,22 +14,32 @@ public class IDA<T extends Neighbors<T> & Comparable<T> & Stateful<T>> implement
 
     Heuristic<T> heuristic;
     Set<T> visited;
+    private int totalNodesExpanded;
+    private int nodesInFrontier;
 
     public IDA(Heuristic<T> heuristic){
         this.heuristic = heuristic;
         visited = new HashSet<>();
+        this.totalNodesExpanded = 0;
+        this.nodesInFrontier = 0;
     }
 
     @Override
-    public Collection<T> search(T state) {
+    public Result<T> search(T state) {
+        if(state == null) return new Result<>(searchName(), false, 0, 0.0,
+                0, 0, null);
         double bound = heuristic.evaluate(state);
         StatePackage<T> statePackage = new StatePackage<>(new LinkedList<>(), state, 0);
         while(true){
             visited.add(state);
             statePackage.getHistory().add(state);
             StatePackage<T> aux = _search(statePackage, 0.0, bound);
-            if(aux.getCost() == -1) return aux.getHistory();
-            if(aux.getCost() == Double.MAX_VALUE) return null;
+            if(aux.getCost() == -1){ //found
+                return new Result<>(searchName(), true, aux.getHistory().size(), aux.getHistory().size(),
+                                    totalNodesExpanded, nodesInFrontier, aux.getHistory());
+            }
+            if(aux.getCost() == Double.MAX_VALUE) return new Result<>(searchName(), false, 0, 0.0,
+                    0, 0, null);
             bound += aux.getCost();
             visited.clear();
             statePackage.getHistory().clear();
@@ -36,6 +47,7 @@ public class IDA<T extends Neighbors<T> & Comparable<T> & Stateful<T>> implement
     }
 
     public StatePackage<T> _search(StatePackage<T> path, double cost, double bound){
+        totalNodesExpanded++;
         T currState = path.getCurrState();
         double f = cost + heuristic.evaluate(currState);
         if(f > bound) return new StatePackage<>(path.getHistory(), currState, f);
@@ -45,7 +57,9 @@ public class IDA<T extends Neighbors<T> & Comparable<T> & Stateful<T>> implement
         }
         double min = Double.MAX_VALUE;
         StatePackage<T> minState = new StatePackage<T>(new LinkedList<>(), null, Double.MAX_VALUE);
-        for(T neighbor : currState.getNeighbors()){
+        List<T> neighbors = currState.getNeighbors();
+        nodesInFrontier = neighbors.size();
+        for(T neighbor : neighbors){
             if(!neighbor.isValid() || visited.contains(neighbor)) continue;
             visited.add(neighbor);
             StatePackage<T> newPath = new StatePackage<T>(new LinkedList<>(path.getHistory()), neighbor, cost + 1);

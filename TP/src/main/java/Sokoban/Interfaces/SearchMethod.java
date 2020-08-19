@@ -1,5 +1,7 @@
 package Sokoban.Interfaces;
 
+import Sokoban.Model.Result;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -9,5 +11,5 @@ public interface SearchMethod<T> {
     String searchName();
 
     //retorna una lista con los pasos para ir desde start a goal
-    Collection<T> search(T state);
+    Result search(T state);
 }
