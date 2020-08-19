@@ -12,6 +12,7 @@ import Sokoban.Searchs.Uninformed.BFS;
 import Sokoban.Searchs.Uninformed.DFS;
 import Sokoban.Searchs.Uninformed.IDDFS;
 import Sokoban.Searchs.informed.GGS;
+import Sokoban.Searchs.informed.IDA;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -29,11 +30,10 @@ public class Benchmark {
     public void setup(){
         levels = Arrays.asList(0, 1, 2, 3, 4, 5);
         mapFactory = new MapFactory();
-        searchMethods = new ArrayList<>(3);
+        searchMethods = new ArrayList<>();
         searchMethods.add(new BFS<>());
         searchMethods.add(new DFS<>());
         searchMethods.add(new IDDFS<>(15));
-        searchMethods = new ArrayList<>();
         searchMethods.add(new GGS<>(0));
         searchMethods.add(new GGS<>(0.5, new EuclideanDistance()));
         searchMethods.add(new GGS<>(0.5, new SimpleMinDistance()));
@@ -43,6 +43,10 @@ public class Benchmark {
         searchMethods.add(new GGS<>(1, new SimpleMinDistance()));
         searchMethods.add(new GGS<>(1, new PlayerBoxGoalDistance()));
         searchMethods.add(new GGS<>(1, new MinMatching()));
+        searchMethods.add(new IDA<>(new EuclideanDistance()));
+        searchMethods.add(new IDA<>(new SimpleMinDistance()));
+        searchMethods.add(new IDA<>(new PlayerBoxGoalDistance()));
+        searchMethods.add(new IDA<>(new MinMatching()));
     }
 
     public void setupInitialState(int level){

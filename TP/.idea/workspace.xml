@@ -24,13 +24,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Conf.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Conf.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/StatePackage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/StatePackage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/GameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.~lock.benchmarkResults.csv#" beforeDir="false" afterPath="$PROJECT_DIR$/.~lock.benchmarkResults.csv#" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.~lock.presentacion_tp1.odp#" beforeDir="false" afterPath="$PROJECT_DIR$/.~lock.presentacion_tp1.odp#" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarkResults.csv" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarkResults.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentacion_tp1.odp" beforeDir="false" afterPath="$PROJECT_DIR$/presentacion_tp1.odp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Benchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Benchmark.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/App.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -419,26 +417,26 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1250" height="176" key="GridCell.Tab.0.bottom" timestamp="1597800667712">
+    <state width="1250" height="176" key="GridCell.Tab.0.bottom" timestamp="1597803122878">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597756764339" />
-    <state width="1250" height="176" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597800667712" />
-    <state width="1250" height="176" key="GridCell.Tab.0.center" timestamp="1597800667711">
+    <state width="1250" height="176" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597803122878" />
+    <state width="1250" height="176" key="GridCell.Tab.0.center" timestamp="1597803122877">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597756764338" />
-    <state width="1250" height="176" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597800667710" />
-    <state width="1250" height="176" key="GridCell.Tab.0.left" timestamp="1597800667709">
+    <state width="1250" height="176" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597803122877" />
+    <state width="1250" height="176" key="GridCell.Tab.0.left" timestamp="1597803122877">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597756764338" />
-    <state width="1250" height="176" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597800667709" />
-    <state width="1250" height="176" key="GridCell.Tab.0.right" timestamp="1597800667712">
+    <state width="1250" height="176" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597803122877" />
+    <state width="1250" height="176" key="GridCell.Tab.0.right" timestamp="1597803122877">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597756764339" />
-    <state width="1250" height="176" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597800667712" />
+    <state width="1250" height="176" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597803122877" />
     <state width="1250" height="215" key="GridCell.Tab.1.bottom" timestamp="1597769868045">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
