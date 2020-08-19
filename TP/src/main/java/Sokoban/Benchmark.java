@@ -1,7 +1,7 @@
 package Sokoban;
 
 import Sokoban.Heuristics.EuclideanDistance;
-import Sokoban.Heuristics.ManhattanDistance;
+import Sokoban.Heuristics.SimpleMinDistance;
 import Sokoban.Heuristics.MinMatching;
 import Sokoban.Heuristics.PlayerBoxGoalDistance;
 import Sokoban.Interfaces.GameMap;
@@ -16,7 +16,6 @@ import Sokoban.Searchs.informed.GGS;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Benchmark {
 
@@ -37,11 +36,11 @@ public class Benchmark {
         searchMethods = new ArrayList<>();
         searchMethods.add(new GGS<>(0));
         searchMethods.add(new GGS<>(0.5, new EuclideanDistance()));
-        searchMethods.add(new GGS<>(0.5, new ManhattanDistance()));
+        searchMethods.add(new GGS<>(0.5, new SimpleMinDistance()));
         searchMethods.add(new GGS<>(0.5, new PlayerBoxGoalDistance()));
         searchMethods.add(new GGS<>(0.5, new MinMatching()));
         searchMethods.add(new GGS<>(1, new EuclideanDistance()));
-        searchMethods.add(new GGS<>(1, new ManhattanDistance()));
+        searchMethods.add(new GGS<>(1, new SimpleMinDistance()));
         searchMethods.add(new GGS<>(1, new PlayerBoxGoalDistance()));
         searchMethods.add(new GGS<>(1, new MinMatching()));
     }

@@ -15,7 +15,7 @@ public class Constants {
 
 
         public static final String EuclideanDistance = "EuclideanDistance";
-        public static final String ManhattanDistance = "ManhattanDistance";
+        public static final String SimpleMinDistance = "SimpleMinDistance";
         public static final String MinMatching = "MinMatching";
         public static final String PlayerBoxGoalDistance = "PlayerBoxGoalDistance";
     }

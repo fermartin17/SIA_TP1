@@ -17,21 +17,23 @@ public class PlayerBoxGoalDistance implements Heuristic<State> {
         Position playerPosition = s.getMap().getPlayerPosition();
         List<Position> goals = s.getMap().getGoalsPositions();
         List<Position> boxes = s.getMap().getBoxPositions();
-        Position nearestBox = boxes.get(0);
+        Position nearestBox = null;
         double minPlayerBox = Double.MAX_VALUE;
         double minBoxGoal = Double.MAX_VALUE;
         double aux;
-        //encontrar la caja que no está en us objetivo más cercana al jugador
+        //encontrar la caja que no está en su objetivo más cercana al jugador
         for(Position box : boxes){
+            if(!goals.contains(box)) continue;
             aux = playerPosition.manhattanDistance(box);
             if(aux < minPlayerBox){
                 minPlayerBox = aux;
                 nearestBox = box;
             }
         }
-        //encontrar el objetivo más cercano para dicha caja
-        for(Position p : goals){
-            aux = nearestBox.manhattanDistance(p);
+        if(nearestBox == null) return 0.0;
+        //encontrar el objetivo no ocupado más cercano para dicha caja
+        for(Position g : goals){
+            aux = nearestBox.manhattanDistance(g);
             if(aux < minBoxGoal){
                 minBoxGoal = aux;
             }

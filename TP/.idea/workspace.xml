@@ -23,20 +23,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/SimpleMinDistance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.~lock.presentacion_tp1.odp#" beforeDir="false" afterPath="$PROJECT_DIR$/.~lock.presentacion_tp1.odp#" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Conf.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Conf.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarkResults.csv" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarkResults.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Benchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Benchmark.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/ManhattanDistance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/MinMatching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/MinMatching.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/PlayerBoxGoalDistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Heuristics/PlayerBoxGoalDistance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/Level.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Factories/SearchFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Factories/SearchFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/IDDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/IDDFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/Level$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/Level.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Model/State.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Model/State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/IDDFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/IDDFS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Factories/HeuristicFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Factories/HeuristicFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Heuristics/HungarianTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Heuristics/HungarianTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Heuristics/MinMatchingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Heuristics/MinMatchingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/GameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Interfaces/Map$TILES.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Interfaces/Map.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/MapFactory$LevelInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/MapFactory.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,6 +144,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameTest.testInformedMethods (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Sokoban.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Sokoban" />
+      <option name="MAIN_CLASS_NAME" value="Sokoban.GameTest" />
+      <option name="METHOD_NAME" value="testInformedMethods" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameTest.testInformedMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP" />
       <extension name="coverage">
@@ -169,37 +192,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HungarianTest.oneSizeCostMatrixTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Heuristics.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Heuristics" />
-      <option name="MAIN_CLASS_NAME" value="Heuristics.HungarianTest" />
-      <option name="METHOD_NAME" value="oneSizeCostMatrixTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Play" />
       <item itemvalue="JUnit.GameTest.minMatchingTest" />
-      <item itemvalue="JUnit.HungarianTest.oneSizeCostMatrixTest" />
       <item itemvalue="JUnit.GameTest.testInformedMethods" />
       <item itemvalue="JUnit.GameTest.testUninformedMethods" />
       <item itemvalue="JUnit.DFSTest.correctOrderTest" />
+      <item itemvalue="JUnit.GameTest.testInformedMethods (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameTest.testInformedMethods (1)" />
         <item itemvalue="JUnit.DFSTest.correctOrderTest" />
         <item itemvalue="JUnit.GameTest.testInformedMethods" />
         <item itemvalue="JUnit.GameTest.testUninformedMethods" />
         <item itemvalue="JUnit.GameTest.minMatchingTest" />
-        <item itemvalue="JUnit.HungarianTest.oneSizeCostMatrixTest" />
       </list>
     </recent_temporary>
   </component>
@@ -424,26 +431,26 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1250" height="176" key="GridCell.Tab.0.bottom" timestamp="1597789107807">
+    <state width="1250" height="176" key="GridCell.Tab.0.bottom" timestamp="1597799443141">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597756764339" />
-    <state width="1250" height="176" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597789107807" />
-    <state width="1250" height="176" key="GridCell.Tab.0.center" timestamp="1597789107802">
+    <state width="1250" height="176" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597799443141" />
+    <state width="1250" height="176" key="GridCell.Tab.0.center" timestamp="1597799443140">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597756764338" />
-    <state width="1250" height="176" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597789107802" />
-    <state width="1250" height="176" key="GridCell.Tab.0.left" timestamp="1597789107800">
+    <state width="1250" height="176" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597799443140" />
+    <state width="1250" height="176" key="GridCell.Tab.0.left" timestamp="1597799443140">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597756764338" />
-    <state width="1250" height="176" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597789107800" />
-    <state width="1250" height="176" key="GridCell.Tab.0.right" timestamp="1597789107805">
+    <state width="1250" height="176" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597799443140" />
+    <state width="1250" height="176" key="GridCell.Tab.0.right" timestamp="1597799443140">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="330" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597756764339" />
-    <state width="1250" height="176" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597789107805" />
+    <state width="1250" height="176" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597799443140" />
     <state width="1250" height="215" key="GridCell.Tab.1.bottom" timestamp="1597769868045">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
@@ -507,12 +514,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Sokoban/Game.java</url>
-          <line>51</line>
+          <line>39</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Sokoban/Game.java</url>
-          <line>41</line>
+          <line>30</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
