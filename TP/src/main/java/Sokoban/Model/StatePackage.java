@@ -4,9 +4,7 @@ import Sokoban.Interfaces.Heuristic;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 @Getter
 @Setter

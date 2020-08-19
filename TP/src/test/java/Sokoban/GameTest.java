@@ -35,9 +35,9 @@ public class GameTest {
         uninformedSearchMethods.add(new IDDFS<>(15));
         informedSearchMethods = new ArrayList<>();
         //informedSearchMethods.add(new GGS<>(0));
-        informedSearchMethods.add(new GGS<>(0, new SimpleMinDistance()));
-        informedSearchMethods.add(new GGS<>(0.5, new SimpleMinDistance()));
-        informedSearchMethods.add(new GGS<>(1, new SimpleMinDistance()));
+        //informedSearchMethods.add(new GGS<>(0,      new SimpleMinDistance()));
+        //informedSearchMethods.add(new GGS<>(0.5,    new SimpleMinDistance()));
+        //informedSearchMethods.add(new GGS<>(1,      new SimpleMinDistance()));
         //informedSearchMethods.add(new GGS<>(0, new PlayerBoxGoalDistance()));
         //informedSearchMethods.add(new GGS<>(0.5, new PlayerBoxGoalDistance()));
         //informedSearchMethods.add(new GGS<>(1, new PlayerBoxGoalDistance()));

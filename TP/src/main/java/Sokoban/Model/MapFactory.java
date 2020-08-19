@@ -8,7 +8,7 @@ public class MapFactory {
     //se podría leer de un archivo
     private static final LevelInfo[] levels = new LevelInfo[]{
             new LevelInfo("easy-test", 6, 6,
-                    "######\n" +
+                      "######\n" +
                             "# .  #\n" +
                             "#    #\n" +
                             "# $  #\n" +
@@ -16,7 +16,7 @@ public class MapFactory {
                             "######\n"
             ),
             new LevelInfo("demo-level1", 6,8,
-                    "########\n" +
+                      "########\n" +
                             "#      #\n" +
                             "#@ $   #\n" +
                             "#   $  #\n" +
@@ -24,7 +24,7 @@ public class MapFactory {
                             "########\n"
             ),
             new LevelInfo("demo-level2", 6, 8,
-                    "########\n" +
+                      "########\n"+
                             "#     .#\n" +
                             "#@ $   #\n" +
                             "#   $  #\n" +
@@ -32,7 +32,7 @@ public class MapFactory {
                             "########\n"
             ),
             new LevelInfo("big-0",8, 7,
-                    "#######\n" +
+                      "#######\n" +
                             "#     #\n" +
                             "#     #\n" +
                             "#. #  #\n" +
@@ -42,7 +42,7 @@ public class MapFactory {
                             "#######\n"
             ),
             new LevelInfo("original-tp",10, 15,
-                    "~~~~~~###~~~~~~\n" +
+                      "~~~~~~###~~~~~~\n" +
                             "~~~~~~#.#~~~~~~\n" +
                             "~~#####.#####~~\n" +
                             "~##         ##~\n" +
@@ -54,7 +54,7 @@ public class MapFactory {
                             "~~~####~####~~~\n"
             ),
             new LevelInfo("big-3",11, 19,
-                    "~~~~#####~~~~~~~~~~\n" +
+                      "~~~~#####~~~~~~~~~~\n" +
                             "~~~~#   #~~~~~~~~~~\n" +
                             "~~~~#   #~~~~~~~~~~\n" +
                             "~~### #$##~~~~~~~~~\n" +

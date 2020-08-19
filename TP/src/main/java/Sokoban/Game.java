@@ -11,12 +11,12 @@ public class Game {
 
     Sokoban.Model.MapFactory mapFactory;
     State initialState;
-    SearchMethod searchMethod;
+    SearchMethod<State> searchMethod;
     int level;
 
     public Game(){}
 
-    public void setup(SearchMethod searchMethod, int level){
+    public void setup(SearchMethod<State> searchMethod, int level){
         this.level = level;
         this.searchMethod = searchMethod;
         mapFactory = new MapFactory();
@@ -29,6 +29,7 @@ public class Game {
 
     public Map<Long,List<State>> answerData(SearchMethod<State> method){
         Map<Long,List<State>> resp = new HashMap<Long,List<State>>();
+        Double time;
         Long startTime = System.nanoTime();
         List<State> aux = (List<State>) method.search(this.initialState);
         Long endTime = System.nanoTime();
@@ -36,7 +37,7 @@ public class Game {
         return resp;
     }
 
-    public void start(SearchMethod searchMethod, int level){
+    public void start(SearchMethod<State> searchMethod, int level){
         setup(searchMethod, level);
         setupInitialState();
         Map<Long,List<State>> answer = answerData(this.searchMethod);
