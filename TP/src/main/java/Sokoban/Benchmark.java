@@ -56,8 +56,9 @@ public class Benchmark {
         List<Long> times = new ArrayList<>(5);
         for(int i = 0; i < 5; i++){
             long startTime = System.nanoTime();
-            method.search(initialState);
+            List<State> ret = (List<State>) method.search(initialState);
             long endTime = System.nanoTime();
+            if(i == 0) times.add((long) ret.size());
             times.add(endTime - startTime);
         }
         return times;
