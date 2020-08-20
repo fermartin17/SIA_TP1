@@ -23,13 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.~lock.benchmarkResults.csv#" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.~lock.presentacion_tp1.odp#" beforeDir="false" afterPath="$PROJECT_DIR$/.~lock.presentacion_tp1.odp#" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Conf.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Conf.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentacion_tp1.odp" beforeDir="false" afterPath="$PROJECT_DIR$/presentacion_tp1.odp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/IDDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/IDDFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/IDDFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/IDDFS.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
