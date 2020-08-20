@@ -23,22 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Conf.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Conf.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Benchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Benchmark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Factories/HeuristicFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Factories/HeuristicFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Factories/SearchFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Factories/SearchFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DLS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/DLS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/IDDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/IDDFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/GGS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/HPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/GameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/BFSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/BFSTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/DFSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sokoban/Searchs/Uninformed/DFSTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +71,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="JUnit.GameTest.testUninformedMethods (1)">
+  <component name="RunManager" selected="Application.Play">
     <configuration name="Play" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Sokoban.App" />
       <module name="TP" />
@@ -139,6 +124,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameTest.minMatchingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Sokoban.Searchs.Uninformed.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Sokoban.Searchs.Uninformed" />
+      <option name="MAIN_CLASS_NAME" value="Sokoban.Searchs.Uninformed.GameTest" />
+      <option name="METHOD_NAME" value="minMatchingTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameTest.testInformedMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP" />
       <extension name="coverage">
@@ -150,22 +151,6 @@
       <option name="PACKAGE_NAME" value="Sokoban.Searchs.Uninformed" />
       <option name="MAIN_CLASS_NAME" value="Sokoban.Searchs.Uninformed.GameTest" />
       <option name="METHOD_NAME" value="testInformedMethods" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameTest.testUninformedMethods (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Sokoban.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Sokoban" />
-      <option name="MAIN_CLASS_NAME" value="Sokoban.GameTest" />
-      <option name="METHOD_NAME" value="testUninformedMethods" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -189,19 +174,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Play" />
+      <item itemvalue="JUnit.GameTest.minMatchingTest" />
       <item itemvalue="JUnit.GameTest.testInformedMethods" />
       <item itemvalue="JUnit.GameTest.testUninformedMethods" />
       <item itemvalue="JUnit.DFSTest.correctOrderTest" />
       <item itemvalue="JUnit.DFSTest.NodesInFrontier" />
-      <item itemvalue="JUnit.GameTest.testUninformedMethods (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GameTest.testUninformedMethods (1)" />
         <item itemvalue="JUnit.DFSTest.NodesInFrontier" />
         <item itemvalue="JUnit.DFSTest.correctOrderTest" />
         <item itemvalue="JUnit.GameTest.testInformedMethods" />
         <item itemvalue="JUnit.GameTest.testUninformedMethods" />
+        <item itemvalue="JUnit.GameTest.minMatchingTest" />
       </list>
     </recent_temporary>
   </component>
@@ -413,11 +398,11 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="170" y="127" width="1096" height="541" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/70.27.1296.741@70.27.1296.741" timestamp="1597859588202" />
-    <state x="431" y="21" width="378" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1597849494556">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="526" y="105" width="378" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1597863071988">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="431" y="21" width="378" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1597849494556" />
-    <state x="526" y="105" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/70.27.1296.741@70.27.1296.741" timestamp="1597262695986" />
+    <state x="526" y="105" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/70.27.1296.741@70.27.1296.741" timestamp="1597863071988" />
     <state x="450" y="202" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1596746616117">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
@@ -438,45 +423,45 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1312" height="434" key="GridCell.Tab.0.bottom" timestamp="1597883973108">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1250" height="535" key="GridCell.Tab.0.bottom" timestamp="1597888707544">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1312" height="434" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597883973108" />
-    <state width="1250" height="183" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597862546480" />
-    <state width="1312" height="434" key="GridCell.Tab.0.center" timestamp="1597883973108">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1312" height="280" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597849387277" />
+    <state width="1250" height="535" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597888707544" />
+    <state width="1250" height="535" key="GridCell.Tab.0.center" timestamp="1597888707542">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1312" height="434" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597883973108" />
-    <state width="1250" height="183" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597862546480" />
-    <state width="1312" height="434" key="GridCell.Tab.0.left" timestamp="1597883973108">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1312" height="280" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597849387276" />
+    <state width="1250" height="535" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597888707542" />
+    <state width="1250" height="535" key="GridCell.Tab.0.left" timestamp="1597888707541">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1312" height="434" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597883973108" />
-    <state width="1250" height="183" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597862546479" />
-    <state width="1312" height="434" key="GridCell.Tab.0.right" timestamp="1597883973108">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1312" height="280" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597849387276" />
+    <state width="1250" height="535" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597888707541" />
+    <state width="1250" height="535" key="GridCell.Tab.0.right" timestamp="1597888707543">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1312" height="434" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597883973108" />
-    <state width="1250" height="183" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597862546480" />
-    <state width="1312" height="434" key="GridCell.Tab.1.bottom" timestamp="1597883973109">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1312" height="280" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597849387277" />
+    <state width="1250" height="535" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597888707543" />
+    <state width="1250" height="215" key="GridCell.Tab.1.bottom" timestamp="1597861709689">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1312" height="434" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597883973109" />
+    <state width="1312" height="242" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597722323298" />
     <state width="1250" height="215" key="GridCell.Tab.1.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597861709689" />
-    <state width="1312" height="434" key="GridCell.Tab.1.center" timestamp="1597883973109">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1250" height="215" key="GridCell.Tab.1.center" timestamp="1597861709689">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1312" height="434" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1597883973109" />
+    <state width="1312" height="242" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1597722323297" />
     <state width="1250" height="215" key="GridCell.Tab.1.center/70.27.1296.741@70.27.1296.741" timestamp="1597861709689" />
-    <state width="1312" height="434" key="GridCell.Tab.1.left" timestamp="1597883973108">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1250" height="215" key="GridCell.Tab.1.left" timestamp="1597861709689">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1312" height="434" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1597883973108" />
+    <state width="1312" height="242" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1597722323297" />
     <state width="1250" height="215" key="GridCell.Tab.1.left/70.27.1296.741@70.27.1296.741" timestamp="1597861709689" />
-    <state width="1312" height="434" key="GridCell.Tab.1.right" timestamp="1597883973109">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1250" height="215" key="GridCell.Tab.1.right" timestamp="1597861709689">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1312" height="434" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1597883973109" />
+    <state width="1312" height="242" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1597722323298" />
     <state width="1250" height="215" key="GridCell.Tab.1.right/70.27.1296.741@70.27.1296.741" timestamp="1597861709689" />
     <state x="155" y="11" key="SettingsEditor" timestamp="1597366352226">
       <screen x="0" y="0" width="1366" height="768" />
@@ -547,11 +532,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/Sokoban/Game.java</url>
           <line>34</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Sokoban/Model/State.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.StackOverflowError" package="java.lang" />

@@ -55,10 +55,12 @@ public class IDA<T extends Neighbors<T> & Comparable<T> & Stateful<T>> implement
             path.getHistory().add(currState);
             return new StatePackage<>(path.getHistory(), currState, -1); //found
         }
+
+        this.nodesInFrontier--;
         double min = Double.MAX_VALUE;
         StatePackage<T> minState = new StatePackage<T>(new LinkedList<>(), null, Double.MAX_VALUE);
         List<T> neighbors = currState.getNeighbors();
-        nodesInFrontier = neighbors.size();
+        nodesInFrontier += neighbors.size();
         for(T neighbor : neighbors){
             if(!neighbor.isValid() || visited.contains(neighbor)) continue;
             visited.add(neighbor);

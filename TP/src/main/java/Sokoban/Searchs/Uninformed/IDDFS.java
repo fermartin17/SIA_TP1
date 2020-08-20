@@ -50,5 +50,5 @@ public class IDDFS<T extends Neighbors<T> & Comparable<T> & Stateful<T>> impleme
     }
 
     @Override
-    public String searchName() { return "IDDFs"; }
+    public String searchName() { return "IDDFS"; }
 }

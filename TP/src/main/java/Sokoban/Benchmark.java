@@ -7,6 +7,7 @@ import Sokoban.Heuristics.PlayerBoxGoalDistance;
 import Sokoban.Interfaces.GameMap;
 import Sokoban.Interfaces.SearchMethod;
 import Sokoban.Model.MapFactory;
+import Sokoban.Model.Result;
 import Sokoban.Model.State;
 import Sokoban.Searchs.Uninformed.BFS;
 import Sokoban.Searchs.Uninformed.DFS;
@@ -55,10 +56,10 @@ public class Benchmark {
     public List<Long> measureTime(SearchMethod<State> method){
         List<Long> times = new ArrayList<>(5);
         for(int i = 0; i < 5; i++){
-            long startTime = System.nanoTime();
-            List<State> ret = (List<State>) method.search(initialState);
-            long endTime = System.nanoTime();
-            if(i == 0) times.add((long) ret.size());
+            long startTime = System.currentTimeMillis();
+            Result<State> ret =  method.search(initialState);
+            long endTime = System.currentTimeMillis();
+            if(i == 0) times.add((long) ret.getPath().size());
             times.add(endTime - startTime);
         }
         return times;
