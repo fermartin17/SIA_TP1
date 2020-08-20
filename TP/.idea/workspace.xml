@@ -24,11 +24,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b652b197-ab5a-44cf-83d6-eaf03a31eed4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.~lock.benchmarkResults.csv#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.~lock.presentacion_tp1.odp#" beforeDir="false" afterPath="$PROJECT_DIR$/.~lock.presentacion_tp1.odp#" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Conf.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Conf.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Benchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Benchmark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Model/MapFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/IDA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/informed/IDA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentacion_tp1.odp" beforeDir="false" afterPath="$PROJECT_DIR$/presentacion_tp1.odp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/IDDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sokoban/Searchs/Uninformed/IDDFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/IDDFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sokoban/Searchs/Uninformed/IDDFS.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -428,26 +429,26 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="301" y="114" width="814" height="574" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1596916891944" />
-    <state width="1250" height="535" key="GridCell.Tab.0.bottom" timestamp="1597867990084">
+    <state width="1250" height="535" key="GridCell.Tab.0.bottom" timestamp="1597888707544">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="280" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1597849387277" />
-    <state width="1250" height="535" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597867990084" />
-    <state width="1250" height="535" key="GridCell.Tab.0.center" timestamp="1597867990082">
+    <state width="1250" height="535" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1597888707544" />
+    <state width="1250" height="535" key="GridCell.Tab.0.center" timestamp="1597888707542">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="280" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1597849387276" />
-    <state width="1250" height="535" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597867990082" />
-    <state width="1250" height="535" key="GridCell.Tab.0.left" timestamp="1597867990081">
+    <state width="1250" height="535" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1597888707542" />
+    <state width="1250" height="535" key="GridCell.Tab.0.left" timestamp="1597888707541">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="280" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1597849387276" />
-    <state width="1250" height="535" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597867990081" />
-    <state width="1250" height="535" key="GridCell.Tab.0.right" timestamp="1597867990083">
+    <state width="1250" height="535" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1597888707541" />
+    <state width="1250" height="535" key="GridCell.Tab.0.right" timestamp="1597888707543">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1312" height="280" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597849387277" />
-    <state width="1250" height="535" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597867990083" />
+    <state width="1250" height="535" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1597888707543" />
     <state width="1250" height="215" key="GridCell.Tab.1.bottom" timestamp="1597861709689">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
