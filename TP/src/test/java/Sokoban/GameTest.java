@@ -25,12 +25,12 @@ public class GameTest {
     @Before
     public void setup(){
         MapFactory mapFactory = new MapFactory();
-        GameMap gameMap = mapFactory.loadMap(2); //EASY MAP
+        GameMap gameMap = mapFactory.loadMap(3); //EASY MAP
         initialState = new State(gameMap, GameMap.DIRECTION.INITIAL);
         uninformedSearchMethods = new ArrayList<>(3);
         uninformedSearchMethods.add(new BFS<>());
-        uninformedSearchMethods.add(new DFS<>());
-        uninformedSearchMethods.add(new IDDFS<>(15));
+        //uninformedSearchMethods.add(new DFS<>());
+        //uninformedSearchMethods.add(new IDDFS<>(15));
         informedSearchMethods = new ArrayList<>();
         //informedSearchMethods.add(new GGS<>(0));
         informedSearchMethods.add(new HPA<>(0,      new SimpleMinDistance()));
@@ -50,7 +50,7 @@ public class GameTest {
         for(SearchMethod<State> method : uninformedSearchMethods){
             List<State> ret = (List<State>) method.search(initialState);
             Assert.assertNotNull(ret);
-            ret.forEach(s -> s.getMap().printMap());
+            //ret.forEach(s -> s.getMap().printMap());
         }
     }
 

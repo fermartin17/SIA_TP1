@@ -32,7 +32,7 @@ public class MapFactory {
                             "########\n"
             ),
             new LevelInfo("big-0",8, 7,
-                      "#######\n" +
+                    "#######\n" +
                             "#     #\n" +
                             "#     #\n" +
                             "#. #  #\n" +
